@@ -1,4 +1,3 @@
-# My Great Book
+# ODE modeling with Insightmaker
 
-TODO this should have some simple build information
-and/or a link to documentation
+This book is about using Insightmaker in a modeling focused ODE course.
