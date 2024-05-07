@@ -228,9 +228,9 @@ Following along through each primitive, you can create an Insight for <xref ref=
 		<p>
 			<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
 				<p>
-				When the stock you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the initial value of the stock. This will be the value of the stock at the start of the simulation (the default start is at <m>t = 0</m>). Here we have it set to the value <m>12</m>. Perhaps the most important mathematical idea with stocks is the following: <em> The expression you enter for the initial value is a single number, not something that varies with time; the time evolution of a stock is determined by the flows, which can depend on time.</em> 
+				When the flow is highlighted you will see this box on the left side of your screen. You may modify the formula for the flow in the current window, or you can click the circled box to have a new formula editing window. The formula may involve time (entered as Seconds(), Minutes(), etc.), the upstream and/or downstream stocks, or any linked variables (discussed below). 
 				</p><p></p>
-				<image source="images/StockSliderSettings.png" width="60%"></image>
+				<image source="images/FlowFormula.png" width="60%"></image>
 			</sidebyside>	
 			When we discuss variables and links, we will let the initial value be a variable. Doing this makes sense in models where we think of the initial value as a parameter, such as <m>b</m> in <m> y = mx+b</m>.
 		</p>
