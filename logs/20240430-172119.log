@@ -1,0 +1,10 @@
+INFO    : PreTeXt project found in `C:\Users\mcalister_e\Desktop\Pretext_repositories\InsightDE`.
+WARNING : Using CLI version 2.3.4 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.3.4.
+CRITICAL: Opening and ending tag mismatch: p line 197 and li, line 211, column 7
+INFO    : ------------------------
+CRITICAL: Failed to build.  Exiting...
+INFO    : While running pretext, the following errors occurred:
+

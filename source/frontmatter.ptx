@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This frontmatter division will contain all content before the -->
+<!-- first chapter.  Fill in and comment/uncomment to see how this -->
+<!-- works.                                                        -->
+
+<frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
+  <titlepage>
+    <author>
+      <personname>Erich McAlister</personname>
+      <department>Mathematics</department>
+      <institution>Fort Lewis College</institution>
+    </author>
+    <date><today/></date>
+  </titlepage>
+
+  <colophon>
+    <!--website>
+      <name><c>my-website.org</c></name>
+      <address>http://my.website.org</address>
+    </website-->
+
+    <copyright>
+      <!-- In addition to specifying the copyright holder, you should  -->
+      <!-- include a license, such as the cc-by-sa license shown below -->
+      <!-- so people reading your book know how they can use it.       -->
+      <year>2024</year>
+      <holder>Erich McAlister</holder>
+      <!-- <minilicense><image source="../images/by-sa.png" /></minilicense> -->
+      <shortlicense>
+        <!-- <image source="../images/by-sa.png" width="15%"/>  -->
+        This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</url>
+      </shortlicense>
+
+    </copyright>
+
+  </colophon>
+
+  <!--dedication>
+    <p>
+      For ...
+    </p>
+  </dedication-->
+
+  <acknowledgement>
+    <p>
+      First, I would like to thank Scott Fortmann-Roe for creating Insightmaker. Without its creation, this text really wouldn't make any sense at all.  
+    </p>
+    <p>
+      I would also like to thank those who support the use of novel pedagogies for Ordinary Differential Equations. These include Brian Winkel of SIMIODE (<url href="https://qubeshub.org/community/groups/simiode/" visual="SIMIODE website"/>), the CODEE consortium (<url href="https://scholarship.claremont.edu/codee/" visual="CODEE Journal"/>), and my colleagues at Fort Lewis College (especially by wife, Vera) who are willing to be test course materials I have created.
+    </p>
+
+  
+
+  </acknowledgement>
+
+  <preface xml:id="preface">
+    <!-- You should be a little careful about what you put here -->
+    <!-- Avoid elements that should have a number, for example  -->
+    <p>
+      This text is designed as a supplement for teaching a first course in ordinary differential equations from a modeling perspective. This course is usually taken the sophomore or junior year following single-variable calculus. Topics included in the course are some mix of the following:
+      <ol>
+        <li>
+          <p>
+            Modeling with first-order equations and solving analytically in some cases (linear and separable equations) and numerically when necessary and/or helpful
+          </p>
+        </li>
+        <li>
+          <p>
+            Modeling with second-order equations and solving linear second-order equations analytically using a variety of techniques 
+          </p>
+        </li>
+        <li>
+          <p>
+            Solving linear constant-coefficient (including ones with discontinuous or impulsive forces) equations using the Laplace transform
+          </p>
+        </li>
+        <li>
+          <p>
+            Modeling with and analyzing systems of ODEs and solving linear systems analytically 
+          </p>
+        </li>
+      </ol>
+    </p>
+    <p>
+      It is my feeling that a first course in ODEs should present them in as many ways as possible, provided the representations and methods contribute to the students' practical understanding and mathematical growth. With this in mind, it is important to catalog how traditional pedagogies, modeling, and Insightmaker fit into the course.
+      <ol>
+        <li>
+          <p>
+            Real-world modeling, and all that goes with it (units, data, parameter estimation etc.) is emphasized. The vast majority of students in this course are Engineering majors, but some are from other scientific disciplines. Students should leave the course thinking that they now <em> get </em> to use differential equations to answer questions they are interested in, rather than merely check off a major requirement.
+          </p>
+        </li>
+        <li>
+          <p>
+            While analytic procedures are not the focus of the class, they are included for a couple of reasons. First, these techniques may appear in subsequent courses in their major and on professional exams. Second, and perhaps more importantly, analytic methods may represent a more familiar way of approaching mathematics (a <em>met before</em> in the terminology of David Tall). Throughout prior math courses many students have been trained to believe that answers are formulas or numbers, and they are comfortable with this idea. As we proceed throught the course, we often find occasion to compare the results of numerical or qualitative methods with analytic ones to become more comfortable with the former methods. 
+          </p>
+        </li>
+        <li>
+          <p>
+            The addition of using Insightmaker to construct models provides students with additional semantic understanding of differential equations and the general process of modeling. By representing a model graphically, students can give practical meaning to each term of a differential equation and experiment with their effects on the model idependently. The net effect is that students gain an increase in ODE literacy as well as gains in the ability to communicate mathematical ideas to both technical and non-technical audiences.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+  </preface>
+
+  <!-- You can have more than one preface. -->
+</frontmatter>

@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Sec1_1_Insights_and_ODEs">
+	<title>Insights and ODEs</title>
+
+  <objectives>
+	In this section we will
+		<ul>
+	  		<li>
+				<p>
+				Understand the components of an Insight in the framework of introductory differential equations.
+				</p>
+			</li>
+			<li>
+	  			<p>
+				Work through some familiar examples from algebra and Calculus and as Insights and see how they relate to the different representations of solutions to ODEs in Insightmaker,
+	  			</p>
+	  		</li>
+			<li>
+				<p>
+				Briefly discuss the settings of an Insight.
+				</p>
+			</li>
+	  	</ul>
+  </objectives>
+
+<subsection xml:id="ODEs_and_IVPs">
+	<title>ODEs and IVPs</title>
+
+  <p>
+  We begin by reminding ourselves what, in a purely mathematical sense, a differential equation is.
+  </p>
+
+  <definition xml:id="def-DE"><title>First-Order Ordinary Differential Equations</title>
+	<statement>
+		<p>
+			Let <m>t</m> denote time, which we will take as our independent variable throughout this text. A <term>first-order ordinary differential equation (ODE)</term> is an equation involving some unknown function of <m>t</m>, <m>y</m> (the dependent variable), its derivative <m>y'</m>, and possibly <m>t</m>. If possible, we often write our first-order differential equations in the standard form
+			<me>
+				y' = f(t,y),
+			</me>
+			where <m>f</m> is some function of <m>y</m> and <m>t</m>. A <term>solution</term> to an ODE is some representation (not necessarily as a formula!) of a function that makes the equation true when substituted for <m>y</m>. 
+		</p>
+		<p>
+			An <term>initial value problem (IVP)</term> is an ODE together with some specified output value at a specified input value, expressed as <m>y(t_0) = y_0</m>, i.e. we are told that the graph of the unknown function <m>y</m> passes through the point <m>(t_0,y_0)</m>. The equation <m>y(t_0) = y_0</m> is called an <term>initial condition</term> and the value <m>y_0</m> is the <term>initial value</term>.
+		</p>
+	</statement>
+  </definition>
+  
+  <p>
+	In more practical terms a first-order ODE informs us of how this unknown function relates to its own derivative (rate of change) and time. The practical value of this idea is that we can often express or measure how a quantity changes more easily than find an expression for its value. Initial conditions should be thought of as <em>data</em>.
+  </p>
+  <p>
+	Here are three examples that may help make the idea of ODEs and IVPs make sense. We will develop these as Insights before the end of the section.
+  </p>
+  
+  <example xml:id="Linear_as_IVP"><title>Linear Functions</title>
+	<p>
+	The first initial value problem you probably ever encountered was most likely stated in the following form: <em> find the equation of a line with slope <m>m</m> passing through the point <m>(t_0,y_0)</m></em>. Stated in terms of differential equations, this instruction is simply to solve the IVP
+	<me>
+	y' = m, y(t_0) = y_0.	
+	</me>
+	The solution (check it), in slope-intercept form, is
+	<me>
+		y = mt + (y_0 - mt_0).
+	</me>
+	</p>
+	<p>
+		Observe that in practical situations, <m>y</m> and <m>t</m> typically have some sort of units. The units of <m>y'</m>, and thus <m>m</m>, are <m>\frac{y\text{ units}}{t\text{ units}}</m>.	
+	</p>
+  </example>
+
+  <example xml:id="Exp_as_IVP"><title>Exponential (Malthusian) Growth</title>
+	<p>
+	The second common family of functions that naturally arises as the set of solutions to differential equations are exponential functions. Here we will let our dependent variable be <m>P</m> (for population, measured in individuals) and out independent variable be time, <m>t</m>, in whatever units make sense for the problem. 
+	</p>
+	<p>
+	The defining feature of a population that is growing exponentially is the following: <em>the instantaneous growth rate in <m>P</m> is proportional to <m>P</m>, with some constant of proportionality <m>k</m></em>. Assuming <m>P(t_0) = P_0</m>, finding the population as a function of time amounts to solving the IVP
+	<me>
+		P' = kP, P(t_0) = P_0.
+	</me>
+	The solution to this IVP is given by <m>P(t) = P_0e^{kt}</m>
+	</p>
+	<p>
+	Observe that the units of <m>P'</m> are <m>\frac{\text{individuals}}{\text{time}}</m>. Since <m>P</m> has units of individuals, in order for the differential equation to be dimensinally consistent the units of <m>k</m> must be <m>\frac{1}{\text{time}}</m>. This is a commonly encountered unit for percent rates of change because percentages are by definition dimensionless. 
+	</p>
+  </example>
+
+  <example xml:id="Circle_as_System"><title>A System of IVPs </title>
+	<p>
+	Now we will introduce the idea of a system of differential equations. A system of ODEs (hence IVPs) involves multiple dependent variables whose rate of change depend on one-another. Such situations arise all the time. For instance, the variables could be competing animal species, interacting sub-populations during an epidemic (those who are susceptible, infected, and recovered), or the position and velocity of a mass on a spring.
+	</p>
+	<p>
+		A particularly simple example is given by
+		<md>
+		<mrow>	x' = -y,\amp\ \ x(0) = 1</mrow>
+		<mrow>	y' = x,\amp\ \ y(0) = 0.</mrow>
+		</md>
+	</p>
+	<p>
+		In this example we are using <m>x</m> and <m>y</m> as the dependent variables to describe the coordinates of a particle moving in the <m>xy</m>-plane. The values of <m>x</m> and <m>y</m> describe the particle's position, whereas the values of <m>x'</m> and <m>y'</m> decribe where it is moving (instantaneously). More specifically, let's think about the motion of the particle decriped by the differential equations when it is in each of the four quadrants of the plane.
+		<ul>
+			<li>
+				<p>
+					If <m>(x,y)</m> is in the first quadrant, <m>x</m> and <m>y</m> are both positive. Looking at the equations, we see that this means <m>x'</m> is negative and <m>y'</m> is positive. Thus, the particle is moving up and to the left.
+				</p>
+			</li>
+			<li>
+				<p>
+					If <m>(x,y)</m> is in the second quadrant, <m>x</m> is negative and <m>y</m> is positive. Looking at the equations, we see that this means <m>x'</m> is negative and <m>y'</m> is also negative. Thus, the particle is moving down and to the left.
+				</p>
+			</li>
+			<li>
+				<p>
+					If <m>(x,y)</m> is in the third quadrant, <m>x</m> and <m>y</m> are both negative. Looking at the equations, we see that this means <m>x'</m> is positive and <m>y'</m> is negative. Thus, the particle is moving down and to the right.
+				</p>
+			</li>
+			<li>
+				<p>
+					Finally, if <m>(x,y)</m> is in the fourth quadrant, <m>x</m> is positive and <m>y</m> is negative. Looking at the equations, we see that this means <m>x'</m> is positive and <m>y'</m> positive. Thus, the particle is moving up and to the right.
+				</p>
+			</li>
+		</ul>
+	</p>
+	<p>
+		The motion described above sounds like it might be circular (or at least periodic). Indeed, the solution to the given system of IVPs is <m>x(t) = \cos(t)</m> and <m>y(t) = \sin(t)</m>. As <m>t</m> changes, the particle traces out the unit circle. Varying the initial conditions will change the starting point, which will change the radius if the starting point is not one unit from the origin.
+	</p>	
+  </example>
+</subsection>
+
+<subsection xml:id="Insights_of_IVPs">
+	<title>Insights of IVPs</title>
+<p>	
+Now let's get to the heart of this text: Insightmaker and Insights. If you haven't already, you'll want to go to <url href="https://insightmaker.com/" visual="Insightmaker.com"/> and create a free account. Also, if you were reading the three examples in the previous subsection and weren't feeling extra enlightened, the goal of this section is to help us see what's going on by visualizing them in multiple ways.
+</p>
+
+
+<p>
+Insightmaker represents ODE (systems-dynamics) models (on pages called <term>Insights</term>) using what are known as <term>stock-flow models</term>. Here we list the basic components of a stock-flow model, called <term>primitives</term>. Each component will be discussed in more length separately. 
+  <ul>
+	<li><term>Stocks:</term> Stocks are things that accumulate. In the context of modeling with ODEs, these are the dependent variables of the system.</li>
+
+	<li><term>Flows:</term> Flows into a stock contribute positively to the time-derivative of the corresponding dependent variable. Likewise, outflows contribute negatively. Briefly, the key formula to manage a stock-flow model is the following:
+		<me>\mbox{Time Derivative of a Stock} = \sum\mbox{Inflows} - \sum\mbox{Outflows}</me> 
+	</li>
+
+	<li><term>Variables:</term> Variables are often used as parameters in the context of ODEs. These are numbers that we may modify to match our model to data, such as adjusting <m>k</m> in <xref ref="Exp_as_IVP"/> in order to match a value of the population at a later time.</li>
+	<li><term>Links:</term> Links are arrows between stocks, flows, and variables that allow the linked objects to be used in the formulas for the object that the to which the link points. Yes, that's a mouthful, but links are quite a useful organizational tool. </li>
+  </ul> 
+
+</p>
+
+<p>
+	Now we can take each primitive individually and say
+	<ol>
+		<li>
+			<p>
+				How it is created.
+			</p>
+		</li>
+		<li>
+			<p>
+				How it can be modified.
+			</p>
+		</li>
+		<li>
+			<p>
+				What its important settings are.
+			</p>
+		</li>
+	</ol>
+Following along through each primitive, you can create an Insight for <xref ref="Linear_as_IVP"/>. 
+</p>
+
+<question xml:id="Stocks"><title>Stocks</title>
+	<ol>
+	<li><p>
+		<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
+			<p>
+				To create a stock, click on the "<m>\oplus</m> PRIMITIVE" button and choose to add a stock as shown. This will create a blue rectangular box with the name of your stock, which you can edit on the right side of the Insightmaker screen. Call this one <m>y</m>.
+			</p><p></p>
+			<image source="images/CreateStock.png" width="60%"></image>
+		</sidebyside>
+	</p>	
+	</li>
+	<li>
+		<p>
+			<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+				<p>
+				When the stock you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the initial value of the stock. This will be the value of the stock at the start of the simulation (the default start is at <m>t = 0</m>). Here we have it set to the value <m>12</m>. Perhaps the most important mathematical idea with stocks is the following: <em> The expression you enter for the initial value is a single number, not something that varies with time; the time evolution of a stock is determined by the flows, which can depend on time.</em> 
+				</p><p></p>
+				<image source="images/StockSliderSettings.png" width="60%"></image>
+			</sidebyside>	
+			When we discuss variables and links, we will let the initial value be a variable. Doing this makes sense in models where we think of the initial value as a parameter, such as <m>b</m> in <m> y = mx+b</m>.
+		</p>
+	</li>
+	<li>
+		<p>
+		Now we will discuss the only two settings we use for stocks in an introductory Differential Equations course.
+		</p>
+		<ul>
+			<li>
+				<p>
+				We will typically want "Allow negatives" to be on, i.e. the stock can take on negative values. Even in models where context might exclude negative values (such as when a stock is population), we would like to allow them anyway so that we can see something might be wrong with our model. 	
+				</p>
+			</li>
+			<li>
+				<p>
+				If you toggle on "Enable value slider", this will allow you to create a slider for the initial value of the stock. The ability to use sliders in simulations and see how the behavior of the model changes dynamically is one of the most useful features of Insightmaker. (In the Insight we're building, we will disable the value slider for this stock and create a variable for <m>b</m> with a slider enabled.)	
+				</p>
+			</li>
+		</ul>
+	</li>
+	</ol>
+</question>
+
+<question xml:id="Flows"><title>Flows</title>
+	<ol>
+	<li><p>
+		<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
+			<p>
+				To create a flow, click on the "Flows/Transitions" button to highlight it. Now click on the stock which you want to be the source or target of your flow (if the flow really has no source, click on the target stock only). Then you can drag the arrow to the stock at the other end of the flow. If there is no stock at one end, you will have a cloud at one end of the flow.
+			</p><p></p>
+			<image source="images/CreateFlow1.png" width="60%"></image>
+		</sidebyside>
+	</p>	
+	</li>
+	<li>
+		<p>
+			<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+				<p>
+				When the stock you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the initial value of the stock. This will be the value of the stock at the start of the simulation (the default start is at <m>t = 0</m>). Here we have it set to the value <m>12</m>. Perhaps the most important mathematical idea with stocks is the following: <em> The expression you enter for the initial value is a single number, not something that varies with time; the time evolution of a stock is determined by the flows, which can depend on time.</em> 
+				</p><p></p>
+				<image source="images/StockSliderSettings.png" width="60%"></image>
+			</sidebyside>	
+			When we discuss variables and links, we will let the initial value be a variable. Doing this makes sense in models where we think of the initial value as a parameter, such as <m>b</m> in <m> y = mx+b</m>.
+		</p>
+	</li>
+	<li>
+		<p>
+		Now we will discuss the only two settings we use for stocks in an introductory Differential Equations course.
+		</p>
+		<ul>
+			<li>
+				<p>
+				We will typically want "Allow negatives" to be on, i.e. the stock can take on negative values. Even in models where context might exclude negative values (such as when a stock is population), we would like to allow them anyway so that we can see something might be wrong with our model. 	
+				</p>
+			</li>
+			<li>
+				<p>
+				If you toggle on "Enable value slider", this will allow you to create a slider for the initial value of the stock. The ability to use sliders in simulations and see how the behavior of the model changes dynamically is one of the most useful features of Insightmaker. (In the Insight we're building, we will disable the value slider for this stock and create a variable for <m>b</m> with a slider enabled.)	
+				</p>
+			</li>
+		</ul>
+	</li>
+	</ol>
+</question>
+
+
+
+</subsection>
+
+</section>
+

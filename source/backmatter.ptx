@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file contains all of the "backmatter" material  -->
+<!-- We show examples of how to have hints to divisional  -->
+<!-- excercies appear in a section, and then their        -->
+<!-- solutions in the next.  Then there is an appendix    -->
+<!-- with all notation generated, and finally the index.  -->
+<backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="backmatter">
+  <title>Backmatter</title>
+  
+  <solutions divisional="hint">
+    <title>Selected Hints</title>
+  </solutions>
+  
+  <solutions divisional="solution">
+    <title>Selected Solutions</title>
+  </solutions>
+  
+  <appendix>
+    <title>List of Symbols</title>
+    <notation-list/>
+  </appendix>
+
+  <index>
+    <title>Index</title>
+    <index-list/>
+  </index>
+
+  <colophon>
+    <p>
+      This book was authored in <pretext />.
+    </p>
+  </colophon>
+  <references xml:id="references-backmatter" label="references-backmatter">
+    <title>References</title>
+
+    <biblio type="raw" xml:id="SIMIODE-text" label="SIMIODE-text">Kurt Bryan, <title>Differential Equations: A Toolbox for Modeling the World</title> SIMIODE.org, 2021.
+    </biblio>
+
+    
+    <biblio type="raw" xml:id="multiple-doses" label="multiple-doses">Bryan Winkel, <title>7-010-MultipleDoses-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3045&amp;v=1" />, doi:/10.25334/CCW1-E736, 2022.
+    </biblio>
+
+    
+
+</references>
+
+
+
+</backmatter>
+

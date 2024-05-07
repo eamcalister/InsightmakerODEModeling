@@ -1,0 +1,32 @@
+INFO    : PreTeXt project found in `C:\Users\mcalister_e\Desktop\Pretext_repositories\InsightDE`.
+WARNING : Using CLI version 2.3.4 but project's `requirements.txt`
+WARNING : is configured to use 1.5.2. Consider either installing
+WARNING : CLI version 1.5.2 or running `pretext init --refresh`
+WARNING : to update `requirements.txt` to match 2.3.4.
+INFO    : Preparing to build into C:\Users\mcalister_e\Desktop\Pretext_repositories\InsightDE\output\web.
+INFO    : discovering source file's directory name: C:\Users\mcalister_e\Desktop\Pretext_repositories\InsightDE\source
+INFO    : verifying and expanding input directory: C:\Users\mcalister_e\Desktop\Pretext_repositories\InsightDE\source\../generated-assets
+INFO    : input directory expanded to absolute path: C:\Users\mcalister_e\Desktop\Pretext_repositories\InsightDE\generated-assets
+INFO    : verifying and expanding input directory: C:\Users\mcalister_e\Desktop\Pretext_repositories\InsightDE\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\mcalister_e\Desktop\Pretext_repositories\InsightDE\assets
+INFO    : Runestone Services (via PreTeXt repository): version 7.1.2
+INFO    : Runestone Services (using newer, via online CDN query): version 7.2.16
+INFO    : converting C:\Users\mcalister_e\Desktop\Pretext_repositories\InsightDE\source\main.ptx to HTML in C:\Users\MCALIS~1\AppData\Local\Temp\tmpnvegkpi_
+INFO    : XSL conversion of C:\Users\mcalister_e\Desktop\Pretext_repositories\InsightDE\source\main.ptx by C:\Users\mcalister_e\.ptx\xsl\pretext-html.xsl
+INFO    : comprehensive messages, warnings, and errors:
+INFO    :     * PTX:ERROR:   left margin of a <sidebyside> ("-0.833333333333333%") is outside the interval [0%, 100%], (this may be computed, check consistency of "@margins" and "@widths")
+INFO    :     *              located within: "Stocks" (xml:id), "Stocks" (title)
+INFO    :     * PTX:ERROR:   right margin of a <sidebyside> ("-0.833333333333333%") is outside the interval [0%, 100%], (this may be computed, check consistency of "@margins" and "@widths")
+INFO    :     *              located within: "Stocks" (xml:id), "Stocks" (title)
+INFO    :     * PTX:ERROR:   computed space between panels of a <sidebyside> ("-1.666666666666667%") is negative (this value is computed, check consistency of "@margins" and "@widths")
+INFO    :     *              located within: "Stocks" (xml:id), "Stocks" (title)
+INFO    :     * PTX:ERROR:   left margin of a <sidebyside> ("-0.833333333333333%") is outside the interval [0%, 100%], (this may be computed, check consistency of "@margins" and "@widths")
+INFO    :     *              located within: "Flows" (xml:id), "Flows" (title)
+INFO    :     * PTX:ERROR:   right margin of a <sidebyside> ("-0.833333333333333%") is outside the interval [0%, 100%], (this may be computed, check consistency of "@margins" and "@widths")
+INFO    :     *              located within: "Flows" (xml:id), "Flows" (title)
+INFO    :     * PTX:ERROR:   computed space between panels of a <sidebyside> ("-1.666666666666667%") is negative (this value is computed, check consistency of "@margins" and "@widths")
+INFO    :     *              located within: "Flows" (xml:id), "Flows" (title)
+INFO    : successful application of C:\Users\mcalister_e\.ptx\xsl\pretext-html.xsl
+INFO    : 
+Success! Run `pretext view` to see the results.
+
