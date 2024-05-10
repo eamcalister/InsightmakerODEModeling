@@ -297,15 +297,18 @@ Following along through each primitive, you can create an Insight for <xref ref=
 		</p>
 	</li>
 	<li>
-		<p>
-			<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
-				<p>
-				For flows we can choose to only allow positive flow rates by toggling "positive flow rates only" on. When this is on there will be no flow from the target to the source. This will make sense to do in some contexts but not others. In our running example, if we wish to allow for negative slopes, then we need to toggle this feature off.
-				</p><p></p>
-				<image source="images/PosOnlyFlowSlider.png" width="60%"></image>
-			</sidebyside>
-		</p>
+
 		<ul>
+			<li>
+				<p>
+				<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+					<p>
+					For flows we can choose to only allow positive flow rates by toggling "positive flow rates only" on. When this is on there will be no flow from the target to the source. This will make sense to do in some contexts but not others. In our running example, if we wish to allow for negative slopes, then we need to toggle this feature off.
+					</p><p></p>
+					<image source="images/PosOnlyFlowSlider.png" width="60%"></image>
+				</sidebyside>	
+				</p>
+			</li>
 			<li>
 				<p>
 				<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
