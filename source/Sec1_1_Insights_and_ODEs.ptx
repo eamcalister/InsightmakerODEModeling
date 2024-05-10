@@ -218,9 +218,9 @@ Following along through each primitive, you can create an Insight for <xref ref=
 	<li><p>
 		<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 			<p>
-				To create a flow, click on the "Flows/Transitions" button to highlight it. Now click on the stock which you want to be the source or target of your flow (if the flow really has no source, click on the target stock only). Then you can drag the arrow to the stock at the other end of the flow. If there is no stock at one end, you will have a cloud at one end of the flow.
+				To create a variable, click on the "<m>\oplus</m> PRIMITIVE" button and choose to add a variable as shown. This will create a peach-colored ellipse with the name of your variable, which you can edit on the right side of the Insightmaker screen. Create two variables called <m>m</m> and <m>b</m> (drag so they're not on top of one another).
 			</p><p></p>
-			<image source="images/CreateFlow1.png" width="60%"></image>
+			<image source="images/CreateVariable.png" width="60%"></image>
 		</sidebyside>
 	</p>	
 	</li>
@@ -228,26 +228,21 @@ Following along through each primitive, you can create an Insight for <xref ref=
 		<p>
 			<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
 				<p>
-				When the flow is highlighted you will see this box on the left side of your screen. You may modify the formula for the flow in the current window, or you can click the circled box to have a new formula editing window. The formula may involve time (entered as Seconds(), Minutes(), etc.), the upstream and/or downstream stocks, or any linked variables (discussed below). 
+					Similar to stocks, when a variable you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the value of the variable. This will be the value of the variable through at the start of the simulation. Note that there is a lot of flexibility in what we may enter in the formula for a variable; it may be a function of time or depend on other variables. In the example we're exploring our variables will be the slope and <m>y</m>-intercept of a linear function, which will be numbers controlled by sliders.
 				</p><p></p>
-				<image source="images/FlowFormula.png" width="60%"></image>
+				<image source="images/VariableSliderSettings.png" width="60%"></image>
 			</sidebyside>	
-			When we discuss variables and links, we will let the initial value be a variable. Doing this makes sense in models where we think of the initial value as a parameter, such as <m>b</m> in <m> y = mx+b</m>.
+			Links (discussed below) will allow our new variables to be used in formulas for other primitives.
 		</p>
 	</li>
 	<li>
 		<p>
-		Now we will discuss the only two settings we use for stocks in an introductory Differential Equations course.
+		The main setting we use for variables allows them to be dynamic parameters in simulations.
 		</p>
 		<ul>
 			<li>
 				<p>
-				We will typically want "Allow negatives" to be on, i.e. the stock can take on negative values. Even in models where context might exclude negative values (such as when a stock is population), we would like to allow them anyway so that we can see something might be wrong with our model. 	
-				</p>
-			</li>
-			<li>
-				<p>
-				If you toggle on "Enable value slider", this will allow you to create a slider for the initial value of the stock. The ability to use sliders in simulations and see how the behavior of the model changes dynamically is one of the most useful features of Insightmaker. (In the Insight we're building, we will disable the value slider for this stock and create a variable for <m>b</m> with a slider enabled.)	
+				If you toggle on "Enable value slider", this will allow you to create a slider for the numerical value for the variable. When the slider is enabled and a numerical value is chosen, that variable will be constant through the simulation. You can choose a range of values and a step size for the slider that you find useful. Here we chose a range of <m>-20\leq b\leq 20</m> with a step size of <m>0.01</m> and set the slider to <m>12</m>.
 				</p>
 			</li>
 		</ul>
