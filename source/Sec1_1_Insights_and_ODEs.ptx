@@ -324,6 +324,12 @@ Following along through each primitive, you can create an Insight for <xref ref=
 	</ol>
 </question>
 
+If you have followed along building a linear function Insight as you have been reading, you should have an Insight like the following:
+
+<figure xml:id="linear-Insight">
+	<caption>An Insight for a linear function.</caption>
+	<interactive xml:id="interactive-linear-Insight" iframe="https://insightmaker.com/insight/5mgijPG176EqqZ5fIAj4ZO/embed?topBar=1;sideBar=1;zoom=1"/>
+</figure>
 
 
 </subsection>
