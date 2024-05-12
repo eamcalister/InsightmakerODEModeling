@@ -324,13 +324,27 @@ Following along through each primitive, you can create an Insight for <xref ref=
 	</ol>
 </question>
 
+<p>
 If you have followed along building a linear function Insight as you have been reading, you should have an Insight like the following:
+</p>
 
 <figure xml:id="linear-Insight">
-	<caption>An Insight for a linear function.</caption>
+	<caption>An Insight for a linear function (click on "full screen Insight" to open in a new window).</caption>
 	<interactive xml:id="interactive-linear-Insight" iframe="https://insightmaker.com/insight/5mgijPG176EqqZ5fIAj4ZO/embed?topBar=1;sideBar=1;zoom=1"/>
 </figure>
 
+<p>
+	Now you can click "simulate" and we see the time evolution of <m>y</m> with initial value <m>b</m> and slope <m>m</m> (you may need to use the configuration settings in the simulation window to only show <m>y</m>). If "sliders linked" is highlighted in the simulation window, then you can dynamically change the parameter values and see the effect on the graph of <m>y</m>. 
+</p>
+
+<p>
+	For the purpose of completeness, here is a video of the creation of this Insight.
+</p>
+
+<figure xml:id="linear-Insight-creation">
+	<caption>Building the linear function Insight.</caption>
+	<video xml:id="linear-Insight-video" youtube="mvfmD4yIsXs" width="50%" preview="generic"/>
+</figure>
 
 </subsection>
 
