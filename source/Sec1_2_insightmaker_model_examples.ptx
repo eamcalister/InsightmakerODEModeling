@@ -7,14 +7,47 @@
 		<ul>
 	  		<li>
 	  			<p>
-				See in action with at least three first order examples. 
+				Explore both the ODEs from the last section and several modeling examples. 
 	  			</p>
 	  		</li>
+			<li>
+				<p>
+				Discuss simulation and display settings in Insightmaker.	
+				</p>
+			</li>
 
 	  	</ul>
   </objectives>
 
-<example><title>Ant Tunneling</title>
+<example><title>Malthusian (Exponential) Growth</title>
+	<p>
+	Here we will consider the example given by <xref ref="Exp_as_IVP"/>, but add some context so that we can use more of the features of Insightmaker. Here is the set up for the problem: <em> A population of creatures is initially <m>10</m> and grows exponentially. If the population is <m>20</m> after three weeks, what will the population be in one year?</em>
+	</p>
+	<solution><title>Calculus Class Version</title>
+	<p>
+	First we will give the standard formulation and solution using Calculus. The problem may be reformulated as the IVP
+	<me>
+		P' = kP, P(0) = 10,
+	</me>
+	where <m>P</m> represents the number of creatures, the independent variable is <m>t = </m> time in weeks, and <m>k</m> is the continuous percent growth rate in units of <m>\frac{1}{\text{weeks}}</m>. We can then observe (by whatever technique you prefer) that the general solution is given by 
+	<me>
+		P(t) = 10e^{kt}.
+	</me>
+	Using the data point <m>P(3) = 20</m>, we find <m>k = \frac{\ln(2)}{3}\approx 0.23</m>. Thus, <m>P(52) \approx 10e^{0.23\cdot 52} \approx 165,140</m> creatures. <alert>However, this solution isn't the point of this text!</alert> We are only including it to reference the result. 
+	</p>
+	</solution>
+	<solution><title>Using Insightmaker</title>
+	<p>
+	The Insight that we will use to solvie this problem is below
+	<interactive xml:id="Malthusian-Example-Insight" iframe="https://insightmaker.com/insight/2Yd7izSdPu4DhoalPCmI4g/embed?topBar=1;sideBar=1;zoom=1"/>
+	</p>
+	</solution>
+
+
+</example>
+
+
+  <example><title>Ant Tunneling</title>
 	<p>
 		We can approach the problem of ant tunneling by considering two stocks: the dirt in the tunnel and the dirt removed.
 	</p>
