@@ -343,10 +343,12 @@ If you have followed along building a linear function Insight as you have been r
 
 <figure xml:id="linear-Insight-creation-video">
 	<caption>Building the linear function Insight.</caption>
-	<video xml:id="linear-Insight-video" youtube="mvfmD4yIsXs" width="50%" preview="generic"/>
+	<video xml:id="linear-Insight-video" youtube="mvfmD4yIsXs" width="75%" />
 </figure>
 
 </subsection>
+
+In the next section we will explore some more basic examples, including the remaining examples of ODEs in this section. As we do these we will explore some more of the available displays and settings in Insightmaker.
 
 </section>
 
