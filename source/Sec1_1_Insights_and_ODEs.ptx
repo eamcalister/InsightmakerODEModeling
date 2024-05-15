@@ -26,7 +26,7 @@
   We begin by reminding ourselves what, in a purely mathematical sense, a differential equation is.
   </p>
 
-  <definition xml:id="def-DE"><title>First-Order Ordinary Differential Equations</title>
+  <definition xml:id="def-DE"><title>First-Order Ordinary Differential Equations</title><idx><h>Differential Equation</h></idx>
 	<statement>
 		<p>
 			Let <m>t</m> denote time, which we will take as our independent variable throughout this text. A <term>first-order ordinary differential equation (ODE)</term> is an equation involving some unknown function of <m>t</m>, <m>y</m> (the dependent variable), its derivative <m>y'</m>, and possibly <m>t</m>. If possible, we often write our first-order differential equations in the standard form
@@ -129,7 +129,8 @@ Now let's get to the heart of this text: Insightmaker and Insights. If you haven
 </p>
 
 
-<p>
+<definition xml:id="def-Insight"><title>Insight</title><idx><h>Insight</h></idx><idx><h>Primitive</h></idx>
+<statement>	
 Insightmaker represents ODE (systems-dynamics) models (on pages called <term>Insights</term>) using what are known as <term>stock-flow models</term>. Here we list the basic components of a stock-flow model, called <term>primitives</term>. Each component will be discussed in more length separately. 
   <ul>
 	<li><term>Stocks:</term> Stocks are things that accumulate. In the context of modeling with ODEs, these are the dependent variables of the system.</li>
@@ -141,8 +142,8 @@ Insightmaker represents ODE (systems-dynamics) models (on pages called <term>Ins
 	<li><term>Variables:</term> Variables are often used as parameters in the context of ODEs. These are numbers that we may modify to match our model to data, such as adjusting <m>k</m> in <xref ref="Exp_as_IVP"/> in order to match a value of the population at a later time.</li>
 	<li><term>Links:</term> Links are arrows between stocks, flows, and variables that allow the linked objects to be used in the formulas for the object that the to which the link points. Yes, that's a mouthful, but links are quite a useful organizational tool. </li>
   </ul> 
-
-</p>
+</statement>
+</definition>
 
 <p>
 	Now we can take each primitive individually and say

@@ -21,6 +21,7 @@
     <xi:include href="./Chapter2.ptx" />
     <xi:include href="./Chapter3.ptx" />
     <xi:include href="./Chapter4.ptx" />
+    <xi:include href="./backmatter.ptx" />
 
 
     <!-- Of course you will want to add more chapters as you proceed-->

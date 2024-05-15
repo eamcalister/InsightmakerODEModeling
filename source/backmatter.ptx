@@ -8,29 +8,29 @@
 <backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="backmatter">
   <title>Backmatter</title>
   
-  <solutions divisional="hint">
+  <!--solutions divisional="hint">
     <title>Selected Hints</title>
-  </solutions>
+  </solutions-->
   
-  <solutions divisional="solution">
+  <!--solutions divisional="solution">
     <title>Selected Solutions</title>
-  </solutions>
+  </solutions-->
   
-  <appendix>
+  <!--appendix>
     <title>List of Symbols</title>
     <notation-list/>
-  </appendix>
+  </appendix-->
 
   <index>
     <title>Index</title>
     <index-list/>
   </index>
 
-  <colophon>
+  <!--colophon>
     <p>
       This book was authored in <pretext />.
     </p>
-  </colophon>
+  </colophon-->
   <references xml:id="references-backmatter" label="references-backmatter">
     <title>References</title>
 
