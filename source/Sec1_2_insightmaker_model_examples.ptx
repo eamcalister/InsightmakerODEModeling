@@ -38,16 +38,62 @@
 	</solution>
 	<solution><title>Using Insightmaker</title>
 	<p>
-	The Insight that we will use to solvie this problem is below
+	The Insight that we will use to solve this problem is below
 	<interactive xml:id="Malthusian-Example-Insight" iframe="https://insightmaker.com/insight/2Yd7izSdPu4DhoalPCmI4g/" width = "85%"/>
 	</p>
-	</solution>
+	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+		<p>
+		Two features we will use in this solution are having sliders linked and using the tabular output option. To show the output of the simulation as a table instead of the graph of a function, use the configuration button in the simulation window and choose "table" as indicated in the image to the right.
+		</p>
+		<p></p>
+		<image source="images/TableButton.png" width="40%"><description>
+			<p>
+			Choosing the tabular output option.
+			</p>
+		</description></image>	
+	</sidebyside>
+	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+		<p>
+		Upon scrolling through the table with <m>k=0.1</m>, we find <m>P(3) \approx 13.5</m>. Thus, <m>k</m> is too small.
+		</p>
+		<p></p>
+		<image source="images/Exp_kequalspoint1.png" width="40%"><description>
+			<p>
+			Output at <m>t=3</m> when <m>k=0.1</m>.
+			</p>
+		</description></image>	
+	</sidebyside>
+	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+		<p>
+		Adjusting the slider for <m>k</m> until we have <m>P(3)\approx 20</m>, we see the correct value of <m>k</m> is about <m>0.23</m>. If we adjust the step size in the slider below <m>0.01</m>, we can opbtain a more accurate value. 
+		</p>
+		<p></p>
+		<image source="images/Exp_kequalspoint23.png" width="40%"><description>
+			<p>
+			Output at <m>t=3</m> when <m>k=0.23</m>.
+			</p>
+		</description></image>	
+	</sidebyside>
 
+	</solution>
 
 </example>
 
+<example><title>Simulation Algorithm Setting Exploration</title>
+	<p>
+		In this example we will explore the simulation algorithm and step size settings in the context of the exponential growth model.
+	</p>
+</example>
 
-  <example><title>Ant Tunneling</title>
+<example><title>The Circular Functions as Solutions to a System</title>
+	<p>
+		Here we will explore the system of ODEs introduced in <xref ref="Circle_as_System"/> to show the scatter plot (phase plane) display setting and revisit the choice of display algorithm.
+	</p>
+</example>
+
+
+
+<example><title>Ant Tunneling</title>
 	<p>
 		We can approach the problem of ant tunneling by considering two stocks: the dirt in the tunnel and the dirt removed.
 	</p>

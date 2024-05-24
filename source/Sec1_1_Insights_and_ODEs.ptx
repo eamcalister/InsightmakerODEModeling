@@ -329,9 +329,17 @@ If you have followed along building a linear function Insight as you have been r
 	<interactive xml:id="interactive-linear-Insight" iframe="https://insightmaker.com/insight/5mgijPG176EqqZ5fIAj4ZO/" width = "90%"/>
 </figure>
 
+<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
 <p>
 	Now you can click "simulate" and we see the time evolution of <m>y</m> with initial value <m>b</m> and slope <m>m</m> (you may need to use the configuration settings in the simulation window to only show <m>y</m>). If "sliders linked" is highlighted in the simulation window, then you can dynamically change the parameter values and see the effect on the graph of <m>y</m>. 
-</p>
+</p><p></p>
+<image source="images/SlidersLinked.png" width="40%"><description>
+	<p>
+	Linked sliders button in simulation window.
+	</p>
+</description></image>
+
+</sidebyside>
 
 <p>
 	For the purpose of completeness, here is a video of the creation of this Insight.
@@ -339,7 +347,7 @@ If you have followed along building a linear function Insight as you have been r
 
 <figure xml:id="linear-Insight-creation-video">
 	<caption>Building the linear function Insight.</caption>
-	<video xml:id="linear-Insight-video" youtube="mvfmD4yIsXs" width="75%" />
+	<video xml:id="linear-Insight-video" youtube="mvfmD4yIsXs" width="100%" />
 </figure>
 
 </subsection>
