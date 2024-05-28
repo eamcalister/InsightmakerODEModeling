@@ -326,7 +326,7 @@ If you have followed along building a linear function Insight as you have been r
 
 <figure xml:id="linear-Insight">
 	<caption>An Insight for a linear function (click on "full screen Insight" to open in a new window).</caption>
-	<interactive xml:id="interactive-linear-Insight" iframe="https://insightmaker.com/insight/5mgijPG176EqqZ5fIAj4ZO/" width = "90%"/>
+	<interactive xml:id="interactive-linear-Insight" iframe="https://insightmaker.com/insight/5mgijPG176EqqZ5fIAj4ZO/embed?topBar=1;sideBar=1;zoom=1" width = "90%"/>
 </figure>
 
 <sidebyside widths="60% 5% 40%" margins="auto" valign="top">

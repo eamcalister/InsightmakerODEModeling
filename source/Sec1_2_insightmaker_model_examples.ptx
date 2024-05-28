@@ -19,7 +19,7 @@
 	  	</ul>
   </objectives>
 
-<example><title>Malthusian (Exponential) Growth</title>
+<example xml:id="Exp_Insight_Example"><title>Malthusian (Exponential) Growth</title>
 	<p>
 	Here we will consider the example given by <xref ref="Exp_as_IVP"/>, but add some context so that we can use more of the features of Insightmaker. Here is the set up for the problem: <em> A population of creatures is initially <m>10</m> and grows exponentially. If the population is <m>20</m> after three weeks, what will the population be in one year?</em>
 	</p>
@@ -39,7 +39,7 @@
 	<solution><title>Using Insightmaker</title>
 	<p>
 	The Insight that we will use to solve this problem is below
-	<interactive xml:id="Malthusian-Example-Insight" iframe="https://insightmaker.com/insight/2Yd7izSdPu4DhoalPCmI4g/" width = "85%"/>
+	<interactive xml:id="Malthusian-Example-Insight" iframe="https://insightmaker.com/insight/2Yd7izSdPu4DhoalPCmI4g/embed?topBar=1;sideBar=1;zoom=1" width = "85%"/>
 	</p>
 	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
 		<p>
@@ -79,26 +79,130 @@
 
 </example>
 
-<example><title>Simulation Algorithm Setting Exploration</title>
+<example xml:id="Euler_vs_RK4_Exploration"><title>Simulation Algorithm Setting Exploration</title>
 	<p>
 		In this example we will explore the simulation algorithm and step size settings in the context of the exponential growth model.
 	</p>
 </example>
 
-<example><title>The Circular Functions as Solutions to a System</title>
+<example xml:id="Circle_as_System_Insight_Example"><title>The Circular Functions as Solutions to a System</title>
 	<p>
 		Here we will explore the system of ODEs introduced in <xref ref="Circle_as_System"/> to show the scatter plot (phase plane) display setting and revisit the choice of display algorithm.
 	</p>
 </example>
 
-
-
-<example><title>Ant Tunneling</title>
+<p>
+	In the next example we consider the time it takes for an ant to build a tunnel of length <m>x</m>. This scenario is presented in <xref ref="ant-tunneling"/> as well as Project 1.6.3 in <xref ref="SIMIODE-text"/>. The approach presented here is specific to Insightmaker and is meant to help us understand how to build models of the real world; our examples so far have been more of an abstract mathematical nature.
+</p>
+<p>
+	In order to build models in Insightmaker we will take the following general approach:
+	<ol>
+		<li>
+			<p>
+				<em>Create Stocks:</em> We first decide which quantities we wish to model as functions of time. We must keep in mind that we cannot give formulas for stocks, only initial values and flow rates.
+			</p>
+		</li>
+		<li>
+			<p>
+				<em>Create Variables:</em> Here we will decide what parameters may influence our flow rates into and out of the stocks.
+			</p>
+		</li>
+		<li>
+			<p>
+				<em>Assess Dependencies and Create Flows and Links:</em> Now we can create flows in a very flexible way. We can create a flow for each separate term influencing the change in a stock, or just have one big flow that includes all terms. Assessing dependencies will allow us to create necessary links between stocks, variables, and flows. When you have created the necessary links, creation of the flow formulas should be natural (although it can be very hard, using dimensional analysis is very helpful).
+			</p>
+		</li>
+	</ol>
+</p>
+<remark>
 	<p>
-		We can approach the problem of ant tunneling by considering two stocks: the dirt in the tunnel and the dirt removed.
+		While the list given above is ordered, you will find on many occasions that you need to backtrack in the mode building process. This is normal.
 	</p>
+</remark>
+
+
+
+<example xml:id="Ant_Tunneling"><title>Ant Tunneling</title>
+	<p>
+		Suppose that we have a mound of dirt of unknown size and we wish to tunnel through this mound. To complete our <em>create stocks</em> we will make the choice of a single stock, <m>V</m>, the volume of dirt removed from the mound in cubic centimeters. In the <em>create variables</em> step we will see that this is a good proxy for the length of the tunnel. The initial value for <m>V</m> should be <m>V(0) = 0</m>.
+	</p>
+	<p>
+		Now we will build our variables. There are certainly many ways to proceed and what follows is just one:
+		<ul>
+			<li>
+				<p>
+					Let <m>r</m> be the radius of the tunnel (assuming its shape is cylindrical and straight) in cm. 
+				</p>
+			</li>
+			<li>
+				<p>
+					Let <m>x</m> be the length of the tunnel, in cm, at time of <m>t</m> seconds. This is computable as <m>x = \dfrac{V}{\pi r^2}</m>.
+				</p>
+			</li>
+			<li>
+				<p>
+					Let <m>k_{\text{scrape}}</m> be the rate in <m>\text{cm}^3/\text{s}</m> that we can remove (scrape) dirt from the end of the tunnel. 
+				</p>
+			</li>
+			<li>
+				<p>
+					The main issue that makes the flow rate of <m>V</m> depend on <m>V</m> is that dirt scraped from the end of the tunnel must then be removed from the tunnel. We will assume that the velocity at which a volume <m>\Delta{V}</m> of dirt can be moved is inversely proportional to <m>\Delta{V}</m>. That is 
+					<me>
+						\text{velocity at which }\Delta{V}\text{ can be moved} = \frac{k_{\text{move}}}{\Delta{V}}
+					</me>
+					for some constant <m>k_{\text{move}}</m>. (Think about how plausible this is.)
+				</p>
+			</li>
+		</ul>
+	</p>
+	<p>
+		Now we can create links and flows. 
+		<ul>
+			<li>
+				<p>
+					We should have one flow into <m>V</m>. Clearly, <m>k_{\text{scrape}}</m> and <m>k_{\text{move}}</m> should be linked to this flow. Since the flow rate will depend on the length of the tunnel, we should also have a link from <m>x</m> to this flow. 
+				</p>
+			</li>
+			<li>
+				<p>
+					Because <m>x</m> is computed from <m>V</m> and <m>r</m>, there should be links pointing from <m>V</m> and <m>r</m> to <m>x</m>.
+				</p>
+			</li>
+		</ul>
+		At this point we have the following diagram:
+		<figure xml:id="AntTunnelDiagram">
+			<caption>The diagram of dependencies for the ant tunneling problem.</caption>
+			<image source="images/AntTunnelInsight.png" width="70%"></image>
+		</figure>
+	</p>
+	<p>
+		Now we can derive the formula for the flow rate into <m>V</m>. Observe that for a small change in volume, <m>\Delta{V}</m>, the time it takes to remove that volume is given by
+		<me>
+			\Delta{t} = \frac{\Delta{V}}{k_{\text{scrape}}} + \frac{x}{k_{\text{move}}/\Delta{V}}.
+		</me>
+		A little algebra and taking the limit as <m>\Delta{V}\to 0</m> then yields
+		<me>
+			\frac{dV}{dt} = \frac{1}{\frac{1}{k_{\text{scrape}}} + \frac{x}{k_{\text{move}}}}.
+		</me>
+		We would enter this into the formula for the flow as <code>1/(1/[k_scrape]+[x]/([k_move]))</code>.
+		Observe that for finding the analytic solution to this ODE, we would write it as 
+		<me>
+			\frac{dV}{dt} = \frac{1}{\frac{1}{k_{\text{scrape}}} + \frac{V}{k_{\text{move}}\pi r^2}}.
+		</me>	
+	</p>
+	<p>
+	Finally, we can add one more item so that we can graph the solution to the problem posed in the original SIMIODE scenario. That is, we wish to graph the time <m>T(x)</m> to tunnel <m>x</m> cm as a function of <m>x</m>. So far we have <m>x</m> as a function of time. To do this we create time as a stock, with initial value zero, and flow rate <m>1</m>. Now running the simulation in scatter plot format with the new time stock on the vertical axis and <m>x</m> on the horizontal gives us the desired graph. A complete Insight is given below (with several variables set arbitrarily at one).	
+	</p>
+	<p>
+		<interactive xml:id="Ant-Tunneling-Insight" iframe="https://insightmaker.com/insight/1Zu4Hbs8F4258DG73eqNbj/embed?topBar=1;sideBar=1;zoom=1" width = "85%"/>
+	</p>
+
 </example>
 
-
+<exercise>
+	<p>
+	Based on the results of the above simulation, is it better to have one ant dig the entire tunnel or have two ants start at opposite ends and meet in the middle?
+	</p>
+</exercise>
 
 </section>
