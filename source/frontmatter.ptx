@@ -57,7 +57,7 @@
     <!-- You should be a little careful about what you put here -->
     <!-- Avoid elements that should have a number, for example  -->
     <p>
-      This text is designed as a supplement for teaching a first course in ordinary differential equations from a modeling perspective. This course is usually taken the sophomore or junior year following single-variable calculus. Topics included in the course are some mix of the following:
+      <em>Insightmaker</em> is <xref ref="Insightmaker"/>... This text is designed as a supplement for teaching a first course in ordinary differential equations from a modeling perspective. This course is usually taken the sophomore or junior year following single-variable calculus. Topics included in the course are some mix of the following:
       <ol>
         <li>
           <p>
