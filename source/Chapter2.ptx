@@ -5,7 +5,24 @@
   <title>First-Order Modeling Scenarios</title>
   
 <introduction>
-Here we present several modeling scenarios involving first order ODEs.
+Here we present several modeling scenarios involving first order ODEs. In the first scenario, from the first chapter of <xref ref="SIMIODE-text"/>, we present the workflow of ODE modeling with data. The remaining sections are in the form of exercises for the reader (with some numerical answers given to check your work). The worksheet scenarios are as follows:
+<ol>
+  <li>
+    <p>
+      <term>Who Threw the Fastest Pitch?:</term> In this scenario we can use data to estimate the drag coefficient of a baseball in order to compare baseball pitch velocities that were recorded using different measurement methods. 
+    </p>
+  </li>
+  <li>
+    <p>
+      <term>Cancer Treatment:</term> Here we present a model for the effect of a drug on the size of a tumor. Based on data from a single patient we can use Insightmaker to estimate the intrisic growth rate of a tumor.
+    </p>
+  </li>
+  <li>
+    <p>
+      <term>Drug Dosage:</term> In our final scenario we model the amount of drug in a body under two different dosing regimens. In this scenario we must allow for discontinuities in certain functions appearing in the governing differential equation.
+    </p>
+  </li>
+</ol> 
 </introduction>
 
 <xi:include  href="./FastPitchWorksheet.ptx" />

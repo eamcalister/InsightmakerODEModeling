@@ -7,12 +7,142 @@
 		<ul>
 	  		<li>
 	  			<p>
-				Decide who threw the fastest pitch ever.
+				Here we will use an ODE model to determine whether a 100.9 mph pitch recorded in 1974 was in fact a faster fastball than the "fastest pitch ever", which was a 105.1 mph pitch in 2010.
 	  			</p>
 	  		</li>
 	  	</ul>
   </objectives>
 
+  <p>
+	This worksheet follows the basic outline of <xref ref="fastpitch"/>, but here we rely on the numerical solving power of Insightmaker to solve the ODE and its optimization algorithm to estimate the drag coefficient. The reason this is interesting is that the measurement of pitch velocities in Major League Baseball (MLB) has varied over the years. In 1974, Nolan Ryan had a fastball clocked by radar moving 100.9 mph a distance of 10 ft from home plate. On the other hand, Aroldis Chapman had a fastball clocked at 105.1 mph at a distance of 50.5 ft from home plate. Because the ball slows down as it moves toward home plate, we would like to know which one was moving faster at equal distances.
+  </p>
 
+  <exercise xml:id="baseball_dimensional_model">
+	<p>
+		Define variables as follows:
+		<md>
+			<mrow>A\amp = \amp \text{cross sectional area of a baseball} </mrow>
+			<mrow>m\amp = \amp \text{mass of a baseball} </mrow>
+			<mrow>\rho\amp = \amp \text{density of air} </mrow>
+			<mrow>v\amp = \amp \text{velocity of the baseball} </mrow>
+			<mrow>K\amp = \amp \text{a dimensionless coefficient} </mrow>
+		</md> 
+		Assume that the force acting to slow down a baseball in flight is given by
+		<me>
+			F = mv' = -KA^{a}\rho^{b}v^{c}.
+		</me>
+		<ol>
+			<li>
+				<p>
+					Use dimensional analysis to explain why the exponent <m>c</m> must equal <m>2</m>.
+				</p>
+			</li>
+			<li>
+				<p>
+					Explain why it makes sense to have the minus sign in front of <m>K</m>.
+				</p>
+			</li>
+		</ol>
+		<hint>
+			<p>
+				Attach units to all the terms on both sides of the given equation and observe that time units only appear in one place on the right-hand side.
+			</p>
+		</hint>
+
+		
+	</p>
+  </exercise>
+
+  <p>
+	From now on, we may represent the ODE given in <xref ref="baseball_dimensional_model"/> as 
+	<me>
+		v' = -kv^2,
+	</me>
+	where <m>k = \frac{K\rho A}{m}</m>. At the time of publication of <xref ref="fastpitch"/>, no data to calculate the value of <m>k</m> was available from MLB. Thus, we need to estimate it from data. 
+  </p>
+
+  <p>
+	The data set we will use to estimate <m>k</m> is given in the table below, sourced from the makers of a Bluetooth enabled pitch training ball (reference).
+  </p>
+<table xml:id="pitch_data"><title>Baseball Velocity Data</title>
+  <tabular>
+  
+	<row header="yes" bottom = "major">
+		<cell>Velocity (mph)</cell><cell>Time to Plate (s)</cell><cell>Delivery Time (s)</cell><cell>Extension (ft)</cell>
+	</row>
+	<row>
+		<cell>85</cell><cell>1.2</cell><cell>0.74</cell><cell>5.1</cell>
+	</row>
+	<row>
+		<cell>83.7</cell><cell>1.3</cell><cell>0.84</cell><cell>6.2</cell>
+	</row>
+	<row>
+		<cell>79.3</cell><cell>1.25</cell><cell>0.79</cell><cell>4.1</cell>
+	</row>
+	<row>
+		<cell>83.6</cell><cell>1.4</cell><cell>0.95</cell><cell>4.8</cell>
+	</row>
+	<row>
+		<cell>82.3</cell><cell>1.21</cell><cell>0.75</cell><cell>5.7</cell>
+	</row>
+	<row>
+		<cell>85.7</cell><cell>1.26</cell><cell>0.81</cell><cell>5.0</cell>
+	</row>
+	<row>
+		<cell>81.7</cell><cell>1.17</cell><cell>0.71</cell><cell>5.9</cell>
+	</row>
+	<row>
+		<cell>86.7</cell><cell>1.24</cell><cell>0.79</cell><cell>4.5</cell>
+	</row>
+	<row>
+		<cell>77.7</cell><cell>1.23</cell><cell>0.72</cell><cell>5.7</cell>
+	</row>
+	<row>
+		<cell>72.7</cell><cell>1.25</cell><cell>0.74</cell><cell>3.2</cell>
+	</row>
+	<row>
+		<cell>77.3</cell><cell>1.37</cell><cell>0.86</cell><cell>5.8</cell>
+	</row>
+	<row>
+		<cell>76.9</cell><cell>1.25</cell><cell>0.74</cell><cell>5.8</cell>
+	</row>
+	<row>
+		<cell>73</cell><cell>1.22</cell><cell>0.69</cell><cell>4.4</cell>
+	</row>
+	<row>
+		<cell>77.1</cell><cell>1.24</cell><cell>0.78</cell><cell>6</cell>
+	</row>
+  </tabular>
+</table>
+
+In this table...
+
+<exercise> 
+	<p>Now we can use Insightmaker and the table data.</p>
+	<ol>
+		<li>
+			<p>
+				Construct an Insight for the ODE model presented above using <m>k</m> as a variable and <m>v</m> and its integral (position) as stocks. Be sure to carefully include all units (paying carful attention to them).	
+			</p>
+		</li>
+		<li>
+			<p>
+				Using either slider functionality or Insightmaker's optimization algorithm, construct an estimate of <m>k</m> for each row of <xref ref="pitch_data"/>. Be sure to carfully document the procedure you use for your estimates as they might vary. <em>Note:</em> Some of the rows of <xref ref="pitch_data"/> are bad data; your estimates of <m>k</m> should find them so that you can throw them out.
+			</p>
+		</li>
+	</ol>
+</exercise>
+
+<exercise>
+	<p>
+		Aroldis Chapman's fastest recorded pitch was a 105.1 mph fastball on September 24, 2010, and its velocity was measured 50.5 ft from home plate. Nolan Ryan threw a pitch whose velocity was measured at 100.9 mph at a distance of 10 ft from home plate. Use your Insight and estimate(s) of <m>k</m> to decide which of these two pitches was likely the fastest.
+	</p>
+</exercise>
+
+<exercise>
+	<p>
+		Now (2024 as of writing) MLB publishes drag coefficients (values of <m>K</m> in <xref ref="baseball_dimensional_model"/>). Do a little research to compare values you would compute from your estimates of <m>k</m>. How far off are we and what might be the cause of the error?
+	</p>
+</exercise>
 
 </worksheet>

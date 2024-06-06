@@ -37,6 +37,9 @@
     <biblio type="raw" xml:id="SIMIODE-text" label="SIMIODE-text">Kurt Bryan, <title>Differential Equations: A Toolbox for Modeling the World</title> SIMIODE.org, 2021.
     </biblio>
 
+    <biblio type="raw" xml:id="fastpitch" label="fastpitch">Erich McAlister, <title>1-145-FastPitch-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3393&amp;v=1" />, doi:/10.25334/TV3N-R432, 2022.
+    </biblio>
+
     
     <biblio type="raw" xml:id="multiple-doses" label="multiple-doses">Bryan Winkel, <title>7-010-MultipleDoses-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3045&amp;v=1" />, doi:/10.25334/CCW1-E736, 2022.
     </biblio>
