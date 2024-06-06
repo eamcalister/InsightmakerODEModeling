@@ -17,7 +17,7 @@
 	This worksheet follows the basic outline of <xref ref="fastpitch"/>, but here we rely on the numerical solving power of Insightmaker to solve the ODE and its optimization algorithm to estimate the drag coefficient. The reason this is interesting is that the measurement of pitch velocities in Major League Baseball (MLB) has varied over the years. In 1974, Nolan Ryan had a fastball clocked by radar moving 100.9 mph a distance of 10 ft from home plate. On the other hand, Aroldis Chapman had a fastball clocked at 105.1 mph at a distance of 50.5 ft from home plate. Because the ball slows down as it moves toward home plate, we would like to know which one was moving faster at equal distances.
   </p>
 
-  <exercise xml:id="baseball_dimensional_model">
+  <exercise xml:id="baseball_dimensional_model" workspace="2in">
 	<p>
 		Define variables as follows:
 		<md>
@@ -52,6 +52,7 @@
 		
 	</p>
   </exercise>
+
 
   <p>
 	From now on, we may represent the ODE given in <xref ref="baseball_dimensional_model"/> as 
