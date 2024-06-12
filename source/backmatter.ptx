@@ -50,6 +50,9 @@
     <biblio type="raw" xml:id="Insightmaker" label="Insightmaker">Scott Fortmann-Roe, <title>Insight Maker: A general-purpose tool for web-based modeling <m></m> simulation</title>, <journal>Simulation Modelling Practice and Theory</journal>, <volume>47</volume>,<pages>28-45</pages>, 2014, <url href="https://www.sciencedirect.com/science/article/pii/S1569190X14000513" />.
     </biblio>
 
+    <biblio type="raw" xml:id="BoltSprint" label="BoltSprint">Kurt Bryan, <title>1-092-DashItAll-ModelingSenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3233&amp;v=1" />, doi:/10.25334/M2CS-ZA79, 2022.
+    </biblio>
+
     
 
 </references>

@@ -25,8 +25,8 @@ Here we present several modeling scenarios involving first order ODEs. In the fi
 </ol> 
 </introduction>
 
+<xi:include  href="./Sec2_1_SprintModel.ptx" />
 <xi:include  href="./FastPitchWorksheet.ptx" />
-<!--xi:include  href="./Sec2_1_FastPitch.ptx" /-->
 
 
 

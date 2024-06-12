@@ -18,6 +18,7 @@
   </p>
 
   <exercise xml:id="baseball_dimensional_model" workspace="2in">
+	<statement>
 	<p>
 		Define variables as follows:
 		<md>
@@ -43,15 +44,15 @@
 				</p>
 			</li>
 		</ol>
+	</p>
+	</statement>
 		<hint>
 			<p>
 				Attach units to all the terms on both sides of the given equation and observe that time units only appear in one place on the right-hand side.
 			</p>
 		</hint>
-
-		
-	</p>
   </exercise>
+
 
 
   <p>
@@ -63,8 +64,27 @@
   </p>
 
   <p>
-	The data set we will use to estimate <m>k</m> is given in the table below, sourced from the makers of a Bluetooth enabled pitch training ball (reference).
+	The data set we will use to estimate <m>k</m> is given in the table below, sourced from the makers of a Bluetooth enabled pitch training ball (reference). The terminology used in the given table is defined as follows:
+	<ul>
+		<li>
+			<p>
+				<term>Time to Plate:</term> This is the time it takes from the pitcher's initial movement until the ball gets to home plate, which is 60.5 feet from the pitcher's mound.
+			</p>
+		</li>
+		<li>
+			<p>
+				<term>Delivery Time:</term> This is the time from the pitcher's initial movement until the ball is released.
+			</p>
+		</li>
+		<li>
+			<p>
+				<term>Extension:</term> This is how far in front of the pitcher's mound the ball is released.
+			</p>
+		</li>
+	</ul>
   </p>
+
+<p>
 <table xml:id="pitch_data"><title>Baseball Velocity Data</title>
   <tabular>
   
@@ -115,11 +135,15 @@
 	</row>
   </tabular>
 </table>
+</p>
 
-In this table...
+
+
+
 
 <exercise> 
-	<p>Now we can use Insightmaker and the table data.</p>
+	<statement>
+	<p>Now we will use Insightmaker and the table data.</p>
 	<ol>
 		<li>
 			<p>
@@ -132,18 +156,23 @@ In this table...
 			</p>
 		</li>
 	</ol>
+	</statement>
 </exercise>
 
 <exercise>
+	<statement>
 	<p>
 		Aroldis Chapman's fastest recorded pitch was a 105.1 mph fastball on September 24, 2010, and its velocity was measured 50.5 ft from home plate. Nolan Ryan threw a pitch whose velocity was measured at 100.9 mph at a distance of 10 ft from home plate. Use your Insight and estimate(s) of <m>k</m> to decide which of these two pitches was likely the fastest.
 	</p>
+	</statement>
 </exercise>
 
 <exercise>
+	<statement>
 	<p>
 		Now (2024 as of writing) MLB publishes drag coefficients (values of <m>K</m> in <xref ref="baseball_dimensional_model"/>). Do a little research to compare values you would compute from your estimates of <m>k</m>. How far off are we and what might be the cause of the error?
 	</p>
+	</statement>
 </exercise>
 
 </worksheet>
