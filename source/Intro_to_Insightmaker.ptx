@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="Intro_to_Insightmaker" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Introduction to Insightmaker for ODEs</title>
+  
+<introduction>
+Chapter goals: Figure out how insights work and do some first order ODES.
+</introduction>
+
+
+<xi:include  href="./Intro_Insights_and_ODEs.ptx" />
+<xi:include  href="./Intro_insightmaker_model_examples.ptx" />
+<xi:include  href="./Intro_dimensional_analysis.ptx" />
+
+
+</chapter>

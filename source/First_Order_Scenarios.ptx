@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<chapter xml:id="chapter_2" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="First_Order_Scenarios" xmlns:xi="http://www.w3.org/2001/XInclude">
 
   <title>First-Order Modeling Scenarios</title>
   
@@ -25,8 +25,8 @@ Here we present several modeling scenarios involving first order ODEs. In the fi
 </ol> 
 </introduction>
 
-<xi:include  href="./Sec2_1_SprintModel.ptx" />
-<xi:include  href="./FastPitchWorksheet.ptx" />
+<xi:include  href="./First_Order_SprintModel.ptx" />
+<xi:include  href="./First_Order_FastPitchWorksheet.ptx" />
 
 
 

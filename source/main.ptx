@@ -17,8 +17,8 @@
 
 
     <xi:include href="./frontmatter.ptx" />
-    <xi:include href="./Chapter1.ptx" />
-    <xi:include href="./Chapter2.ptx" />
+    <xi:include href="./Intro_to_Insightmaker.ptx" />
+    <xi:include href="./First_Order_Scenarios.ptx" />
     <xi:include href="./Chapter3.ptx" />
     <xi:include href="./Chapter4.ptx" />
     <xi:include href="./backmatter.ptx" />

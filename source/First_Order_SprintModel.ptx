@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="SprintModel">
+	<title>Modeling a Sprint with Insightmaker</title>
+
+	<introduction>
+		<p>
+			In this section we will follow the example given in the first section <xref ref="SIMIODE-text"/> and <xref ref="BoltSprint"/> to show the full workflow of modeling a real-world scenario with Insightmaker.
+		</p>
+	</introduction>
+
+  <objectives>
+		<ul>
+	  		<li>
+	  			<p>
+					Create a one-parameter ODE model of the velocity and position of a sprinter.
+	  			</p>
+	  		</li>
+			<li>
+				<p>
+					Compare the results of our model to real-world data from the 2008 Olympic 100m dash. 	
+				</p>
+			</li>
+			<li>
+				<p>
+					Estimate the value of the parameter in our ODE model that yields the best fit to the data using the built-in optimization abilities of Insightmaker.	
+				</p>
+			</li>
+	  	</ul>
+  </objectives>
+
+<p>
+	We consider the problem of creating an ODE model for the velocity of a sprinter based on the following data from the 2008 Olympic 100m dash:
+</p>
+
+<table xml:id="sprint_data"><title>Usain Bolt's Position Data from the 2008 Olympic 100m Dash</title>
+<tabular>
+	<row bottom = "major">
+		<cell>Time (s)</cell> <cell>0.165</cell> <cell>1.85</cell> <cell>2.87</cell> <cell>3.78</cell> <cell>4.65</cell> <cell>5.50</cell> <cell>6.32</cell> <cell>7.14</cell> <cell>7.96</cell> <cell>8.79</cell> <cell>9.69</cell>
+	</row>
+	<row>
+		<cell>Position (m)</cell> <cell>0</cell> <cell>10</cell> <cell>20</cell> <cell>30</cell> <cell>40</cell> <cell>50</cell> <cell>60</cell> <cell>70</cell> <cell>80</cell> <cell>90</cell> <cell>100</cell>
+	</row>
+</tabular>
+</table>
+
+<p>
+	Observe that the data we are presented with is position, while we are attemting to model velocity. This turns out to be a common situation as velocity is easier to model with a differential equation using Newton's Second Law (<m> F = ma</m> has the derivative of velocity on the right-hand side), whereas position is easier to measure for data collection. However, since we can numerically integrate using Insightmaker we just need to create a model for velocity, then make the velocity stock equal to the inflow rate of the position stock via a link. This idea is illustrated with the following basic diagram, which we may refer to as an <term>idiom</term> since it describes a very common modeling situation (this is the velocity-to-position idiom).
+</p>
+
+<figure xml:id="velocity_to_position">
+	<caption>The basic velocity to position diagram.</caption>
+	<image source="images/velocity_to_position.png" width="80%"></image>
+</figure>
+
+<p>
+	Creating this basic diagram for the modeling scenario, while it may seem intuitive, is the first step in the process of modeling using Insightmaker. We should not it explicitly.
+</p>
+<axiom xml:id="modeling-step-one"><title>Step 1: Identify Stocks and Flow Relationships</title>
+	<statement>
+		<p>
+			Identify all time-dependent variables (stocks) in the scenario and observe possible inflows, outflow, and flows between stocks. Decide if any stock influences the flow into or out of another and create links accordingly. 
+		</p>
+	</statement>
+</axiom>
+
+<p>
+	It is also good practice to establish units on all the stocks and flows of the model at this stage. In this case we will establish meters as the units of position, m/s as the units of velocity (the stock and the flow into position) and m/s<m>^2</m> as the units of both flows into velocity.
+</p>
+
+
+
+<axiom xml:id="modeling-step-two"><title>Step 2: Establish Flow Formulas and Parameters</title>
+	<statement>
+		<p>
+			Create formulas for the flow rates as well as any parameters (variables in Insightmaker) that the flow rates may depend on.
+		</p>
+	</statement>
+</axiom>
+
+Use physics, intuition, and units. For the sprint we develop the Hill-Keller model. How good the model is depends on how well you can match the data.
+
+<axiom xml:id="modeling-step-three"><title>Step 3: Adjust Parameters to Match the Data</title>
+	<statement>
+		<p>
+			After creating some quantifiable way of measuring how well the simulation matches the data, import the data as a converter and use an optimization procedure to make the simulation match the data as well as possible.
+		</p>
+	</statement>
+</axiom>
+
+<p>
+In order of increasing complexity we can
+<ol>
+	<li>
+		<p>
+			adjust sliders to make the data match at one or more points by inspection,
+		</p>
+	</li>
+	<li>
+		<p>
+			use the built-in optimization algorithm in Insightmaker to minimize the absolute value of the difference between one data point and the simulation, or
+		</p>
+	</li>
+	<li>
+		<p>
+			use the built-in optimization algorithm in Insightmaker to minimize the sum of squared errors between the collection of data points and the simulation.
+		</p>
+	</li>
+</ol>
+</p>
+
+<p>
+	We will now demonstrate each of these for our sprint model and see how much variation we get in our value of <m>k</m> depending on the method.
+</p>
+
+
+</section>
