@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="CancerTreatmentWorksheet">
+	<title>Modeling Cancer Treatment</title>
+
+	<objectives>
+		<ul>
+	  		<li>
+	  			<p>
+					Cancer
+	  			</p>
+	  		</li>
+	  	</ul>
+  </objectives>
+
+  <p>
+	Scenario description
+  </p>
+
+  <exercise>
+	<statement>
+		<p>
+			Something.
+		</p>
+	</statement>
+  </exercise>
+
+</worksheet>

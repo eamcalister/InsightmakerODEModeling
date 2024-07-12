@@ -152,7 +152,7 @@
 		</li>
 		<li>
 			<p>
-				Using either slider functionality or Insightmaker's optimization algorithm, construct an estimate of <m>k</m> for each row of <xref ref="pitch_data"/>. Be sure to carfully document the procedure you use for your estimates as they might vary. <em>Note:</em> Some of the rows of <xref ref="pitch_data"/> are bad data; your estimates of <m>k</m> should find them so that you can throw them out.
+				Using either slider functionality or Insightmaker's optimization algorithm, construct an estimate of <m>k</m> for each row of <xref ref="pitch_data"/>. Be sure to carefully document the procedure you use for your estimates as they might vary. <em>Note:</em> Some of the rows of <xref ref="pitch_data"/> are bad data; your estimates of <m>k</m> should find them so that you can throw them out.
 			</p>
 		</li>
 	</ol>

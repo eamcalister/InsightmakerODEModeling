@@ -27,6 +27,8 @@ Here we present several modeling scenarios involving first order ODEs. In the fi
 
 <xi:include  href="./First_Order_SprintModel.ptx" />
 <xi:include  href="./First_Order_FastPitchWorksheet.ptx" />
+<xi:include  href="./First_Order_CancerTreatment.ptx" />
+<xi:include  href="./First_Order_DrugDosage.ptx" />
 
 
 
