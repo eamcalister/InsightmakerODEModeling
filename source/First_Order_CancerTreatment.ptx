@@ -7,22 +7,123 @@
 		<ul>
 	  		<li>
 	  			<p>
-					Cancer
+					Develop a descriptive Insightmaker model from a differential equation modeling the growth of a tumor under treatment.
 	  			</p>
 	  		</li>
+			<li>
+				<p>
+					Analyze the cancer treatment model qualitiatively and generate supporting graphs with Insightmaker.
+				</p>
+			</li>
+			<li>
+				<p>
+					Estimate a tumor's intirinsic growth rate using Insightmkaer's optimization capabilities in order to decide whether to proceed with clinical trials.
+				</p>
+			</li>
 	  	</ul>
   </objectives>
 
   <p>
-	Scenario description
+	This worksheet is based on <xref ref="cancer_model"/>
+  </p>
+
+  <p>
+	Suppose you work for a drug company that has recently discovered a new cancer drug. It has been tried out on a small number of patients and now you need to study the results further before proceeding to widespread clinical trials. The model describing the relative (dimensionless) radius <m>r</m> of a tumor for a dosage of relative size <m>k\geq 0</m> is given by the differential equation
+<me>
+r' = \alpha\frac{(1-r)r}{1+r} - kr,
+</me>
+where <m>\alpha\geq </m> is a parameter called the <term>intrinsic growth rate</term>. The time units are months. Suppose, throughout this worksheet, that at time of detection <m>r=.05</m>.
   </p>
 
   <exercise>
 	<statement>
 		<p>
-			Something.
+			Explain why the expressions <m>\alpha\dfrac{(1-r)r}{1+r}</m> and <m>kr</m> are both always positive. Develop and Insight with one inflow, one outflow, and two variables (with sliders). (<em>For students turning this in, you will need to submit your Insightmaker files.</em>)
 		</p>
 	</statement>
   </exercise>
+
+  <exercise>
+	<statement>
+		<p>
+			Use the model you have developed above to describe the long-run behavior of the tumor under each of the following scenarios:
+		</p>
+		<ul>
+			<li>
+				<p>
+					<m>k=0</m> (no treatment)
+				</p>
+			</li>
+			<li>
+				<p>
+					<m>\alpha = 0</m> (no growth)
+				</p>
+			</li>
+		</ul>
+		Explain why each of these results makes practical sense.
+	</statement>
+
+	</exercise>
+
+  <exercise>
+	<statement>
+		<p>
+			Determine the equilibrium solutions of the given model algebraically (show your work) and determine their stability depending on the values of <m>\alpha</m> and <m>k</m>. What is the desirable (in terms of real-world cancer treatment) in terms of the equilibria and stability of them, and how must <m>\alpha</m> and <m>k</m> be related to achieve this outcome. Include graphs from Insightmaker simulations to illustrate each possible outcome with descriptions that are accessible to a non-mathematical audience.
+		</p>
+	</statement>
+  </exercise>
+
+  <exercise xml:id="tumor_growth_estimate">
+	<statement>
+		<p>
+			Suppose that after detection Patient #1 was given a regular dose of the drug with <m>k=1.5</m> and their tumor size grew according to the following table:
+		</p>
+		<table>
+			<title>Tumor Size for Patient #1</title>
+			<tabular>
+				<row header="yes" bottom="medium">
+					<cell>Time (months)</cell> <cell><m>r</m></cell>
+				</row>
+				<row>
+					<cell>1 </cell><cell> 0.091677</cell>
+				</row>
+				<row>
+					<cell>2 </cell><cell> 0.152964</cell>
+				</row>
+				<row>
+					<cell>3 </cell><cell> 0.196308</cell>
+				</row>
+				<row>
+					<cell>4 </cell><cell> 0.217980</cell>
+				</row>
+				<row>
+					<cell>5 </cell><cell> 0.227098</cell>
+				</row>
+				<row>
+					<cell>6 </cell><cell> 0.230665</cell>
+				</row>
+			</tabular>
+		</table>
+	Use a converter for this data and the method of least-squares (recall how this was done in <xref ref="SprintModel"/>) to determine the intrinsic growth rate for this tumor.
+	</statement>
+  </exercise>
+
+  <exercise>
+	<statement>
+		<p>
+			(Ethical Question) Suppose that possibly deadly side effects occur when the drug is administered with <m>k\gt 2.5</m>. Based on the results of patient #1, should widespread clinical trials proceed? Try to describe several considerations in your answer from the point of view of multiple stakeholders.
+		</p>
+	</statement>
+  </exercise>
+
+  <exercise>
+	<statement>
+		<p>
+			How realistic does this model feel? What aspects seem realistic and which ones don't? You can answer this mathematically as well as by doing a little internet research about cancer treatment.
+		</p>
+	</statement>
+  </exercise>
+  
+
 
 </worksheet>

@@ -34,6 +34,9 @@
   <references xml:id="references-backmatter" label="references-backmatter">
     <title>References</title>
 
+    <biblio type="raw" xml:id="cancer_model" label="cancer_model">Julie C. Beier, Jana L. Gevertz and Keith E. Howard, <title>Building Context with Tumor Growth Modeling Projects in Differential Equations</title>, <journal>PRIMUS</journal>, <volume>25</volume>, <number>4</number>, <pages>pp 297-395</pages>, <publisher> Taylor and Francis</publisher>, <url href="https://doi.org/10.1080/10511970.2014.975881" />, doi:10.1080/10511970.2014.975881, 2015.
+    </biblio>
+
     <biblio type="raw" xml:id="BoltSprint" label="BoltSprint">Kurt Bryan, <title>1-092-DashItAll-ModelingSenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3233&amp;v=1" />, doi:/10.25334/M2CS-ZA79, 2022.
     </biblio>
 
