@@ -57,7 +57,20 @@
   </ol>
 
   <p>
-	In order to model these protocols, you may find the following Insightmaker functions useful for your flow rates:
+	In order to model these protocols, you will find the Insightmaker Pulse function useful. The pulse function works as follows:
+	<cd>
+		<cline>Pulse(Time, Height, Width, Repeat)</cline>
+	</cd>
+	will create a "pulse train" starting at time <m>\text{Time}</m>, of height <m>\text{Height}</m>, with each bump of width <m>\text{Width}</m>, repeating every <m>\text{Repeat}</m> time units. For instance, the graph of <m>\text{Pulse}(0,1,.5,2)</m> is shown below.
+  </p>
+  <figure xml:id="pulse_train">
+	<caption>A pulse train starting at <m>t=0</m>, of height<m>=1</m>, width<m>=0.5</m>, repeating every <m>2</m> time units. </caption>
+	<image source="images/pulse_train.png">
+	</image>
+  </figure>
+
+  <p>
+	The pulse function should be used to "turn on" and "turn off" the drug flow.
   </p>
 
   <exercisegroup><title>Continuous Drip Exercises</title>
@@ -65,14 +78,30 @@
   
 	<introduction>
 		<p>
-			Exercises ?-?? are about protocol (a) above.
+			Exercises 1-3 are about protocol (a) above.
 		</p>
 	</introduction>
   
 	<exercise>
 		<statement>
 			<p>
-				build
+				Build an Insightmaker model to model the continuous drip dosing method assuming the patient initially has no drug in their bloodstream. The model should have sliders for the duration of the drip, the amount in each IV bag, and the frequency with which the IV bag is changed.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Use your Insight to give several combinations of drip duration, IV bag dose quantity, and IV bag change frequency that gives acceptable results. Include graphs for each combination and use them to explain the general effect of varying each of the parameters.
+			</p>
+		</statement>
+	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				Among the several possible combinations you gave above, what are some of the considerations you might use to choose the "best" of them. Use some mathematics to decide which of your combinations is best for each of your considerations.
 			</p>
 		</statement>
 	</exercise>
@@ -83,32 +112,37 @@
   
 	<introduction>
 		<p>
-			Exercises ?-?? are about protocol (a) above.
+			Exercises 4-6 are about protocol (b) above.
 		</p>
 	</introduction>
   
 	<exercise>
 		<statement>
 			<p>
-				build
+				Modify your model (by taking a limit, approximately) to model the situation of bolus injections and give several combinations of dose size and frequency that are acceptable. Explain things thoroughly.
 			</p>
 		</statement>
 	</exercise>
-  
-  </exercisegroup>
 
-  <exercisegroup><title>Other Considerations</title>
-  
-  
-  
 	<exercise>
 		<statement>
 			<p>
-				
+				Re-answer what the "best" combination of dose size and frequency is among your combinations for bolus injections. Why might you choose bolus injections vs. continuous drips?
 			</p>
 		</statement>
 	</exercise>
+
+	<exercise>
+		<statement>
+			<p>
+				What does the graph of the flow function really look like in an idealized (instantaneous injection) bolus injection model?
+			</p>
+		</statement>
+	</exercise>
+
   
   </exercisegroup>
+
+
 
 </worksheet>
