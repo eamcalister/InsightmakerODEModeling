@@ -20,15 +20,95 @@
   </p>
 
   <p>
-	Scenario description
+	In this worksheet we consider the problem of administering a drug under the following conditions: 
+  </p>
+  <ul>
+	<li>
+		<p>
+			The minimum amount of drug in the bloodstream to be effective is <m>2</m>mg. On the other hand, the maximum amount to avoid adverse effects is <m>4</m>mg. Thus, over the 24 hour dosing period, the amount in the blood must remain between <m>2</m>mg and <m>4</m>mg.
+		</p>
+	</li>
+	<li>
+		<p>
+			The drug is removed from the bloodstream and moved into other tissues (where it is effective) at a rate proportional to the amount present in the bloodstream per hour. The half-life of the drug in the body is <m>4.5</m> hours.
+		</p>
+	</li>
+	<li>
+		<p>
+			Due to staffing patterns, a nurse will only administer an injection or change an IV bag at intervals that are an integer number of hours, e.g. every hour on the hour.
+		</p>
+	</li>
+  </ul>
+
+  <p>
+	We wish to model and compare the following two dosing protocols:
+  </p>
+  <ol>
+	<li>
+		<p>
+			<term>Continuous Drip:</term> Under this protocol the drug is administered several times in amounts of <m>a</m> mg at a constant rate over some fixed time period. For instance, every two hours the nurse might attach a new IV bag that continuously administers <m>8</m>mg over the course of <m>30</m> minutes.
+		</p>
+	</li>
+	<li>
+		<p>
+			<term>Bolus Injections:</term> The drug may be administered as a <em>bolus</em>. That is, a certain amount of drug is injected all at once (essentially instantaneously). For instance, the nurse may inject <m>3</m>mg exactly every two hours.
+		</p>
+	</li>
+  </ol>
+
+  <p>
+	In order to model these protocols, you may find the following Insightmaker functions useful for your flow rates:
   </p>
 
-  <exercise>
-	<statement>
+  <exercisegroup><title>Continuous Drip Exercises</title>
+
+  
+	<introduction>
 		<p>
-			Something.
+			Exercises ?-?? are about protocol (a) above.
 		</p>
-	</statement>
-  </exercise>
+	</introduction>
+  
+	<exercise>
+		<statement>
+			<p>
+				build
+			</p>
+		</statement>
+	</exercise>
+  
+  </exercisegroup>
+
+  <exercisegroup><title>Bolus Exercises</title>
+  
+	<introduction>
+		<p>
+			Exercises ?-?? are about protocol (a) above.
+		</p>
+	</introduction>
+  
+	<exercise>
+		<statement>
+			<p>
+				build
+			</p>
+		</statement>
+	</exercise>
+  
+  </exercisegroup>
+
+  <exercisegroup><title>Other Considerations</title>
+  
+  
+  
+	<exercise>
+		<statement>
+			<p>
+				
+			</p>
+		</statement>
+	</exercise>
+  
+  </exercisegroup>
 
 </worksheet>
