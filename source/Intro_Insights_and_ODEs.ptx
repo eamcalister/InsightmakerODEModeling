@@ -278,7 +278,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 			<p>
 				To create a flow, click on the "Flows/Transitions" button to highlight it. Now click on the stock which you want to be the source or target of your flow (if the flow really has no source, click on the target stock only). Then you can drag the arrow to the stock at the other end of the flow. If there is no stock at one end, you will have a cloud at one end of the flow. In our example we want a flow with a cloud as source and <m>y</m> as its target.
 			</p><p></p>
-			<image source="images/CreateFlow1.png" width="60%"></image>
+			<image source="images/CreateFlow.png" width="60%"></image>
 		</sidebyside>
 	</p>	
 	</li>
@@ -313,6 +313,15 @@ Following along through each primitive, you can create an Insight for <xref ref=
 						</p><p></p>
 						<image source="images/Flow_arrow.png" width="60%"></image>
 				</sidebyside>	
+				</p>
+				<p>
+					<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+					<p>	
+					Additionally, you may assign a minus sign (<m>-</m>) and a plus sign (<m>+</m>) to the ends of the arrows indicating positive and negative flow directions as this is somewhat easier to see than the default arrowhead types. To do this, right click on the flow and scroll down to see the "line" options and choose a minus on the start arrow and plus on the end arrow, as shown. You may choose this as the default for your insight by choosing to set this as the flow theme in the same menu. 
+					</p><p></p>
+					<image source="images/plus_minus_flow.png" width="60%"></image>
+					<!--image source="images/flow_theme.png" width="60%"></image-->
+					</sidebyside>
 				</p>
 			</li>
 		</ul>
