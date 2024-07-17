@@ -3,12 +3,6 @@
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="SprintModel">
 	<title>Modeling a Sprint with Insightmaker</title>
 
-	<introduction>
-		<p>
-			In this section we will follow the example given in the first section <xref ref="SIMIODE-text"/> and <xref ref="BoltSprint"/> to show the full workflow of modeling a real-world scenario with Insightmaker.
-		</p>
-	</introduction>
-
   <objectives>
 		<ul>
 	  		<li>
@@ -28,6 +22,11 @@
 			</li>
 	  	</ul>
   </objectives>
+
+<introduction>
+	<p>
+		In this section we will follow the example given in the first section <xref ref="SIMIODE-text"/> and <xref ref="BoltSprint"/> to show the full workflow of modeling a real-world scenario with Insightmaker.
+	</p>
 
 <p>
 	We consider the problem of creating an ODE model for the velocity of a sprinter based on the following data from the 2008 Olympic 100m dash:
@@ -54,8 +53,12 @@
 </figure>
 
 <p>
-	Creating this basic diagram for the modeling scenario, while it may seem intuitive, is the first step in the process of modeling using Insightmaker. We should not it explicitly.
+	Creating this basic diagram for the modeling scenario, while it may seem intuitive, is the first step in the process of modeling using Insightmaker. We will now carry out the rest of the modeling process explicitly.
 </p>
+</introduction>
+
+<subsection><title>Creating the Model Diagram</title>
+
 <axiom xml:id="modeling-step-one"><title>Step 1: Identify Stocks and Flow Relationships</title>
 	<statement>
 		<p>
@@ -67,7 +70,9 @@
 <p>
 	It is also good practice to establish units on all the stocks and flows of the model at this stage. In this case we will establish meters as the units of position, m/s as the units of velocity (the stock and the flow into position) and m/s<m>^2</m> as the units of both flows into velocity.
 </p>
+</subsection>
 
+<subsection><title>Establish Settings and Create Formulas</title>
 
 
 <axiom xml:id="modeling-step-two"><title>Step 2: Establish Flow Formulas and Parameters</title>
@@ -79,6 +84,11 @@
 </axiom>
 
 Use physics, intuition, and units. For the sprint we develop the Hill-Keller model. How good the model is depends on how well you can match the data.
+
+</subsection>
+
+<subsection><title>Using Data</title>
+
 
 <axiom xml:id="modeling-step-three"><title>Step 3: Adjust Parameters to Match the Data</title>
 	<statement>
@@ -113,5 +123,51 @@ In order of increasing complexity we can
 	We will now demonstrate each of these for our sprint model and see how much variation we get in our value of <m>k</m> depending on the method.
 </p>
 
+<ol>
+	<li>
+		<p>
+			<term>Adjust Paramteters with Sliders:</term> This is the most intuitive method. In this case, Bolt ran <m>100</m> meters in <m>9.69</m> seconds. Thus, we can run the simulation set to display time and position in the table display. Then, with sliders linked, we can adjust <m>k</m> to make the position as close as we can to <m>100</m> as possible when <m>t=9.69</m>. The result is shown below:
+		</p>
+		<figure xml:id="sprint_slider_pic">
+			<image source="images/SprintSlider.png">
+			</image>
+			<caption>The slider of <m>0.948</m> for <m>k</m> yields a position very close to <m>100</m> meters.</caption>
+		</figure>
+	</li>
+	<li>
+		<p>
+			<term>Use the Optimizer (Version 1):</term> As an alternative to using a slider, we can use the built in optimization algorithm to minimize <m>|\text{position}-100|</m> when <m>t=9.69</m>. First, we create a variable for <m>|\text{position}-100|</m> (it will need a link from position). Then we proceed as follows:
+			<ul>
+				<li>
+					<p>
+						Choose "Optimization and Goal Seeking" from the "Tools" (toolbox next to the "Simulate" button). 
+					</p>
+				</li>
+				<li>
+					<p>
+						Choose <m>k</m> as the "primitive to adjust".
+					</p>
+				</li>
+				<li>
+					<p>
+						Highlight "minimize" and "final value".
+					</p>
+				</li>
+				<li>
+					<p>
+						Choose <m>|\text{position}-100|</m> as the primitive and accuracy of <m>0.001</m> along with a guess range for <m>k</m>. 
+					</p>
+				</li>
+			</ul>
+			Running the optimization, we find the <m>k</m> is about what we found using the slider method. Notice we get a range of values and the value of the minimized variable. This is a numerical optimization algorithm, hence may not arrive at exact values even if you can find them by hand. The output is shown below.
+		</p>
+		<figure xml:id="sprint_end_opt_pic">
+			<image source="images/SprintEndValueOpt.png">
+			</image>
+			<caption>The optimizer also finds <m>k\approx .948</m>.</caption>
+		</figure>
+	</li>
+</ol>
+</subsection>
 
 </section>
