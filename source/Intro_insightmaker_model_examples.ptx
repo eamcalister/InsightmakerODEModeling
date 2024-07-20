@@ -79,7 +79,64 @@
 
 </example>
 
-<example xml:id="Euler_vs_RK4_Exploration"><title>Simulation Algorithm Setting Exploration</title>
+<p>
+	Now is a good time to discuss the simulation settings in Insightmaker. You get to these by clicking the "Settings" button in the top toolbar.
+</p>
+
+<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+	<p>
+		The first important settings are the <em>Basic Simulation Settings</em>. These include the following:
+		<ul>
+			<li>
+				<p>
+					<term>Simulation Start:</term> This is the time value at the start of the simulation, which is the time value indicated by the initial value problem (<m>t_0</m> in <xref ref="def-DE"/>).
+				</p>
+			</li>
+			<li>
+				<p>
+					<term>Simulation Length:</term> This is how long the simulation will run. If you are interested in the value of a stock at some specific time after the start time, you may use the difference between the specified time and the start time as the simulation length.
+				</p>
+			</li>
+			<li>
+				<p>
+					<term>Time Units:</term> This is the unit of time. For example, if Seconds are chosen, then <m>t=1</m> means <m>1</m> second.
+				</p>
+			</li>
+		</ul>
+	</p><p></p>
+	<image source="images/BasicTimeSettings.png" width="40%"><description>
+		<p>
+		Basic Simulation Settings
+		</p>
+	</description></image>
+	
+	</sidebyside>
+
+	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+		<p>
+			Two more important settings are the <em>Advanced Simulation Settings</em>. These include the following:
+			<ul>
+				<li>
+					<p>
+						<term>Simulation Time Step:</term> 
+					</p>
+				</li>
+				<li>
+					<p>
+						<term>Simullation Algorithm:</term> 
+					</p>
+				</li>
+			</ul>
+		</p><p></p>
+		<image source="images/TimeStepandAlgorithm.png" width="40%"><description>
+			<p>
+			Basic Simulation Settings
+			</p>
+		</description></image>
+		
+		</sidebyside>
+
+<example xml:id="Settings_Exploration"><title>Exploration of Settings</title>
 	<p>
 		In this example we will explore the simulation algorithm and step size settings in the context of the exponential growth model.
 	</p>
@@ -94,29 +151,10 @@
 <p>
 	In the next example we consider the time it takes for an ant to build a tunnel of length <m>x</m>. This scenario is presented in <xref ref="ant-tunneling"/> as well as Project 1.6.3 in <xref ref="SIMIODE-text"/>. The approach presented here is specific to Insightmaker and is meant to help us understand how to build models of the real world; our examples so far have been more of an abstract mathematical nature.
 </p>
-<p>
-	In order to build models in Insightmaker we will take the following general approach:
-	<ol>
-		<li>
-			<p>
-				<em>Create Stocks:</em> We first decide which quantities we wish to model as functions of time. We must keep in mind that we cannot give formulas for stocks, only initial values and flow rates.
-			</p>
-		</li>
-		<li>
-			<p>
-				<em>Create Variables:</em> Here we will decide what parameters may influence our flow rates into and out of the stocks.
-			</p>
-		</li>
-		<li>
-			<p>
-				<em>Assess Dependencies and Create Flows and Links:</em> Now we can create flows in a very flexible way. We can create a flow for each separate term influencing the change in a stock, or just have one big flow that includes all terms. Assessing dependencies will allow us to create necessary links between stocks, variables, and flows. When you have created the necessary links, creation of the flow formulas should be natural (although it can be very hard, using dimensional analysis is very helpful).
-			</p>
-		</li>
-	</ol>
-</p>
+
 <remark>
 	<p>
-		While the list given above is ordered, you will find on many occasions that you need to backtrack in the mode building process. This is normal.
+		The Insightmaker model given below may seem to be built in a somewhat <em>ad hoc</em> way. In the next chapter we will try to make model building more systematic. However, keep in mind that modeling is a creative endeavor; there isn't an easy "build a model" algorithm.
 	</p>
 </remark>
 
@@ -124,7 +162,7 @@
 
 <example xml:id="Ant_Tunneling"><title>Ant Tunneling</title>
 	<p>
-		Suppose that we have a mound of dirt of unknown size and we wish to tunnel through this mound. To complete our <em>create stocks</em> we will make the choice of a single stock, <m>V</m>, the volume of dirt removed from the mound in cubic centimeters. In the <em>create variables</em> step we will see that this is a good proxy for the length of the tunnel. The initial value for <m>V</m> should be <m>V(0) = 0</m>.
+		Suppose that we have a mound of dirt of unknown size and we wish to tunnel through this mound. We will make the choice of a single stock, <m>V</m>, the volume of dirt removed from the mound in cubic centimeters. This will also be a good proxy for the length of the tunnel. The initial value for <m>V</m> should be <m>V(0) = 0</m>.
 	</p>
 	<p>
 		Now we will build our variables. There are certainly many ways to proceed and what follows is just one:
@@ -204,5 +242,11 @@
 	Based on the results of the above simulation, is it better to have one ant dig the entire tunnel or have two ants start at opposite ends and meet in the middle?
 	</p>
 </exercise>
+
+<remark>
+	<p>
+		The Insightmaker model construction in <xref ref="Ant_Tuneling"/> may seem to be built in a somewhat <em>ad hoc</em> way. In <xref ref="Intro_dimensional_analysis"/> and <xref ref="First_Order_Scenarios"/> we will try to make model building more systematic. However, keep in mind that modeling is a creative endeavor; there isn't an easy "build a model" algorithm.
+	</p>
+</remark>
 
 </section>
