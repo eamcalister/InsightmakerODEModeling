@@ -133,10 +133,10 @@
 <ul>
 	<li>
 		<p>
-			<term>Simulation Algorithm:</term> The algorithms available for simulation with Insightmaker are Euler's Method () and the 4th Order Runge-Kutta Method. Euler's Method uses the ODE to compute the slope at each point and follows a linear approximation to <m>y</m> for one time step, then repeats. The 4th Order Runge-Kutta Method is more complicated and its description is beyond the scope of this text. 
+			<term>Simulation Algorithm:</term> The algorithms available for simulation with Insightmaker are Euler's Method and the 4th Order Runge-Kutta Method (RK4). Euler's Method uses the ODE to compute the slope at each point and follows a linear approximation to <m>y</m> for one time step, then repeats. The RK4 Method is more complicated and its description is beyond the scope of this text. 
 		</p>
 		<p>
-			The primary differences between the two is accuracy vs. speed. Euler's Method is what is known as a <em>first order</em> method, which means error decreases linearly with the step size. In other words, if you cut the time step in half, the error is Euler's Method will also be (approximately) cut in half. The Runge-Kutta Method is a 4th order method, so the error is approximately proportional to the step size to the 4th power, i.e. if you cut the time step in half, the error will be (approximately) multiplied by <m>1/16</m>.
+			The primary differences between the two is accuracy vs. speed. Euler's Method is what is known as a <em>first order</em> method, which means error decreases linearly with the step size. In other words, if you cut the time step in half, the error is Euler's Method will also be (approximately) cut in half. The RK4 Method is a 4th order method, so the error is approximately proportional to the step size to the 4th power, i.e. if you cut the time step in half, the error will be (approximately) multiplied by <m>1/16</m>.
 		</p>
 	</li>
 </ul>
@@ -205,7 +205,31 @@
 
 <example xml:id="Circle_as_System_Insight_Example"><title>The Circular Functions as Solutions to a System</title>
 	<p>
-		Here we will explore the system of ODEs introduced in <xref ref="Circle_as_System"/> to show the scatter plot (phase plane) display setting and revisit the choice of simulation algorithm. The Insight used here can be found at <url href="https://insightmaker.com/insight/1MtQzhS6qx9B0SbVnmFs27" visual="circular function insight" />.
+		Here we will explore the system of ODEs introduced in <xref ref="Circle_as_System"/> to show the scatter plot (phase plane) display setting and revisit the choice of simulation algorithm. The Insight used here can be found at <url href="https://insightmaker.com/insight/1MtQzhS6qx9B0SbVnmFs27" visual="circular function insight" />. Choosing the RK4 simulation algortithm with a step size of <m>0.1</m>, we obtain the following time series graphs for <m>x</m> and <m>y</m> as functions of <m>t</m>. In this we see a nice match for the exact analytic solutions <m>x(t) = \cos(t)</m> and <m>y(t) = \sin(t)</m>.
+	</p>
+	<figure xml:id="circular_time_series">
+		<caption>The solutions for <m>x</m> and <m>y</m> as time series for the system of differential IVPs given by <xref ref="Circle_as_System"/>.</caption>
+		<image source="images/circular_time_series.png">
+		</image>
+	</figure>
+	<p>
+		In the case of systems of differential equations we are often interested more in the way the dependent variables vary with each other as much as (or more than) how they vary individually with time. So see this we use the scatter plot configuration in the simulation window's configuration settings. We choose "show lines" and turn off "show points" to display the following:
+	</p>
+	<figure xml:id="circular_scatter1">
+		<caption>The solutions for <m>x</m> and <m>y</m> plotted together for the system of differential IVPs given by <xref ref="Circle_as_System"/>.</caption>
+		<image source="images/circular_scatter1.png">
+		</image>
+	</figure>
+	<p>
+		Finally, to again illustrate the accuracy difference between Euler's Method and RK4, we show the result of the same simulation using Euler's Method: 
+	</p>
+	<figure xml:id="circular_scatter2">
+		<caption>The solutions for <m>x</m> and <m>y</m> plotted together for the system of differential IVPs given by <xref ref="Circle_as_System"/> using Euler's Method.</caption>
+		<image source="images/circular_scatter2.png">
+		</image>
+	</figure>
+	<p>
+		We see the outward spiral because Euler's Method repeatedly follows lines tangent to the circle, which moves us further and further from the origin.
 	</p>
 </example>
 
