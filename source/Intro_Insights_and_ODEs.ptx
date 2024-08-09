@@ -42,7 +42,7 @@
   </definition>
   
   <p>
-	In more practical terms a first-order ODE informs us of how this unknown function relates to its own derivative (rate of change) and time. The practical value of this idea is that we can often express or measure how a quantity changes more easily than find an expression for its value. Initial conditions should be thought of as <em>data</em>.
+	In more practical terms, a first-order ODE informs us of how this unknown function relates to its own derivative (rate of change) and time. The practical value of this idea is that we can often express or measure how a quantity changes more easily than find an expression for its value. Each ODE will have an entire parametrized family of functions as its set of solutions and the initial conditions indicate a data point in the <m>ty</m>-plane that the graph must pass through. This picks out a particular solution. We will see later that we may have many data points and parameters in the ODE which we can (approximately) solve for using optimization. 
   </p>
   <p>
 	Here are three examples that may help make the idea of ODEs and IVPs make sense. We will develop these as Insights before the end of the section.
@@ -66,7 +66,7 @@
 
   <example xml:id="Exp_as_IVP"><title>Exponential (Malthusian) Growth</title>
 	<p>
-	The second common family of functions that naturally arises as the set of solutions to differential equations are exponential functions. Here we will let our dependent variable be <m>P</m> (for population, measured in individuals) and out independent variable be time, <m>t</m>, in whatever units make sense for the problem. 
+	The second common family of functions that naturally arises as the set of solutions to a family of differential equations are exponential functions. Here we will let our dependent variable be <m>P</m> (for population, measured in individuals) and out independent variable be time, <m>t</m>, in whatever units make sense for the problem. 
 	</p>
 	<p>
 	The defining feature of a population that is growing exponentially is the following: <em>the instantaneous growth rate in <m>P</m> is proportional to <m>P</m>, with some constant of proportionality <m>k</m></em>. Assuming <m>P(t_0) = P_0</m>, finding the population as a function of time amounts to solving the IVP
@@ -125,13 +125,13 @@
 <subsection xml:id="Insights_of_IVPs">
 	<title>Insights of IVPs</title>
 <p>	
-Now let's get to the heart of this text: Insightmaker and Insights. If you haven't already, you'll want to go to <url href="https://insightmaker.com/" visual="Insightmaker.com"/> and create a free account. Also, if you were reading the three examples in the previous subsection and weren't feeling extra enlightened, the goal of this section is to help us see what's going on by visualizing them in multiple ways.
+Now let's get to the heart of this text: Insightmaker and Insights. If you haven't already, you'll want to go to <url href="https://insightmaker.com/" visual="Insightmaker.com"/> and create a free account. Also, if you were reading the three examples in the previous subsection and weren't feeling extra enlightened, the goal of this section is to help us see what's going on by visualizing ODEs in multiple ways.
 </p>
 
 
 <definition xml:id="def-Insight"><title>Insight</title><idx><h>Insight</h></idx><idx><h>Primitive</h></idx>
 <statement>	
-Insightmaker represents ODE (systems-dynamics) models (on pages called <term>Insights</term>) using what are known as <term>stock-flow models</term>. Here we list the basic components of a stock-flow model, called <term>primitives</term>. Each component will be discussed in more length separately. 
+Insightmaker represents ODE (systems-dynamics) models (on pages called <term>Insights</term>) using what are known as <term>stock-flow models</term>. Here we list the basic components of a stock-flow model, called <term>primitives</term>. Each component will be discussed in more depth separately. 
   <ul>
 	<li><term>Stocks:</term> Stocks are things that accumulate. In the context of modeling with ODEs, these are the dependent variables of the system.</li>
 
@@ -348,7 +348,13 @@ If you have followed along building a linear function Insight as you have been r
 	</p>
 </description></image>
 
+
 </sidebyside>
+<remark>
+	<p>
+		Note that when sliders are linked, you may want to configure your graphing window with a fixed minumum and maximum for the axes. Otherwise, the axes will change as the parameters are varied.
+	</p>
+</remark>
 
 <!--p>
 	For the purpose of completeness, here is a video of the creation of this Insight.
@@ -362,7 +368,7 @@ If you have followed along building a linear function Insight as you have been r
 </subsection>
 
 <conclusion>
-In the next section we will explore some more basic examples, including the remaining examples of ODEs in this section. As we do these we will explore some more of the available displays and settings in Insightmaker.
+In the next section we will explore some more examples, including the remaining examples of ODEs in this section. As we do these we will explore some more of the available displays and settings in Insightmaker.
 </conclusion>
 
 </section>

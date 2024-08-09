@@ -118,12 +118,7 @@
 			<ul>
 				<li>
 					<p>
-						<term>Simulation Time Step:</term> 
-					</p>
-				</li>
-				<li>
-					<p>
-						<term>Simullation Algorithm:</term> 
+						<term>Simulation Time Step:</term> Insightmaker simulations use numerical methods to approximate values of stocks as functions of time. The outputs are only approximated at discrete time values starting with the simulation start time and moving in the positive direction in increments of this step size. A smaller time step updates the approximation more frequently and is thus more accurate. However, smaller time steps take more computations and hence run slower.
 					</p>
 				</li>
 			</ul>
@@ -135,30 +130,88 @@
 		</description></image>
 		
 		</sidebyside>
+<ul>
+	<li>
+		<p>
+			<term>Simulation Algorithm:</term> The algorithms available for simulation with Insightmaker are Euler's Method () and the 4th Order Runge-Kutta Method. Euler's Method uses the ODE to compute the slope at each point and follows a linear approximation to <m>y</m> for one time step, then repeats. The 4th Order Runge-Kutta Method is more complicated and its description is beyond the scope of this text. 
+		</p>
+		<p>
+			The primary differences between the two is accuracy vs. speed. Euler's Method is what is known as a <em>first order</em> method, which means error decreases linearly with the step size. In other words, if you cut the time step in half, the error is Euler's Method will also be (approximately) cut in half. The Runge-Kutta Method is a 4th order method, so the error is approximately proportional to the step size to the 4th power, i.e. if you cut the time step in half, the error will be (approximately) multiplied by <m>1/16</m>.
+		</p>
+	</li>
+</ul>
 
 <example xml:id="Settings_Exploration"><title>Exploration of Settings</title>
 	<p>
-		In this example we will explore the simulation algorithm and step size settings in the context of the exponential growth model.
+		In this example we will explore the simulation algorithm and step size settings in the context of the exponential growth model <xref ref="Exp_Insight_Example"/>, but with initial value <m>P(0)=1</m> and <m>k=1</m>. This yields <m>P(t) = e^t</m>, so we know that <m>P(1) = e\approx 2.718</m>. Running the simulation using Euler's Method with a time step of <m>1</m>, we obtain the following graph:
 	</p>
+	<figure xml:id="ExpEulerGraph">
+		<caption>The solution given by Euler's Method with a time step of <m>0.5</m>. The black points are added to show the discrete slopes between the outputs.</caption>
+		<image source="images/ExpEuler1.png">
+		</image>
+	</figure>
+	<p>
+		To explore how the error at <m>t=1</m> changes with the step size, we will note that <m>P(1) = e</m> and use the tabular output.
+	</p>
+	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+		<p>
+			When the time step is <m>0.5</m>, the error at <m>t=1</m> is <m>|e-2.25|\approx 0.468</m>.
+		</p>
+		<p></p><p>
+			<image source="images/Euler1Table.png" width="40%"><description>
+				<p>
+				Tabular output when the time step is <m>0.5</m> using Euler's Method.
+				</p>
+			</description></image>
+		</p>
+	</sidebyside>	
+	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+		<p>
+			When the time step is <m>0.25</m>, the error at <m>t=1</m> is <m>|e-2.2.44140625|\approx 0.2769</m>. This is <em>about</em> half of the previous error.
+		</p>
+		<p></p><p>
+			<image source="images/Euler2Table.png" width="40%"><description>
+				<p>
+				Tabular output when the time step is <m>0.25</m> using Euler's Method.
+				</p>
+			</description></image>
+		</p>
+	</sidebyside>
+	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+		<p>
+			When the time step is <m>0.125</m>, the error at <m>t=1</m> is <m>|e-2.56578451|\approx 0.1525</m>. Again, this is <em>about</em> half of the previous error.
+		</p>
+		<p></p><p>
+			<image source="images/Euler3Table.png" width="40%"><description>
+				<p>
+				Tabular output when the time step is <m>0.125</m> using Euler's Method.
+				</p>
+			</description></image>
+		</p>
+	</sidebyside>
+	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+		<p>
+			Finally, when the time step is <m>0.5</m> and we instead use the 4th Order Runge-Kutta algorithm, the error at <m>t=1</m> is <m>|e-2.71734619|\approx 0.001</m>.  
+		</p>
+		<p></p><p>
+			<image source="images/ExpRK4Table.png" width="40%"><description>
+				<p>
+				Tabular output when the time step is <m>0.5</m> using RK4.
+				</p>
+			</description></image>
+		</p>
+	</sidebyside>
 </example>
 
 <example xml:id="Circle_as_System_Insight_Example"><title>The Circular Functions as Solutions to a System</title>
 	<p>
-		Here we will explore the system of ODEs introduced in <xref ref="Circle_as_System"/> to show the scatter plot (phase plane) display setting and revisit the choice of display algorithm.
+		Here we will explore the system of ODEs introduced in <xref ref="Circle_as_System"/> to show the scatter plot (phase plane) display setting and revisit the choice of simulation algorithm. The Insight used here can be found at <url href="https://insightmaker.com/insight/1MtQzhS6qx9B0SbVnmFs27" visual="circular function insight" />.
 	</p>
 </example>
 
 <p>
 	In the next example we consider the time it takes for an ant to build a tunnel of length <m>x</m>. This scenario is presented in <xref ref="ant-tunneling"/> as well as Project 1.6.3 in <xref ref="SIMIODE-text"/>. The approach presented here is specific to Insightmaker and is meant to help us understand how to build models of the real world; our examples so far have been more of an abstract mathematical nature.
 </p>
-
-<remark>
-	<p>
-		The Insightmaker model given below may seem to be built in a somewhat <em>ad hoc</em> way. In the next chapter we will try to make model building more systematic. However, keep in mind that modeling is a creative endeavor; there isn't an easy "build a model" algorithm.
-	</p>
-</remark>
-
-
 
 <example xml:id="Ant_Tunneling"><title>Ant Tunneling</title>
 	<p>
@@ -245,7 +298,7 @@
 
 <remark>
 	<p>
-		The Insightmaker model construction in <xref ref="Ant_Tuneling"/> may seem to be built in a somewhat <em>ad hoc</em> way. In <xref ref="Intro_dimensional_analysis"/> and <xref ref="First_Order_Scenarios"/> we will try to make model building more systematic. However, keep in mind that modeling is a creative endeavor; there isn't an easy "build a model" algorithm.
+		The Insightmaker model construction in <xref ref="Ant_Tunneling"/> may seem to be built in a somewhat <em>ad hoc</em> way. In <xref ref="Intro_dimensional_analysis"/> and <xref ref="First_Order_Scenarios"/> we will try to make model building more systematic. However, keep in mind that modeling is a creative endeavor; there isn't an easy "build a model" algorithm.
 	</p>
 </remark>
 
