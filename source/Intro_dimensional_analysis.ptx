@@ -4,18 +4,167 @@
 	<title>Dimensional Analysis in ODEs and Insights</title>
 
   <objectives>
+	<p>
+		In this section we will
+	</p>
 		<ul>
 	  		<li>
 	  			<p>
-				Discuss how dimensional analysis can help you create models.
+				discuss how dimensional analysis and units can help build and interpret ODE models and
 	  			</p>
 	  		</li>
 	  		<li>
 	  			<p>
-	  			Deal with units in Insightmaker.
+	  			explore units and model validation in Insightmaker.
 	  			</p>
 	  		</li>
 	  	</ul>
   </objectives>
+
+  <sidebyside  widths="75% 5% 20%" margins="auto" valign="top">
+	<p>
+		<term>Dimension</term> refers to the fundamental type of quantity we work with. Quantities may have dimension of length, area, volume, mass, time, etc. <term>Units</term> refer to a specific way of quantifying a dimensional quantity such as inches or feet for a quantity whose dimension is length. To specify units of a primitive in Insightmaker, observe that each stock, flow, or variable in Insightmaker comes with the button shown to the right in its menu.
+	  </p>
+
+  <p></p>
+  <p>
+	<image source="images/ChooseUnits.png" width="40%"><description>
+		<p>
+		The Choose Units button.
+		</p>
+	</description></image>
+</p>
+</sidebyside>
+
+<p>
+	When we click the Choose Units button we see this menu:
+	<figure xml:id="units_menu">
+		<caption>The units menu for a stock, flow, or variable. Each drop down is a basic <em>dimension</em>, which you can then choose <em>units</em> from.</caption>
+		<image source="images/UnitsMenu.png">
+		</image>
+	</figure>
+</p>
+<p>
+	The difference between dimension and units is visible in this menu; each drop down is a basic dimension while the choices are units.
+</p>
+<p>
+	Both dimension and units play by the same basic rules in ODE modeling. The important ones are as follows:
+	<ol>
+		<li>
+			<p>
+				Quantities can only be added or subtracted if they have the same dimension. To add two quantities of the same dimension with different units, you generally need to convert one of them. Insightmaker does some common conversions automatically (see <xref ref="auto_unit_convert"/>). 
+			</p>
+		</li>
+		<li>
+			<p>
+				Dimensions and units can be combined via multiplication and division. For instance, velocity has dimension of distance/time and velocity<m>\time</m>time has dimension of distance. Often multiplication by variables in flow rates indicates the units of the variable for this reason.
+			</p>
+		</li>
+		<li>
+			<p>
+				If <m>y</m> is a function of time, then the units of <m>y'</m> are <m>\frac{y\text{-units}}{\text{time units}}</m>. For the purposes of Insightmaker, this means that if units are assigned to a stock, the units of each flow into or out of that stock must be the units of the stock per time unit.
+			</p>
+		</li>
+		<li>
+			<p>
+				Likewise, the units of
+				<me>
+					\int_a^b y(t)dt
+				</me>
+				are <m>y\text{-units}\times t\text{-units}</m>. Thus, if units are assigned to a flow you must assign units to its source or target stock accordingly.
+			</p>
+		</li>
+	</ol>
+</p>
+
+
+<example xml:id="auto_unit_convert"><title>Insightmaker Automatic Unit Conversions</title>
+	In the Insight below we see that Insightmaker will automatically convert units of the same dimension, thus simplifying flow formulas. In this example <m>y</m> has units of feet, time has units of seconds, and <m>m</m> has units of inches per second. Setting the flow rate into <m>y</m> to equal <m>m</m>, the units are correctly converted; when <m>m</m> is <m>12</m> inches per second the slope of the simulated line is <m>1</m> foot per second.
+	<figure xml:id="auto-convert-Insight">
+		<caption>An Insight for a linear function (with zero intercept) including units with the slope units converted automatically.</caption>
+		<interactive xml:id="interactive-unit-auto-convert" iframe="https://insightmaker.com/insight/MgEizrIUnREbGroAakZdo/embed?topBar=1;sideBar=1;zoom=1" width = "90%"/>
+	</figure>  
+</example>
+
+<p>
+	When building Insights you can always leave quantities unitless. In the example below we illustrate why it is a good practice to use units and how Insightmaker keeps you honest when you do.
+</p>
+
+<example xml:id="rumor_spread"><title>The Spread of a Rumor</title>
+<p>
+	For this model we will consider a population, with a fixed size of <m>500</m>, in which a rumor spreads. We will have two sub-populations of size <m>H</m> (for <em>Heard</em>) and <m>N</m> (for <em>Not heard</em>). Time will be measured in days and we will assume <m>H(0)=50</m> and <m>N(0)=500</m>. A common model for the rate of change in <m>H</m> is given by
+	<me>
+		H' = kHN,
+	</me>
+	where <m>k</m> is some constant. The typical reasoning presented is that this model presents a scenario where if you scale up either sub-population, the rate of change in <m>H</m> scales up by the same amount. Since <m>H+N = 500</m> is constant, we have <m>N' = -H'</m>.
+</p>
+<p>
+	We build this model in Insightmaker (working version found <url href="https://insightmaker.com/insight/5uGO7EVQ6hOwpOHnmcZZdo" visual="here" />) as follows:
+	<ul>
+		<li>
+			<p>
+				Set the simulation settings to RK4 with a <m>0.1</m> time step and Days as time units.
+			</p>
+		</li>
+		<li>
+			<p>
+				Create two stocks, <m>H</m> and <m>N</m>, with initial values <m>50</m> and <m>450</m>, respectively. Assign units of Individuals from the Ecology and Nature menu for units.
+			</p>
+		</li>
+		<li>
+			<p>
+				Create a variable <m>k</m>, which we will leave unitless for now. Give it a slider range from <m>0</m> to <m>1</m> (somewhat arbitrarily).
+			</p>
+		</li>
+		<li>
+			<p>
+				Create a single flow from <m>N</m> to <m>H</m>. This is possible because <m>H</m> and <m>N</m> have the same units and <m>N'=-H'</m>. After linking <m>k</m> to this flow, we can assign the flow formula <c>[k]*[H]*[N]</c>. Since the stocks have units of Individuals, we must assign the units of this flow as Individuals/Days.
+			</p>
+		</li>
+	</ul>
+	Now we run the simulation and obtain the following error:
+	<image source="images/wrong_units.png">
+		<shortdescription>An error message for wrong units on the flow.</shortdescription>
+	</image>
+</p>
+<p>
+	The reason for this error message is that we left <m>k</m> dimensionless. Observing that <m>H'</m> is in units of Individuals/Days and <m>HN</m> is in units of Individuals<m>^2</m>, it must be the case that <m>k</m> has units of 1/(Individuals*Days). Making this assignment and letting <m>k=0.009</m> (see below why this might be the right order of magnitude for <m>k</m>), we obtain the following simulation:
+	<figure xml:id="rumor_spread_graph">
+		<caption>Graph of <m>H</m> and <m>N</m> when <m>k=0.009</m>.</caption>
+		<image source="images/rumor_spread_sim.png">
+		</image>
+	</figure>
+	From this graph we see that essentially everyone has hear the rumor in two days.
+</p>
+<p>
+	Now let's examine the units of <m>k</m> to better understand this model, which could theoretically help us improve it. We ask ourselves "What is the meaning of <m>k</m>?" We note the units of <m>k</m> are 
+	<me>
+		\frac{1}{\text{Individuals*Days}} = \frac{1/\text{Days}}{\text{Individuals}}
+	</me>
+	Knowing that 1/time units are percent rates of change, we observe that <m>kN</m> has units of a percent growth rate in <m>H</m>. 
+	</p>
+	<p>
+	Why would we multiply by <m>N</m> and have a variable percent growth rate? Let's dive deeper as follows:
+	<ul>
+		<li>
+			<p>
+				Let <m>p</m> be the percentage of the <m>N</m> population that a typical <m>H</m> individual encounters in a day.
+			</p>
+			<p>
+				Let <m>q</m> be the probability that <m>H</m> individual passes the rumor along.
+			</p>
+		</li>
+	</ul>
+	Now we see that for each <m>H</m> individual, <m>pqN</m> individuals who have not heard the rumor will hear it. We then multiply by <m>H</m> to get the total number of individuals entering the <m>H</m> population per day. Thus, <m>k = pq</m>. The choice of <m>k=0.009</m> above was assuming <m>p=0.01</m> and <m>q = 0.9</m>. 
+</p>
+<p>
+	While the deeper analysis of the model given here may not seem especially obvious, practicing with units makes it much easier.
+</p>
+
+	
+</example>
+<exercise>
+	What about the rumor spread model seems realistic or unrealistic to you? Can you think of ways to improve it?
+</exercise>
 
 </section>
