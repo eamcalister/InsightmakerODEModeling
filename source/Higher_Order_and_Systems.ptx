@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="higher_order_and_systems" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <title>Higher Order Equations and Systems</title>
+  
+<introduction>
+
+</introduction>
+
+<xi:include  href="./Systems_Salt_Tanks.ptx" />
+<xi:include  href="./Systems_Disease_Models.ptx" />
+<xi:include  href="./Systems_Oscillators.ptx" />
+<xi:include  href="./Systems_Hamiltonian_and_Gradient.ptx" />
+
+</chapter>
