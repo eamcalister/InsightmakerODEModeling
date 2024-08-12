@@ -51,6 +51,9 @@
 
     <biblio type="raw" xml:id="ant-tunneling" label="ant-tunneling">Bryan Winkel, <title>1-007-AntTunnelBuilding-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=2993&amp;v=2" />, doi:/10.25334/DQRP-G032, 2022.
     </biblio>
+
+    <biblio type="raw" xml:id="lsd-scenario" label="lsd-scenario">Bryan Winkel, <title>5-001-LSD-ModelingScenario.</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3333&amp;v=2" />, doi:/10.25334/CNEE-7J76, 2022.
+    </biblio>
     
     <biblio type="raw" xml:id="multiple-doses" label="multiple-doses">Bryan Winkel, <title>7-010-MultipleDoses-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3045&amp;v=1" />, doi:/10.25334/CCW1-E736, 2022.
     </biblio>

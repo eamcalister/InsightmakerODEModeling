@@ -5,6 +5,11 @@
   <title>Higher Order Equations and Systems</title>
   
 <introduction>
+  Both systems of differential equations and second order ODEs (ODEs involving second derivatives) have made an appearance previously in this text. Systems appeared in <xref ref="Circle_as_System"/> and <xref ref="rumor_spread"/>. By the Hill-Keller in <xref ref="SprintModel"/> model as an ODE with position <m>x</m>, it takes the form
+  <me>
+    mx'' = mF-kmx'.
+  </me>
+  In this chapter we will explore several important types of systems and higher-order equations with Insightmaker, making use of its capabilities when analytic methods fail.
 
 </introduction>
 

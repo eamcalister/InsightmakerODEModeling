@@ -7,11 +7,218 @@
 		<ul>
 	  		<li>
 	  			<p>
-				salt tanks
+					Introduce mixing in and single tank as a first order differential equation.
 	  			</p>
 	  		</li>
+			<li>
+				<p>
+					Create and analyze systems of interconnected tanks as linear systems of ODEs.
+				</p>
+			</li>
 	  	</ul>
   </objectives>
+
+  <introduction>
+	<p>
+		A standard first-order ODE is associated to the following problem type: 
+		<assemblage xml:id="salt-tank-statement"><title>The Basic Salt Tank Problem</title>
+			<p>
+				A brine (salt water) solution of conentration <m>C</m> kg/L at a rate of <m>r</m> L/min flows into a tank of volume <m>V</m> of initially pure water. A well-mixed solution drains out the bottom of the tank at <m>r</m> L/min. How much salt is in the tank as a function of time?
+			</p> 
+		</assemblage>	
+		We call these problems "salt tank problems". 
+	</p>
+	<p>
+		In this section we explore this type of problem in general with multiple tanks and perhaps without conserved volumes. The worksheet in the next section presents the modeling scenario in <xref ref="lsd-scenario"/> and section 6.5.1 of <xref ref="SIMIODE-text"/>
+	</p>
+  </introduction>
+
+  <subsection xml:id="basic_mixing">
+	<title>Basic Mixing Problems</title>
+	<p>
+		To present the problem in <xref ref="salt-tank-statement"/> in ODE form, letting <m>A</m> denote the amount of salt in the tank at a time of <m>t</m> minutes, we have
+		<me>
+			A' = rC - \frac{A}{V}r,\ A(0) = 0. 
+		</me> 
+		We can arrive at essentially through unit analysis. Since the amount of salt in a tank sounds exactly like a stock, we can represent it as the following Insight:
+		<interactive xml:id="Basic-Mixing-Insight" iframe="https://insightmaker.com/insight/4YX9HZUY25jktfHzQp7pvw/embed?topBar=1;sideBar=1;zoom=1" width = "85%"/>
+	</p>
+	<p>
+		We may determine the solution of this IVP analytically to be
+		<me>
+			A = VC(1-e^{-\frac{r}{V}t})
+		</me>
+		Running the given Insight with <m>V = 8</m>, <m>r = 2</m>, and <m>C = 0.25</m> (all with associated units) yields the corresponding graph
+		<figure xml:id="BasicMixingGraph">
+			<caption>The graph of a solution to the basic salt tank problem.</caption>
+			<image source="images/BasicMixingGraph.png" scale="60%">
+			</image>
+		</figure> 
+		The long run equilibrium amount of salt in the tank is <m>2</m>kg. This makes sense as it yields a concentration of <m>0.25</m>kg/L. In the log run all the mixture in the tank is inflow mixture.
+	</p>
+	<exercise>
+		<statement>
+			<p>
+				In your own copy of <xref ref="Basic-Mixing-Insight"/>, create a variable that is equal to <m>|\text{Inflow} - \text{Outflow}|</m>. For a given <m>r</m>, <m>V</m>, and <m>C</m>, use the optimization algorithm to find the equilibrium value of <m>A</m> by imnimizing the integral of this new variable.
+			</p>
+		</statement>
+	</exercise>
+
+	<p>
+		Now we will consider the following questions:
+		<ol>
+			<li>
+				<p>
+					What if there are several interconnected tanks?
+				</p>
+			</li>
+			<li>
+				<p>
+					What if the inflow and outflow rates are not the same?
+				</p>
+			</li>
+		</ol>
+	</p>
+</subsection>
+
+<subsection xml:id="two-tank-conserved-volume">
+	<title>Two Tanks with Constant Fluid Volume</title>
+
+	<p>
+	Consider the first problem:
+	<assemblage xml:id="Basic_Two_Tank">
+		<title>The Two Tank Mixing Problem</title>
+		<p>
+			Consider two interconnected tanks initially containing fresh water, call them Tank 1 and Tank 2, of volumes <m>V_1</m>L and <m>V_2</m>L, respectively. A brine solution of concentration <m>C</m>kg/L flows into Tank 1 from an external source at a rate of <m>r_{\text{in}}</m>L/min. A well-mixed solution froms from Tank 1 to Tank 2 at a rate of <m>r_{12}</m> L/min and from Tank 2 to Tank 1 at a rate of <m>r_{21}</m>L/min. Finally, a well-mixed solution exits Tank 2 at a rate of <m>r_{\text{out}}</m>L/min.
+		</p>
+	</assemblage>
+	</p>
+	<p>
+		This is a scenario where building the Insight is perhaps easier than building the differential equations first. We do so as follows:
+		<ol>
+			<li>
+				<p>
+					Create stocks <m>A_1</m> and <m>A_2</m> for the amount of salt, in kg, in Tank 1 and Tank 2, respectively. Both should have initial values of zero.
+				</p>
+			</li>
+			<li>
+				<p>
+					Create flows into Tank 1 from the outside and from Tank 2. Likewise, create flows out of Tank 2 to the outside and to Tank 1.
+				</p>
+			</li>
+			<li>
+				<p>
+					Create variables for <m>C</m>, <m>V_1</m>, <m>V_2</m>, <m>r_{\text{in}}</m>, <m>r_{\text{out}}</m>, <m>r_{12}</m>, and <m>r_{21}</m>.
+				</p>
+			</li>
+		</ol>
+	</p>
+	<p>
+		Now we need to create links based on what the various salt rates depend on. The best strategy for this is to take each tank and apply the idiom diagram shown below, which corresponds to the ODE
+		<me>
+			A' = Cr_{\text{in total}} - r_{\text{out total}}\frac{A}{V}
+		</me>
+		<figure xml:id="tank_idiom">
+			<caption>The one tank mixing idiom.</caption>
+			<image source="images/TankIdiom.png" width = "50%">
+			</image>
+		</figure>
+	Splitting the inflows and outflows as necessary for each tank we may obtain the following table of linkages:
+	</p>
+	<table>
+		<title>Variable Links in a Two Tank Mixing Problem</title>
+		<tabular>
+			<row header="yes" bottom="medium">
+				<cell>Link</cell><cell>Source</cell><cell>Target</cell>
+			</row>
+			<row>
+				<cell>1</cell><cell><m>C</m></cell><cell>External Flow into Tank 1</cell>
+			</row>
+			<row>
+				<cell>2</cell><cell><m>r_{\text{in}}</m></cell><cell>External Flow into Tank 1</cell>
+			</row>
+			<row>
+				<cell>3</cell><cell><m>V_1</m></cell><cell>Tank 1 to Tank 2</cell>
+			</row>
+			<row>
+				<cell>4</cell><cell><m>r_{12}</m></cell><cell>Tank 1 to Tank 2</cell>
+			</row>
+			<row>
+				<cell>5</cell><cell><m>r_{21}</m></cell><cell>Tank 2 to Tank 1</cell>
+			</row>
+			<row>
+				<cell>6</cell><cell><m>V_2</m></cell><cell>Tank 2 to Tank 1</cell>
+			</row>
+			<row>
+				<cell>7</cell><cell><m>V_2</m></cell><cell>External Flow out of Tank 2</cell>
+			</row>
+			<row>
+				<cell>8</cell><cell><m>r_{\text{out}}</m></cell><cell>External Flow out of Tank 2</cell>
+			</row>
+		</tabular>
+	</table>
+	At this point we have the full diagram:
+	<figure xml:id="two-tank-full">
+		<caption>The full two-tank diagram.</caption>
+		<image source="images/Two_Tank_Full_Diagram.png">
+		</image>
+	</figure>
+	<p>
+		While this diagram may seem complicated, we now see that each ODE in our system will have three terms, what their signs are, and on what variables they depend. We have
+		<md>
+			<mrow>V_1' =  \amp r_{in}C - r_{12}\frac{A_1}{V_1} + r_{21}\frac{A_2}{V_2} </mrow>
+			<mrow>V_2' =  \amp r_{12}\frac{A_1}{V_1} - r_{21}\frac{A_2}{V_2} - r_{out}\frac{A_2}{V_2} </mrow>
+		</md>
+	</p>
+	<p>
+	Using these to build our flow rates in the diagram. Using parameter values indicated in the table nad running for <m>100</m> minutes, we obtain the following (<url href="https://insightmaker.com/insight/52T2bX9A1DF29TAwxhK5tQ" visual="Insight" />):
+	</p>
+	<sidebyside widths="20% 5% 75%" margins="auto" valign="top">
+	<p>
+		<tabular>
+			<row>
+				<cell><m>C</m></cell><cell><m>0.25</m></cell>
+			</row>
+			<row>
+				<cell><m>V_1</m></cell><cell><m>3</m></cell>
+			</row>
+			<row>
+				<cell><m>V_2</m></cell><cell><m>2</m></cell>
+			</row>
+			<row>
+				<cell><m>r_{\text{in}}</m></cell><cell><m>0.3</m></cell>
+			</row>
+			<row>
+				<cell><m>r_{12}</m></cell><cell><m>0.6</m></cell>
+			</row>
+			<row>
+				<cell><m>r_{21}</m></cell><cell><m>0.3</m></cell>
+			</row>
+			<row>
+				<cell><m>r_{\text{out}}</m></cell><cell><m>0.3</m></cell>
+			</row>
+		</tabular>
+	</p>
+	<p></p>
+	<p>
+		<figure xml:id="two-tank-time-series">
+			<caption>Two tank time series graphs.</caption>
+			<image source="images/two_tank_time_series.png">
+			</image>
+		</figure>
+	</p>
+	</sidebyside>
+<p>
+	In each of these graphs we see the long run behavior yields a concentration of about <m>0.25</m>kg/L, as expected. We can also see the equilibrium solutions approached in the following scatter plot:
+<figure xml:id="two-tank-phase">
+	<caption>Scatter plot for the two tank problem. Dot at the equilibrium and arrow added.</caption>
+	<image source="images/two-tank-phase.png">
+	</image>
+</figure>
+</p>
+	
+
+  </subsection>
 
 
 
