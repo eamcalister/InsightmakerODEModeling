@@ -43,10 +43,24 @@
     <biblio type="raw" xml:id="SIMIODE-text" label="SIMIODE-text">Kurt Bryan, <title>Differential Equations: A Toolbox for Modeling the World</title> SIMIODE.org, 2021.
     </biblio>
 
+    <biblio type="raw" xml:id="DHS_SIR_zombies" label="DHS_SIR_zombies">Robert Devaney, Morris Hirsh, Stephen Smale, <title>Differential Equations, Dynamical Systems, and an Introduction to Chaos, Third Edition</title> <pages>251-252</pages> Academic Press, 2013.
+    </biblio>
+
+    <biblio type="raw" xml:id="SIMIODE_SIR2" label="SIMIODE_SIR2">Stanley Florkowski and Ryan Miller, <title>6-018-ExploringSIRModel-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3097&amp;v=1" />, doi:/10.25334/BM76-2667, 2022.
+    </biblio>
+
     <biblio type="raw" xml:id="Insightmaker" label="Insightmaker">Scott Fortmann-Roe, <title>Insight Maker: A general-purpose tool for web-based modeling <m></m> simulation</title>, <journal>Simulation Modelling Practice and Theory</journal>, <volume>47</volume>,<pages>28-45</pages>, 2014, <url href="https://www.sciencedirect.com/science/article/pii/S1569190X14000513" />.
     </biblio>
 
+    <biblio type="raw" xml:id="SIR_common_good" label="SIR_common_good">Lorelei Koss, <title>SIR Models: Differential Equations that Support the Common Good</title>, <journal> CODEE Journal</journal>, <volume>12</volume>,article 6, 2019, <url href="https://www.sciencedirect.com/science/article/pii/S1569190X14000513" />.
+    </biblio>
+
+
+
     <biblio type="raw" xml:id="fastpitch" label="fastpitch">Erich McAlister, <title>1-145-FastPitch-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3393&amp;v=1" />, doi:/10.25334/TV3N-R432, 2022.
+    </biblio>
+
+    <biblio type="raw" xml:id="SIMIODE_SIR" label="SIMIODE_SIR">Sheila Miller, <title>6-001-Epidemic-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=2956&amp;v=1" />, doi:/10.25334/N6DF-2J82, 2022.
     </biblio>
 
     <biblio type="raw" xml:id="ant-tunneling" label="ant-tunneling">Bryan Winkel, <title>1-007-AntTunnelBuilding-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=2993&amp;v=2" />, doi:/10.25334/DQRP-G032, 2022.
@@ -57,6 +71,10 @@
     
     <biblio type="raw" xml:id="multiple-doses" label="multiple-doses">Bryan Winkel, <title>7-010-MultipleDoses-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3045&amp;v=1" />, doi:/10.25334/CCW1-E736, 2022.
     </biblio>
+
+    <biblio type="raw" xml:id="boarding_school" label="boarding_school"> <title>Communicable Disease Surveillance Center. 1978. News and Notes: Influenza in a Boarding School.</title> <journal>British Medical Journal</journal><volume>1</volume><number>6112</number><pages>586-590</pages> <url href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC1603269/pdf/brmedj00115-0064.pdf" />
+    </biblio>
+
     
 
 </references>

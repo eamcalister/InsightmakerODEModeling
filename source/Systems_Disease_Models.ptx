@@ -7,11 +7,132 @@
 		<ul>
 	  		<li>
 	  			<p>
-				SIR etc.
+					Develop the basic SIR model for the spread of an infectious disease.
 	  			</p>
 	  		</li>
+			<li>
+				<p>
+					Estimate parameters in the SIR model using data. 
+				</p>
+			</li>
+			<li>
+				<p>
+					Consider other versions and uses of the SIR model.
+				</p>
+			</li>
 	  	</ul>
   </objectives>
+
+  <subsection xml:id="basic_SIR">
+	<title>The Basic SIR Model</title>
+	<p>
+		The basic model for the spread of an infectious disease involves three sub-populations of a larger one.
+		<ul>
+			<li>
+				<p>
+					The sub-population of individuals who are susceptible to infection. The number of individuals in this population is denoted by <m>S</m>. 
+				</p>
+			</li>
+			<li>
+				<p>
+					The sub-population of individuals who are infected. The number of individuals in this population is denoted by <m>I</m>.
+				</p>
+			</li>
+			<li>
+				<p>
+					The sub-population of individuals who are recovered from the disease. The number of individuals in this population is denoted by <m>R</m>.
+				</p>
+			</li>
+		</ul>
+	</p>
+	<p>
+		In order to simplify the model, we assume that
+		<ol>
+			<li>
+				<p>
+					The total population remains constant, i.e. nobody enters or leaves the local population in which we are modeling spread of the disease.
+				</p>
+			</li>
+			<li>
+				<p>
+					Once recovered, individuals gain immunity from re-infection. This is often true for common diseases, at least on the time scale in which we might model. 
+				</p>
+			</li>
+		</ol>
+		A good test-study for this situation is the case presented in <xref ref="boarding_school"/> and develobed as a SIMIODE modeling scenario in <xref ref="SIMIODE_SIR"/>. In this scenario we have a British boarding school where an influenza outbreak occured. The number of infected students each day of the outbreak is given by the table:
+			<table xml:id="SIR_data">
+				<title>Influenza Outbreak Model</title>
+				<tabular>
+					<row header="yes" bottom="medium">
+						<cell>Day</cell><cell>0</cell><cell>1</cell><cell>2</cell><cell>3</cell><cell>4</cell><cell>5</cell><cell>6</cell><cell>7</cell><cell>8</cell><cell>9</cell><cell>10</cell><cell>11</cell><cell>12</cell><cell>13</cell>
+					</row>
+					<row>
+						<cell><m>\#</m>infected</cell><cell>1</cell><cell>3</cell><cell>25</cell><cell>72</cell><cell>222</cell><cell>282</cell><cell>265</cell><cell>233</cell><cell>189</cell><cell>123</cell><cell>70</cell><cell>25</cell><cell>11</cell><cell>4</cell>
+					</row>
+				</tabular>
+			</table>
+		The total number of boys at the school was 763.	
+	</p>
+	<p>
+		To build the model, we start with the rumor spread model <xref ref="rumor_spread"/>, thinking of the infection as a rumor. Thus, we have two stocks <m>S</m> and <m>I</m>, with a flow from <m>S</m> to <m>I</m> given by the formula <m>aSI</m>, where <m>S</m> and <m>I</m> are in units of individuals and <m>a</m> is in units of <m>\frac{1}{\text{individuals}\cdot\text{days}}</m>. We assume that a consant percentage of the infected individuals recover on a daily basis. Hence the flow rate from <m>I</m> to <m>R</m> is given by <m>kI</m>, where <m>k</m> has units of <m>\frac{1}{\text{days}}</m>. This yields the Insight <url href="https://insightmaker.com/insight/5o6jnC07EQtEfk2ssKRkbE" visual="Boarding School Insight"/>, with main diagram
+		<figure xml:id="SIR_diagram">
+			<caption>The SIR model diagram.</caption>
+			<image source="images/SIR_diagram.png">
+			</image>
+		</figure>
+		and system of differential equations given by
+		<md>
+			<mrow>S' =\amp -aSI</mrow>
+			<mrow>I' =\amp aSI - kI </mrow>
+			<mrow>R' =\amp kI.</mrow>
+		</md>
+		Initial values are given by <m>S(0) = 762</m>, <m>I(0) = 1</m>, and <m>S(0) = 0</m>.
+	</p>
+	<p>
+		To estimate <m>a</m> and <m>k</m>, we use the data given in <xref ref="SIR_data"/> as a converter and use the optimization algorithm to minimize the sum of squared errors as in <url href="https://insightmaker.com/insight/16mM4HCYXRTG1FVSDuEwn5" visual="Boarding School Insight with Data" /> to obtain <m>a\approx 0.002</m> and <m>k\approx 0.5</m>. This yields the time series graphs (with the data shown)
+		<figure xml:id="SIR_boarding_school_graph">
+			<caption>SIR from boarding school matched to data.</caption>
+			<image source="images/SIR_boarding_school_graph.png">
+			</image>
+		</figure>
+		To show the total population being conserved, we can apply the "use areas" in the graph to obtain the following:
+		<figure xml:id="SIR_areas">
+			<caption>Using area graphs to show the conserved population in the basic SIR model.</caption>
+			<image source="images/SIR_areas.png">
+			</image>
+		</figure>
+		This graphical representation is particularly nice when a sum of quantities is conserved through time. This could be total population or total energy (potential plus kinetic) in a mechanical system.
+	</p>
+
+  </subsection>
+
+  <subsection xml:id="Variations_on_SIR">
+	<title>Variations on the SIR Model</title>
+	<p>
+		There are many variations on the SIR model. These variations could be mathematical or contextual in nature. A nice survey is available at <xref ref="SIR_common_good"/>. A fun (or horrifying variation) is to make the infected populations zombies, as in <xref ref="DHS_SIR_zombies"/>. The following exercise explores one possible variation given in Part II of <xref ref="SIMIODE_SIR2"/>.
+	</p>
+	<exercise>
+		<p>
+			Consider the scenario where instead of "recovered", we call the stock described by <m>R</m> "removed" in the sense that they are removed from the <m>S</m> and <m>I</m> populations. Suppose that we have a population of <m>1000</m> individuals, <m>I(0) = 2</m>, <m>S(0) = 988</m>, and <m>R(0) = 10</m>. Let <m>a=0.002</m> and <m>k = 0.5</m>. 
+		</p>
+		<p>
+			Now, assume further that individuals in the removed population can convince individuals in the susceptible population to practice better hygiene to avoid infection. Essentially, susceptible individuals can be "infected" with better health practices. Create a new model with a new variable <m>m</m> that describes this interaction in a way similar to the <m>S</m>-<m>I</m> interaction.
+		</p>
+		<ol>
+			<li>
+				<p>
+					How large does <m>m</m> need to be to ensure the infected population never goes above <m>25\%</m> of the population?
+				</p>
+			</li>
+			<li>
+				<p>
+					What are real-world things that would impact the size of <m>m</m>?
+				</p>
+			</li>
+		</ol>
+	</exercise>
+	
+  </subsection>
 
 
 
