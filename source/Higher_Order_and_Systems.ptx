@@ -9,7 +9,7 @@
   <me>
     mx'' = mF-kmx'.
   </me>
-  In this chapter we will explore several important types of systems and higher-order equations with Insightmaker, making use of its capabilities when analytic methods fail.
+  In this chapter we will explore several important types of systems and higher-order equations with Insightmaker, making use of its capabilities when analytic methods fail or make things difficult (such as when the flow rates should depend on a condition being met).
 
 </introduction>
 

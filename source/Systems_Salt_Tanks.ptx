@@ -15,17 +15,22 @@
 					Create and analyze systems of interconnected tanks as linear systems of ODEs.
 				</p>
 			</li>
+			<li>
+				<p>
+					Use a conditional in formulas for flow rates.
+				</p>
+			</li>
 	  	</ul>
   </objectives>
 
   <introduction>
 	<p>
 		A standard first-order ODE is associated to the following problem type: 
-		<assemblage xml:id="salt-tank-statement"><title>The Basic Salt Tank Problem</title>
+		<problem xml:id="salt-tank-statement"><title>The Basic Salt Tank Problem</title>
 			<p>
 				A brine (salt water) solution of conentration <m>C</m> kg/L at a rate of <m>r</m> L/min flows into a tank of volume <m>V</m> of initially pure water. A well-mixed solution drains out the bottom of the tank at <m>r</m> L/min. How much salt is in the tank as a function of time?
 			</p> 
-		</assemblage>	
+		</problem>	
 		We call these problems "salt tank problems". 
 	</p>
 	<p>
@@ -218,10 +223,65 @@
 </p>
 	
 
-  </subsection>
+</subsection>
+
+<subsection xml:id="two-tank-decreasing-volume">
+	<title>Two Tanks without Constant Fluid Volume</title>
+
+	<p>
+		Notice that in the previous section we carefully chose our flow rates into and out of each tank so that the net inflow was zero. That is,
+		<md>
+			<mrow>r_{\text{in}} + r_{21} - r_{12} = \amp 0 </mrow>
+			<mrow>r_{12} - r_{21} - r_{\text{out}} =\amp 0.</mrow>		
+		</md>
+		If this is not the case, then we will need to modify our model slightly and be careful of division by zero. 
+	</p>
+	<p>
+		In order to allow for the volume in each tank to be variable, we create links to the volume variables, <m>V_1</m> and <m>V_2</m>, from the appropriate rate variables. Now, after removing the sliders for <m>V_1</m> and <m>V_2</m>, we may enter
+		<md>
+			<mrow>3 + (r_{\text{in}} + r_{21} - r_{12})t </mrow>
+			<mrow> \text{and} </mrow>
+			<mrow>2 + (r_{12} - r_{21} - r_{\text{out}})t</mrow>		
+		</md>
+		in the formulas for <m>V_1</m> and <m>V_2</m>, respectively (with initial volumes as in the previous section). Note that care with units must be taken when entering these formulas; the first would be entered as <c>{3 Liters}+([r_in]-[r_1_2]+[r_2_1])*{Minutes() Minutes}</c>. 
+	</p>
+	<p>
+		Now if we run the simulation with <m>r_{\text{out}} = 0.4</m>, we obtain the time series graphs
+		<figure xml:id="bad_volumes">
+			<caption>Variable volume salt tank amounts without worrying about zero or negative volumes.</caption>
+			<image source="images/bad_volumes.png">
+			</image>
+		</figure>
+
+		We have a problem because the volume of liquid in Tank 2 approaces zero in <m>20</m> minutes. This is when we can use one of the most powerful features of Insightmaker.
+	</p>
+	<assemblage xml:id="conditionals_in_formulas">
+		<title>Conditional Flow Rates</title>
+		<p>
+			Using the If Then Else function in the General Functions Menu, we can add conditions to our flow rates. The syntax is given by <c>IfThenElse(Test Condition, Value if True, Value if False)</c>.
+		</p>
+	</assemblage>
+	<p>
+		In our case we must link <m>V_1</m> and <m>V_2</m> to all flows and apply the condition that both volumes are positive to all the flow rates. For instance, the <term>Outflow</term> flow rate will be given by <c>IfThenElse([V1]>{0 Liters} and [V2]>{0 Liters},[r_out]*[A2]/[V2],0)</c>. Applying this we obtain the following time series:
+		<figure xml:id="goot_volumes">
+			<caption>Variable volume salt tank amounts using a conditional to deal with zero or negative volumes.</caption>
+			<image source="images/good_volumes.png">
+			</image>
+		</figure>
+
+		Now we see the flows all turn off at <m>20</m> seconds.
+	</p>
+	<p>
+		The Insight for this scenario may be found at <url href="https://insightmaker.com/insight/2TqzmreRpGmwluWU5Nsllg" visual="Variable Volume Mixing Insight" />. One could argue the number of links starts to make the Insight inelegant. At this stage it might be useful to experiment with ghosting primitives (see <url href="https://insightmaker.com/docs/ghosting" visual="ghosting" />). A slightly more visually pleasing Insight is available at <url href="https://insightmaker.com/insight/6B3Ujs4P1aRHH604muPhpl" visual="with ghosts" />.
+	</p>
+
+	<exercise>
+		<p>
+		Try to re-create the results of the variable volume tanks using stocks for each volume. This will avoid putting explicit formulas for the volumes as functions of time.
+		</p>
+	</exercise>
 
 
-
-
+</subsection>
 
 </section>
