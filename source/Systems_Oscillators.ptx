@@ -7,13 +7,79 @@
 		<ul>
 	  		<li>
 	  			<p>
-				Oscillators
+				Introduce the basic diagram for second order differential equations.
 	  			</p>
 	  		</li>
+			<li>
+				<p>
+					Explore the basic harmonic oscillator (damped or not, forced or not). 
+				</p>
+			</li>
+			<li>
+				<p>
+					Consider a driven nonlinear pendulum as an example that is not solvable by analytic methods.
+				</p>
+			</li>
 	  	</ul>
   </objectives>
 
 
+  <introduction>
+	<p>
+		Second-order ODEs are ones of the form
+		<me>
+			x'' = f(x,x',t)
+		</me>
+	To handle these equations numerically, we must convert such ODEs to a system of first-order ODEs. We do this by introducting the variable <m>v = x'</m>. We use the letter <m>v</m> because we are now thinking of <m>x</m> as a position and <m>x'</m> as a velocity. This yields the system of first order ODEs
+	<md>
+		<mrow>v' = \amp\ f(x,v,t) </mrow>
+		<mrow>x' = \amp\ v </mrow>.
+	</md>
+	The basic Insightmaker diagram for a second order equation becomes the following:
+	<figure xml:id="second_order_idiom">
+		<caption>The general second order equation diagram.</caption>
+		<image source="images/second_order_idiom.png" width = "75%">
+		</image>
+	</figure>
+	This construction can be generalized to any higher-order equation by introducing more intermediate stocks for the derivatives. 
+	</p> 
+	<p>
+		We will now explore an important class of examples inwhich it makes sense to break the single flow into <m>v</m> into multiple branches.
+	</p>
+  </introduction>
+
+  <subsection xml:id="harmonic_oscillators">
+	<title>Harmonic Oscillators</title>
+	<definition xml:id="harmonic_oscillator"><idx><h>harmonic oscillator</h></idx>
+		<statement>
+			<p>
+				A <term>simple harmonic oscillator</term> is a spring-mass system in which the magnitude of the restoring force of the spring is proportional to the dispalcement of the mass. Given the mass <m>m</m> and spring constant <m>k</m>, the position <m>x</m> of the mass satisfies the second-order ODE
+				<me>
+					mx'' = -kx
+				</me>
+				or equivalently
+				<me>
+					mx''+kx = 0.
+				</me>
+				A <term>damped harmonic oscillator</term> has an additional damping term, where the damping is assumed to be proportional to the velocity. Using <m>\gamma</m> as the damping coefficient, we have
+				<me>
+					mx''+\gamma x' + kx = 0.
+				</me>
+				A <term>forced harmonic oscillator</term> introduces an external force function <m>F(t)</m> and we have
+				<me>
+					mx'' + \gamma x' + kx = F(t).
+				</me>
+			</p>
+			Note that in spring-mass systems we have <m>m</m>, <m>k</m>, and <m>\gamma</m> positive.
+		</statement>
+	</definition>
+
+	<p>
+		We now explore the behavior of oscillators in various cases with Insightmaker.
+	</p>
+		
+	
+  </subsection>
 
 
 
