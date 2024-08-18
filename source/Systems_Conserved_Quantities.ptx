@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="systems_ham_grad">
+	<title>Conserved Quantities</title>
+
+  <objectives>
+		<ul>
+	  		<li>
+	  			<p>
+				Define what a conserved quantity is for a dynamical system.
+	  			</p>
+	  		</li>
+			<li>
+				<p>
+					Show with Insightmaker that in an undamped and unforced oscillator total energy is conserved.
+				</p>
+			</li>
+	  	</ul>
+  </objectives>
+
+
+
+
+
+</section>
