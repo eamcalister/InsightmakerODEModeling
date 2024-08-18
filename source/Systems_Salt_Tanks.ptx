@@ -46,7 +46,12 @@
 			A' = rC - \frac{A}{V}r,\ A(0) = 0. 
 		</me> 
 		We can arrive at essentially through unit analysis. Since the amount of salt in a tank sounds exactly like a stock, we can represent it as the following Insight:
-		<interactive xml:id="Basic-Mixing-Insight" iframe="https://insightmaker.com/insight/4YX9HZUY25jktfHzQp7pvw/embed?topBar=1;sideBar=1;zoom=1" width = "85%"/>
+	</p>
+	<p>
+		<figure xml:id="Basic-Mixing-Insight">
+			<caption></caption>
+			<interactive xml:id="OneTankMixing" iframe="https://insightmaker.com/insight/4YX9HZUY25jktfHzQp7pvw/embed?topBar=1;sideBar=1;zoom=1" width = "85%"/>
+		</figure>
 	</p>
 	<p>
 		We may determine the solution of this IVP analytically to be

@@ -271,7 +271,7 @@ In order of increasing complexity we can
 			<term>Use the Optimizer (Version 2):</term> Minimizing the difference between <m>100</m> and the model's predictied position at <m>t=9.69</m> does not account for any other time-position pairs. To obtain a more global fit to the data, we will use a <em>converter</em> with the entire dataset. Then we will minimize the sum of squared errors from the data to the model outputs.
 		</p>
 		<p>
-			<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+			<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 				<p>	
 				To proceed, click to add a primitive and choose "Add Converter". Call your converter "data".
 				</p><p></p>

@@ -170,7 +170,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 <question xml:id="Stocks"><title>Stocks</title>
 	<ol>
 	<li><p>
-		<sidebyside widths="60% 5% 35%" valign="top">
+		<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 			<p>
 				To create a stock, click on the "<m>\oplus</m> PRIMITIVE" button and choose to add a stock as shown. This will create a blue rectangular box with the name of your stock, which you can edit on the right side of the Insightmaker screen. Call this one <m>y</m>.
 			</p><p></p>
@@ -180,7 +180,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 	</li>
 	<li>
 		<p>
-			<sidebyside widths="35% 5% 60%" valign="top">
+			<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 				<p>
 				When the stock you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the initial value of the stock. This will be the value of the stock at the start of the simulation (the default start is at <m>t = 0</m>). Here we have it set to the value <m>12</m>. Perhaps the most important mathematical idea with stocks is the following: <em> The expression you enter for the initial value is a single number, not something that varies with time; the time evolution of a stock is determined by the flows, which can depend on time.</em> 
 				</p><p></p>

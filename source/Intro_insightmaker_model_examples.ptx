@@ -41,7 +41,7 @@
 	The Insight that we will use to solve this problem is below
 	<interactive xml:id="Malthusian-Example-Insight" iframe="https://insightmaker.com/insight/2Yd7izSdPu4DhoalPCmI4g/embed?topBar=1;sideBar=1;zoom=1" width = "85%"/>
 	</p>
-	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+	<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 		<p>
 		Two features we will use in this solution are having sliders linked and using the tabular output option. To show the output of the simulation as a table instead of the graph of a function, use the configuration button in the simulation window and choose "table" as indicated in the image to the right.
 		</p>
@@ -52,7 +52,7 @@
 			</p>
 		</description></image>	
 	</sidebyside>
-	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+	<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 		<p>
 		Upon scrolling through the table with <m>k=0.1</m>, we find <m>P(3) \approx 13.5</m>. Thus, <m>k</m> is too small.
 		</p>
@@ -63,7 +63,7 @@
 			</p>
 		</description></image>	
 	</sidebyside>
-	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+	<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 		<p>
 		Adjusting the slider for <m>k</m> until we have <m>P(3)\approx 20</m>, we see the correct value of <m>k</m> is about <m>0.23</m>. If we adjust the step size in the slider below <m>0.01</m>, we can opbtain a more accurate value. 
 		</p>
@@ -83,7 +83,7 @@
 	Now is a good time to discuss the simulation settings in Insightmaker. You get to these by clicking the "Settings" button in the top toolbar.
 </p>
 
-<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 	<p>
 		The first important settings are the <em>Basic Simulation Settings</em>. These include the following:
 		<ul>
@@ -112,7 +112,7 @@
 	
 	</sidebyside>
 
-	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+	<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 		<p>
 			Two more important settings are the <em>Advanced Simulation Settings</em>. These include the following:
 			<ul>
@@ -153,7 +153,7 @@
 	<p>
 		To explore how the error at <m>t=1</m> changes with the step size, we will note that <m>P(1) = e</m> and use the tabular output.
 	</p>
-	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+	<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 		<p>
 			When the time step is <m>0.5</m>, the error at <m>t=1</m> is <m>|e-2.25|\approx 0.468</m>.
 		</p>
@@ -165,7 +165,7 @@
 			</description></image>
 		</p>
 	</sidebyside>	
-	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+	<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 		<p>
 			When the time step is <m>0.25</m>, the error at <m>t=1</m> is <m>|e-2.2.44140625|\approx 0.2769</m>. This is <em>about</em> half of the previous error.
 		</p>
@@ -177,7 +177,7 @@
 			</description></image>
 		</p>
 	</sidebyside>
-	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+	<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 		<p>
 			When the time step is <m>0.125</m>, the error at <m>t=1</m> is <m>|e-2.56578451|\approx 0.1525</m>. Again, this is <em>about</em> half of the previous error.
 		</p>
@@ -189,7 +189,7 @@
 			</description></image>
 		</p>
 	</sidebyside>
-	<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+	<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 		<p>
 			Finally, when the time step is <m>0.5</m> and we instead use the 4th Order Runge-Kutta algorithm, the error at <m>t=1</m> is <m>|e-2.71734619|\approx 0.001</m>.  
 		</p>
