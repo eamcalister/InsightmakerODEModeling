@@ -52,6 +52,9 @@
     <biblio type="raw" xml:id="Insightmaker" label="Insightmaker">Scott Fortmann-Roe, <title>Insight Maker: A general-purpose tool for web-based modeling <m></m> simulation</title>, <journal>Simulation Modelling Practice and Theory</journal>, <volume>47</volume>,<pages>28-45</pages>, 2014, <url href="https://www.sciencedirect.com/science/article/pii/S1569190X14000513" />.
     </biblio>
 
+    <biblio type="raw" xml:id="RipcordSIMIODE" label="ripcord">Brody Dylan Johnson, <title>3-100-Ripcord-Toys-ModelingScenario</title> <url href="https://qubeshub.org/community/groups/simiode/publications?id=3605&amp;v=2" />, doi:/10.25334/8CZ1-Y987, 2023.
+    </biblio>
+
     <biblio type="raw" xml:id="SIR_common_good" label="SIR_common_good">Lorelei Koss, <title>SIR Models: Differential Equations that Support the Common Good</title>, <journal> CODEE Journal</journal>, <volume>12</volume>,article 6, 2019, <url href="https://www.sciencedirect.com/science/article/pii/S1569190X14000513" />.
     </biblio>
 

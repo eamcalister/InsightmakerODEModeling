@@ -7,12 +7,164 @@
 		<ul>
 	  		<li>
 	  			<p>
-                    
+                    Create a model for the motion of a ripcord car based on energy transfer from a spinning wheel to a moving car.
                 </p>
 	  		</li>
+			<li>
+				<p>
+					Estimate parameters in the model to match real-world observations.
+				</p>
+			</li>
 	  	</ul>
   </objectives>
 
+  <introduction>
+	<p>
+		In this worksheet you will model the motion of a ripcord car. If you don't know what a ripcord car is, this video should help.
+	</p>
+	<figure xml:id="ripcord-car-fig">
+	<caption>What is a ripcord car? The coolest toy ever!</caption>
+	<video xml:id="ripcord-car-video" youtube="mvfmD4yIsXs" width="100%" />
+	</figure>
+	<p>
+		This worksheet is based on the SIMIODE modeling scenario <xref ref="RipcordSIMIODE"/>, but modified to use energy transfer as a modeling concept. 
+	</p>
+	<p>
+		A ripcord toy (call it a "car") uses a handle with a toothed extension cord (the "t-stick") to spin a wheel. When placed on the ground the wheel initially spins exerting a force that accelerates the car. During the spinning on the ground the speed of the wheel decreases, which causes a loss of rotational kinetic energy in the wheel. Assuming energy is conserved (little energy is dissipated as heat or lost to air resistance), the rotational energy lost by the wheel is converted to translational kinetic energy of the car. This transfer of energy continues until pure rolling is achieved. That is, letting <m>v</m> be the velocity of the car, <m>R</m> be the radius of the wheel, and <m>\omega</m> by the angular velocity of the wheel, the energy transfer from the rotation of the wheel to the translation of the car stops when
+		<me>
+			v = \omega R.
+		</me> 
+	</p>
+	<p>
+		Throughout the remaining problems we will assume the following:
+		<ul>
+			<li>
+				<p>
+					The total mass of the car (including the driving wheel) is <m>m_{\text{car}} = 0.5</m> kg and the mass of the spinning wheel is <m>m_{\text{wheel}} = 0.2</m> kg.
+				</p>
+			</li>
+			<li>
+				<p>
+					When we pull the ripcord, we impart a total energy of <m>0.25</m> J (<m>1</m> Newton of force applied through the pull of a <m>0.25</m> meter ripcord).
+				</p>
+			</li>
+			<li>
+				<p>
+					There are two forces exerted on the car prior to the moment when pure rolling is achieved. 
+					<ol>
+						<li>
+							<p>
+								A constant propulsive force <m>F</m> exerted by the spinning wheel.
+							</p>
+						</li>
+						<li>
+							<p>
+								A resistive force proportional to the translational velocity of the car.
+							</p>
+						</li>
+					</ol>
+					After pure rolling is achieved only the resistive force is present.
+				</p>
+			</li>
+		</ul>
+	</p>
+	<p>
+		The data that has been collected (from a film at 30 frames per second) on our car is the following:
+		<table>
+			<title>Distance Traveled by Ripcord Toy</title>
+			<tabular>
+				<row header = "yes" bottom ="medium">
+					<cell>Frame (at 30 fps) </cell><cell>Distance (in cm)</cell>
+				</row>
+				<row>
+					<cell>0</cell><cell>0</cell>
+				</row>
+				<row>
+					<cell>4</cell><cell>3</cell>
+				</row>
+				<row>
+					<cell>8</cell><cell>10</cell>
+				</row>
+				<row>
+					<cell>12</cell><cell>21</cell>
+				</row>
+				<row>
+					<cell>16</cell><cell>34</cell>
+				</row>
+				<row>
+					<cell>20</cell><cell>50</cell>
+				</row>
+				<row>
+					<cell>24</cell><cell>68</cell>
+				</row>
+				<row>
+					<cell>28</cell><cell>85</cell>
+				</row>
+				<row>
+					<cell>32</cell><cell>103</cell>
+				</row>
+				<row>
+					<cell>36</cell><cell>120</cell>
+				</row>
+				<row>
+					<cell>40</cell><cell>136</cell>
+				</row>
+				<row>
+					<cell>44</cell><cell>153</cell>
+				</row>
+				<row>
+					<cell>48</cell><cell>168</cell>
+				</row>
+				<row>
+					<cell>52</cell><cell>184</cell>
+				</row>
+				<row>
+					<cell>56</cell><cell>199</cell>
+				</row>
+				<row>
+					<cell>60</cell><cell>214</cell>
+				</row>
+				<row>
+					<cell>64</cell><cell>228</cell>
+				</row>
+				<row>
+					<cell>68</cell><cell>243</cell>
+				</row>
+				<row>
+					<cell>72</cell><cell>257</cell>
+				</row>
+			</tabular>
+		</table>
+	For reference, the formula for translational kinetic energy is <m>KE_{\text{trans}} = \frac{1}{2}mv^2</m> and the formula for rotational kinetic energy is <m>KE_{\text{rot}} = \frac{1}{2}R^2\omega^2</m>.
+
+	</p>
+
+</introduction>
+
+<exercise xml:id = "energy_eq">
+	<statement>
+	Derive an equation involving masses and energy of the wheel and car that holds when pure rolling occurs, i.e. when <m>v = \omega R</m>. (This will be useful when developing the formula for a flow rate.)
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		Show that the derivative (with respect to time) of <m>KE_{\text{trans}}</m> is <m>mF_{\text{total}}v</m> where <m>m</m> is the mass of the car, <m>F_{\text{total}}</m> is the sum of all forces on the car, and <m>v</m> is the velocity of the car.
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		Create and Insight to model the motion of the car. Here are some hints:
+		<ul>
+			<li>
+				<p>
+					hint 1...
+				</p>
+			</li>
+		</ul>
+	</statement>
+</exercise>
 
 
 </worksheet>
