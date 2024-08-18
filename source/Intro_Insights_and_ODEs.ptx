@@ -170,7 +170,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 <question xml:id="Stocks"><title>Stocks</title>
 	<ol>
 	<li><p>
-		<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
+		<sidebyside widths="60% 5% 35%" valign="top">
 			<p>
 				To create a stock, click on the "<m>\oplus</m> PRIMITIVE" button and choose to add a stock as shown. This will create a blue rectangular box with the name of your stock, which you can edit on the right side of the Insightmaker screen. Call this one <m>y</m>.
 			</p><p></p>
@@ -180,7 +180,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 	</li>
 	<li>
 		<p>
-			<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+			<sidebyside widths="35% 5% 60%" valign="top">
 				<p>
 				When the stock you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the initial value of the stock. This will be the value of the stock at the start of the simulation (the default start is at <m>t = 0</m>). Here we have it set to the value <m>12</m>. Perhaps the most important mathematical idea with stocks is the following: <em> The expression you enter for the initial value is a single number, not something that varies with time; the time evolution of a stock is determined by the flows, which can depend on time.</em> 
 				</p><p></p>
@@ -222,7 +222,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 	</li>
 	<li>
 		<p>
-			<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+			<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 				<p>
 					Similar to stocks, when a variable you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the value of the variable. This will be the value of the variable through at the start of the simulation. Note that there is a lot of flexibility in what we may enter in the formula for a variable; it may be a function of time or depend on other variables. In the example we're exploring our variables will be the slope and <m>y</m>-intercept of a linear function, which will be numbers controlled by sliders.
 				</p><p></p>
@@ -259,7 +259,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 	</li>
 	<li>
 		<p>
-			<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+			<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 				<p>
 				When the primitive you have linked to is highlighted you can now use that variable in its formula. Here we have the stock <m>y</m> highlighted. Clicking in the formula box for the initial value, we can now add <m>[b]</m>. Now the initial value is controlled by the variable <m>b</m>. 
 				</p><p></p>
@@ -284,7 +284,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 	</li>
 	<li>
 		<p>
-			<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+			<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 				<p>
 				When the flow is highlighted you will see this box on the left side of your screen. You may modify the formula for the flow in the current window, or you can click the circled box to have a new formula editing window. The formula may involve time (entered as Seconds(), Minutes(), etc.), the upstream and/or downstream stocks, or any linked variables. In our example we should link <m>m</m> to the flow into <m>y</m> and make it the flow rate.
 				</p><p></p>
@@ -297,7 +297,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 		<ul>
 			<li>
 				<p>
-				<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+				<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 					<p>
 					For flows we can choose to only allow positive flow rates by toggling "positive flow rates only" on. When this is on there will be no flow from the target to the source. This will make sense to do in some contexts but not others. In our running example, if we wish to allow for negative slopes, then we need to toggle this feature off.
 					</p><p></p>
@@ -307,7 +307,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 			</li>
 			<li>
 				<p>
-				<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+				<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 						<p>
 						When negative flow rates are allowed, we need to know which direction of the flow arrow positive rates represent. This is observed by one end of the the bidirectional flow arrow being hollow. Positive flow rates go from the primitive at hollow arrowhead to the primitive at the filled arrowhead.  
 						</p><p></p>
@@ -315,7 +315,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 				</sidebyside>	
 				</p>
 				<p>
-					<sidebyside widths="40% 5% 60%" margins="auto" valign="top">
+					<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 					<p>	
 					Additionally, you may assign a minus sign (<m>-</m>) and a plus sign (<m>+</m>) to the ends of the arrows indicating positive and negative flow directions as this is somewhat easier to see than the default arrowhead types. To do this, right click on the flow and scroll down to see the "line" options and choose a minus on the start arrow and plus on the end arrow, as shown. You may choose this as the default for your insight by choosing to set this as the flow theme in the same menu. 
 					</p><p></p>
@@ -338,7 +338,7 @@ If you have followed along building a linear function Insight as you have been r
 	<interactive xml:id="interactive-linear-Insight" iframe="https://insightmaker.com/insight/5mgijPG176EqqZ5fIAj4ZO/embed?topBar=1;sideBar=1;zoom=1" width = "90%"/>
 </figure>
 
-<sidebyside widths="60% 5% 40%" margins="auto" valign="top">
+<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 <p>
 	Now you can click "simulate" and we see the time evolution of <m>y</m> with initial value <m>b</m> and slope <m>m</m> (you may need to use the configuration settings in the simulation window to only show <m>y</m>). If "sliders linked" is highlighted in the simulation window, then you can dynamically change the parameter values and see the effect on the graph of <m>y</m>. 
 </p><p></p>
