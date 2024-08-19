@@ -45,7 +45,7 @@
 			</li>
 			<li>
 				<p>
-					When we pull the ripcord, we impart a total energy of <m>0.25</m> J (<m>1</m> Newton of force applied through the pull of a <m>0.25</m> meter ripcord).
+					When we pull the ripcord, we impart a total energy of <m>E_0</m> J as rotational kinetic energy for the driving wheel of the car.
 				</p>
 			</li>
 			<li>
@@ -70,7 +70,7 @@
 	</p>
 	<p>
 		The data that has been collected (from a film at 30 frames per second) on our car is the following:
-		<table>
+		<table xml:id = "toy_data">
 			<title>Distance Traveled by Ripcord Toy</title>
 			<tabular>
 				<row header = "yes" bottom ="medium">
@@ -159,12 +159,38 @@
 		<ul>
 			<li>
 				<p>
-					hint 1...
+					Use velocity, position, kinetic energy of the wheel, and kinetic energy of the car as stocks. 
+				</p>
+			</li>
+			<li>
+				<p>
+					Since energy is conserved, inflow to the kinetic energy of the car equals the outflow from the kinetic energy of the wheel.
+				</p>
+			</li>
+			<li>
+				<p>
+					Energy transfer occurs until the equation from <xref ref="energy_eq"/> holds. After this time, you can ignore the energy stocks.
+				</p>
+			</li>
+			<li>
+				<p>
+					There should be two flows for the velocity stock.
 				</p>
 			</li>
 		</ul>
 	</statement>
 </exercise>
 
+<exercise>
+	<statement>
+		Estimate <m>E_0</m>, <m>F</m>, and <m>k</m> to match the data in <xref ref="toy_data"/>. Observe that the data has input of frames rather than time. You will need to account for that.
+	</statement>
+</exercise>
+
+<exercise>
+	<statement>
+		As an alternative approach, without using energy, estimate the time when velocity stops increasing from <xref ref="toy_data"/>. Use this as a parameter so that only two variables need to be estimated. Which method yields a smaller SSE from the data? 
+	</statement>
+</exercise>
 
 </worksheet>
