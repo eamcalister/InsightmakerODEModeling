@@ -13,7 +13,8 @@
 
   <book xml:id="applied-de-insightmaker">
     <!-- The book needs a title and can have a subtitle  -->
-    <title>Applied Differential Equations with Insightmaker and Data</title>
+    <title>Applied Differential Equations with Insightmaker and Data (Fall 2024 Ed.)</title>
+
 
 
     <xi:include href="./frontmatter.ptx" />
