@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span><span class="space"> </span><span class="title">The Spread of a Rumor.</span>
+</h3> <div class="para logical">
+<div class="para">For this model we will consider a population, with a fixed size of <span class="process-math">\(500\text{,}\)</span> in which a rumor spreads. We will have two sub-populations of size <span class="process-math">\(H\)</span> (for <em class="emphasis">Heard</em>) and <span class="process-math">\(N\)</span> (for <em class="emphasis">Not heard</em>). Time will be measured in days and we will assume <span class="process-math">\(H(0)=50\)</span> and <span class="process-math">\(N(0)=500\text{.}\)</span> A common model for the rate of change in <span class="process-math">\(H\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+H' = kHN,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(k\)</span> is some constant. The typical reasoning presented is that this model presents a scenario where if you scale up either sub-population, the rate of change in <span class="process-math">\(H\)</span> scales up by the same amount. Since <span class="process-math">\(H+N = 500\)</span> is constant, we have <span class="process-math">\(N' = -H'\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">We build this model in Insightmaker (working version found <a class="external" href="https://insightmaker.com/insight/5uGO7EVQ6hOwpOHnmcZZdo" target="_blank"><code class="code-inline tex2jax_ignore">here</code></a>) as follows:</div>
+<ul class="disc" id="rumor_spread-3-2">
+<li><div class="para">Set the simulation settings to RK4 with a <span class="process-math">\(0.1\)</span> time step and Days as time units.</div></li>
+<li><div class="para">Create two stocks, <span class="process-math">\(H\)</span> and <span class="process-math">\(N\text{,}\)</span> with initial values <span class="process-math">\(50\)</span> and <span class="process-math">\(450\text{,}\)</span> respectively. Assign units of Individuals from the Ecology and Nature menu for units.</div></li>
+<li><div class="para">Create a variable <span class="process-math">\(k\text{,}\)</span> which we will leave unitless for now. Give it a slider range from <span class="process-math">\(0\)</span> to <span class="process-math">\(1\)</span> (somewhat arbitrarily).</div></li>
+<li><div class="para">Create a single flow from <span class="process-math">\(N\)</span> to <span class="process-math">\(H\text{.}\)</span> This is possible because <span class="process-math">\(H\)</span> and <span class="process-math">\(N\)</span> have the same units and <span class="process-math">\(N'=-H'\text{.}\)</span> After linking <span class="process-math">\(k\)</span> to this flow, we can assign the flow formula <code class="code-inline tex2jax_ignore">[k]*[H]*[N]</code>. Since the stocks have units of Individuals, we must assign the units of this flow as Individuals/Days.</div></li>
+</ul>
+<div class="para">Now we run the simulation and obtain the following error: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/wrong_units.png" class="contained" alt="An error message for wrong units on the flow."></div>
+</div>
+</div> <div class="para">The reason for this error message is that we left <span class="process-math">\(k\)</span> dimensionless. Observing that <span class="process-math">\(H'\)</span> is in units of Individuals/Days and <span class="process-math">\(HN\)</span> is in units of Individuals<span class="process-math">\(^2\text{,}\)</span> it must be the case that <span class="process-math">\(k\)</span> has units of 1/(Individuals*Days). Making this assignment and letting <span class="process-math">\(k=0.009\)</span> (see below why this might be the right order of magnitude for <span class="process-math">\(k\)</span>), we obtain the following simulation: <figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/rumor_spread_sim.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.5<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(H\)</span> and <span class="process-math">\(N\)</span> when <span class="process-math">\(k=0.009\text{.}\)</span></figcaption></figure> From this graph we see that essentially everyone has hear the rumor in two days.</div> <div class="para logical">
+<div class="para">Now let’s examine the units of <span class="process-math">\(k\)</span> to better understand this model, which could theoretically help us improve it. We ask ourselves "What is the meaning of <span class="process-math">\(k\text{?}\)</span>" We note the units of <span class="process-math">\(k\)</span> are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{\text{Individuals*Days}} = \frac{1/\text{Days}}{\text{Individuals}}
+\end{equation*}
+</div>
+<div class="para">Knowing that 1/time units are percent rates of change, we observe that <span class="process-math">\(kN\)</span> has units of a percent growth rate in <span class="process-math">\(H\text{.}\)</span>
+</div>
+</div> <div class="para logical">
+<div class="para">Why would we multiply by <span class="process-math">\(N\)</span> and have a variable percent growth rate? Let’s dive deeper as follows:</div>
+<ul class="disc" id="rumor_spread-6-2"><li>
+<div class="para">Let <span class="process-math">\(p\)</span> be the percentage of the <span class="process-math">\(N\)</span> population that a typical <span class="process-math">\(H\)</span> individual encounters in a day.</div>
+<div class="para">Let <span class="process-math">\(q\)</span> be the probability that <span class="process-math">\(H\)</span> individual passes the rumor along.</div>
+</li></ul>
+<div class="para">Now we see that for each <span class="process-math">\(H\)</span> individual, <span class="process-math">\(pqN\)</span> individuals who have not heard the rumor will hear it. We then multiply by <span class="process-math">\(H\)</span> to get the total number of individuals entering the <span class="process-math">\(H\)</span> population per day. Thus, <span class="process-math">\(k = pq\text{.}\)</span> The choice of <span class="process-math">\(k=0.009\)</span> above was assuming <span class="process-math">\(p=0.01\)</span> and <span class="process-math">\(q = 0.9\text{.}\)</span>
+</div>
+</div> <div class="para">While the deeper analysis of the model given here may not seem especially obvious, practicing with units makes it much easier.</div></article><span class="incontext"><a class="internal" href="Intro_dimensional_analysis.html#rumor_spread">in-context</a></span>
+</body>
+</html>

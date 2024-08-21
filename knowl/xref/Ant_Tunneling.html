@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.2.8</span><span class="period">.</span><span class="space"> </span><span class="title">Ant Tunneling.</span>
+</h3> <div class="para">Suppose that we have a mound of dirt of unknown size and we wish to tunnel through this mound. We will make the choice of a single stock, <span class="process-math">\(V\text{,}\)</span> the volume of dirt removed from the mound in cubic centimeters. This will also be a good proxy for the length of the tunnel. The initial value for <span class="process-math">\(V\)</span> should be <span class="process-math">\(V(0) = 0\text{.}\)</span>
+</div> <div class="para logical">
+<div class="para">Now we will build our variables. There are certainly many ways to proceed and what follows is just one:</div>
+<ul class="disc" id="Ant_Tunneling-3-1">
+<li><div class="para">Let <span class="process-math">\(r\)</span> be the radius of the tunnel (assuming its shape is cylindrical and straight) in cm.</div></li>
+<li><div class="para">Let <span class="process-math">\(x\)</span> be the length of the tunnel, in cm, at time of <span class="process-math">\(t\)</span> seconds. This is computable as <span class="process-math">\(x = \dfrac{V}{\pi r^2}\text{.}\)</span>
+</div></li>
+<li><div class="para">Let <span class="process-math">\(k_{\text{scrape}}\)</span> be the rate in <span class="process-math">\(\text{cm}^3/\text{s}\)</span> that we can remove (scrape) dirt from the end of the tunnel.</div></li>
+<li><div class="para logical">
+<div class="para">The main issue that makes the flow rate of <span class="process-math">\(V\)</span> depend on <span class="process-math">\(V\)</span> is that dirt scraped from the end of the tunnel must then be removed from the tunnel. We will assume that the velocity at which a volume <span class="process-math">\(\Delta{V}\)</span> of dirt can be moved is inversely proportional to <span class="process-math">\(\Delta{V}\text{.}\)</span> That is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{velocity at which }\Delta{V}\text{ can be moved} = \frac{k_{\text{move}}}{\Delta{V}}
+\end{equation*}
+</div>
+<div class="para">for some constant <span class="process-math">\(k_{\text{move}}\text{.}\)</span> (Think about how plausible this is.)</div>
+</div></li>
+</ul>
+</div> <div class="para logical">
+<div class="para">Now we can create links and flows.</div>
+<ul class="disc" id="Ant_Tunneling-4-1">
+<li><div class="para">We should have one flow into <span class="process-math">\(V\text{.}\)</span> Clearly, <span class="process-math">\(k_{\text{scrape}}\)</span> and <span class="process-math">\(k_{\text{move}}\)</span> should be linked to this flow. Since the flow rate will depend on the length of the tunnel, we should also have a link from <span class="process-math">\(x\)</span> to this flow.</div></li>
+<li><div class="para">Because <span class="process-math">\(x\)</span> is computed from <span class="process-math">\(V\)</span> and <span class="process-math">\(r\text{,}\)</span> there should be links pointing from <span class="process-math">\(V\)</span> and <span class="process-math">\(r\)</span> to <span class="process-math">\(x\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">At this point we have the following diagram: <figure class="figure figure-like"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/images/AntTunnelInsight.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.2.9<span class="period">.</span></span><span class="space"> </span>The diagram of dependencies for the ant tunneling problem.</figcaption></figure>
+</div>
+</div> <div class="para logical">
+<div class="para">Now we can derive the formula for the flow rate into <span class="process-math">\(V\text{.}\)</span> Observe that for a small change in volume, <span class="process-math">\(\Delta{V}\text{,}\)</span> the time it takes to remove that volume is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\Delta{t} = \frac{\Delta{V}}{k_{\text{scrape}}} + \frac{x}{k_{\text{move}}/\Delta{V}}.
+\end{equation*}
+</div>
+<div class="para">A little algebra and taking the limit as <span class="process-math">\(\Delta{V}\to 0\)</span> then yields</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dV}{dt} = \frac{1}{\frac{1}{k_{\text{scrape}}} + \frac{x}{k_{\text{move}}}}.
+\end{equation*}
+</div>
+<div class="para">We would enter this into the formula for the flow as 1/(1/[k_scrape]+[x]/([k_move])). Observe that for finding the analytic solution to this ODE, we would write it as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{dV}{dt} = \frac{1}{\frac{1}{k_{\text{scrape}}} + \frac{V}{k_{\text{move}}\pi r^2}}.
+\end{equation*}
+</div>
+</div> <div class="para">Finally, we can add one more item so that we can graph the solution to the problem posed in the original SIMIODE scenario. That is, we wish to graph the time <span class="process-math">\(T(x)\)</span> to tunnel <span class="process-math">\(x\)</span> cm as a function of <span class="process-math">\(x\text{.}\)</span> So far we have <span class="process-math">\(x\)</span> as a function of time. To do this we create time as a stock, with initial value zero, and flow rate <span class="process-math">\(1\text{.}\)</span> Now running the simulation in scatter plot format with the new time stock on the vertical axis and <span class="process-math">\(x\)</span> on the horizontal gives us the desired graph. A complete Insight is given below (with several variables set arbitrarily at one).</div> <div class="para"><iframe src="https://insightmaker.com/insight/1Zu4Hbs8F4258DG73eqNbj/embed?topBar=1;sideBar=1;zoom=1" id="Ant-Tunneling-Insight" width="510" height="510"></iframe></div></article><span class="incontext"><a class="internal" href="Sec1_2_insightmaker_model_examples.html#Ant_Tunneling">in-context</a></span>
+</body>
+</html>

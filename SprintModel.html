@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Modeling a Sprint with Insightmaker</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Applied Differential Equations with Insightmaker and Data">
+<meta property="book:author" content="Erich McAlister">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_martiansands.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#preface-1-3 { counter-set: preface-1-3 0; }
+#preface-1-3 > li::marker { content: ""counter(preface-1-3,decimal)"."; }
+#preface-1-3 > li { counter-increment: preface-1-3; }
+#preface-2-1 { counter-set: preface-2-1 0; }
+#preface-2-1 > li::marker { content: ""counter(preface-2-1,decimal)"."; }
+#preface-2-1 > li { counter-increment: preface-2-1; }
+#Insights_of_IVPs-4-1 { counter-set: Insights_of_IVPs-4-1 0; }
+#Insights_of_IVPs-4-1 > li::marker { content: ""counter(Insights_of_IVPs-4-1,decimal)"."; }
+#Insights_of_IVPs-4-1 > li { counter-increment: Insights_of_IVPs-4-1; }
+#Stocks-2 { counter-set: Stocks-2 0; }
+#Stocks-2 > li::marker { content: ""counter(Stocks-2,decimal)"."; }
+#Stocks-2 > li { counter-increment: Stocks-2; }
+#Variables-2 { counter-set: Variables-2 0; }
+#Variables-2 > li::marker { content: ""counter(Variables-2,decimal)"."; }
+#Variables-2 > li { counter-increment: Variables-2; }
+#Links-2 { counter-set: Links-2 0; }
+#Links-2 > li::marker { content: ""counter(Links-2,decimal)"."; }
+#Links-2 > li { counter-increment: Links-2; }
+#Flows-2 { counter-set: Flows-2 0; }
+#Flows-2 > li::marker { content: ""counter(Flows-2,decimal)"."; }
+#Flows-2 > li { counter-increment: Flows-2; }
+#Intro_dimensional_analysis-6-1 { counter-set: Intro_dimensional_analysis-6-1 0; }
+#Intro_dimensional_analysis-6-1 > li::marker { content: ""counter(Intro_dimensional_analysis-6-1,decimal)"."; }
+#Intro_dimensional_analysis-6-1 > li { counter-increment: Intro_dimensional_analysis-6-1; }
+#First_Order_Scenarios-2-2 { counter-set: First_Order_Scenarios-2-2 0; }
+#First_Order_Scenarios-2-2 > li::marker { content: ""counter(First_Order_Scenarios-2-2,decimal)"."; }
+#First_Order_Scenarios-2-2 > li { counter-increment: First_Order_Scenarios-2-2; }
+#SprintModel-5-4-1-2 { counter-set: SprintModel-5-4-1-2 0; }
+#SprintModel-5-4-1-2 > li::marker { content: ""counter(SprintModel-5-4-1-2,decimal)"."; }
+#SprintModel-5-4-1-2 > li { counter-increment: SprintModel-5-4-1-2; }
+#SprintModel-6-3-1 { counter-set: SprintModel-6-3-1 0; }
+#SprintModel-6-3-1 > li::marker { content: ""counter(SprintModel-6-3-1,decimal)"."; }
+#SprintModel-6-3-1 > li { counter-increment: SprintModel-6-3-1; }
+#SprintModel-6-5 { counter-set: SprintModel-6-5 0; }
+#SprintModel-6-5 > li::marker { content: ""counter(SprintModel-6-5,decimal)"."; }
+#SprintModel-6-5 > li { counter-increment: SprintModel-6-5; }
+#baseball_dimensional_model-1-1-3 { counter-set: baseball_dimensional_model-1-1-3 0; }
+#baseball_dimensional_model-1-1-3 > li::marker { content: "("counter(baseball_dimensional_model-1-1-3,lower-alpha)")"; }
+#baseball_dimensional_model-1-1-3 > li { counter-increment: baseball_dimensional_model-1-1-3; }
+#FastPitchWorksheet-8-1-2 { counter-set: FastPitchWorksheet-8-1-2 0; }
+#FastPitchWorksheet-8-1-2 > li::marker { content: "("counter(FastPitchWorksheet-8-1-2,lower-alpha)")"; }
+#FastPitchWorksheet-8-1-2 > li { counter-increment: FastPitchWorksheet-8-1-2; }
+#DrugDosageWorksheet-7 { counter-set: DrugDosageWorksheet-7 0; }
+#DrugDosageWorksheet-7 > li::marker { content: "("counter(DrugDosageWorksheet-7,lower-alpha)")"; }
+#DrugDosageWorksheet-7 > li { counter-increment: DrugDosageWorksheet-7; }
+#basic_mixing-6-1 { counter-set: basic_mixing-6-1 0; }
+#basic_mixing-6-1 > li::marker { content: ""counter(basic_mixing-6-1,decimal)"."; }
+#basic_mixing-6-1 > li { counter-increment: basic_mixing-6-1; }
+#two-tank-conserved-volume-3-1 { counter-set: two-tank-conserved-volume-3-1 0; }
+#two-tank-conserved-volume-3-1 > li::marker { content: ""counter(two-tank-conserved-volume-3-1,decimal)"."; }
+#two-tank-conserved-volume-3-1 > li { counter-increment: two-tank-conserved-volume-3-1; }
+#basic_SIR-3-1 { counter-set: basic_SIR-3-1 0; }
+#basic_SIR-3-1 > li::marker { content: ""counter(basic_SIR-3-1,decimal)"."; }
+#basic_SIR-3-1 > li { counter-increment: basic_SIR-3-1; }
+#Variations_on_SIR-3-3 { counter-set: Variations_on_SIR-3-3 0; }
+#Variations_on_SIR-3-3 > li::marker { content: ""counter(Variations_on_SIR-3-3,decimal)"."; }
+#Variations_on_SIR-3-3 > li { counter-increment: Variations_on_SIR-3-3; }
+#harmonic_oscillators-5-2-3 { counter-set: harmonic_oscillators-5-2-3 0; }
+#harmonic_oscillators-5-2-3 > li::marker { content: ""counter(harmonic_oscillators-5-2-3,decimal)"."; }
+#harmonic_oscillators-5-2-3 > li { counter-increment: harmonic_oscillators-5-2-3; }
+#harmonic_oscillators-6-3 { counter-set: harmonic_oscillators-6-3 0; }
+#harmonic_oscillators-6-3 > li::marker { content: ""counter(harmonic_oscillators-6-3,decimal)"."; }
+#harmonic_oscillators-6-3 > li { counter-increment: harmonic_oscillators-6-3; }
+#RipcordCarsWorksheet-3-5-1-3-1-1 { counter-set: RipcordCarsWorksheet-3-5-1-3-1-1 0; }
+#RipcordCarsWorksheet-3-5-1-3-1-1 > li::marker { content: "("counter(RipcordCarsWorksheet-3-5-1-3-1-1,lower-alpha)")"; }
+#RipcordCarsWorksheet-3-5-1-3-1-1 > li { counter-increment: RipcordCarsWorksheet-3-5-1-3-1-1; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="applied-de-insightmaker.html"><span class="title">Applied Differential Equations with Insightmaker and Data</span></a></h1>
+<p class="byline">Erich McAlister</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="First_Order_Scenarios.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="First_Order_Scenarios.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="FastPitchWorksheet.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="Intro_to_Insightmaker.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Insightmaker for ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="Sec1_1_Insights_and_ODEs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Insights and ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Sec1_1_Insights_and_ODEs.html#ODEs_and_IVPs" class="internal"><span class="codenumber">1.1.1</span> <span class="title">ODEs and IVPs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Sec1_1_Insights_and_ODEs.html#Insights_of_IVPs" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Insights of IVPs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Sec1_2_insightmaker_model_examples.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Some Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Intro_dimensional_analysis.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Dimensional Analysis in ODEs and Insights</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="First_Order_Scenarios.html" class="internal"><span class="codenumber">2</span> <span class="title">First-Order Modeling Scenarios</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="SprintModel.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Modeling a Sprint with Insightmaker</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SprintModel.html#SprintModel-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Creating the Model Diagram</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SprintModel.html#SprintModel-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Establish Settings and Create Formulas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SprintModel.html#SprintModel-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Using Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SprintModel.html#sprint_insights" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Sprint Insights</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="FastPitchWorksheet.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Fastest Pitch?</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="CancerTreatmentWorksheet.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Modeling Cancer Treatment</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="DrugDosageWorksheet.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Multiple Drug Doses</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="higher_order_and_systems.html" class="internal"><span class="codenumber">3</span> <span class="title">Higher Order Equations and Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems_salt_tanks.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Salt Tank Models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_salt_tanks.html#basic_mixing" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Basic Mixing Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_salt_tanks.html#two-tank-conserved-volume" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Two Tanks with Constant Fluid Volume</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_salt_tanks.html#two-tank-decreasing-volume" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Two Tanks without Constant Fluid Volume</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems_diseases.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Disease Models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_diseases.html#basic_SIR" class="internal"><span class="codenumber">3.2.1</span> <span class="title">The Basic SIR Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_diseases.html#Variations_on_SIR" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Variations on the SIR Model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems_oscillators.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Oscillators</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_oscillators.html#harmonic_oscillators" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Harmonic Oscillators</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="systems_ham_grad.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Conserved Quantities</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="RipcordCarsWorksheet.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Ripcord Cars with Energy</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="references-backmatter.html" class="internal"><span class="title">References</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="SprintModel"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.1</span><span class="space"> </span><span class="title">Modeling a Sprint with Insightmaker</span>
+</h2>
+<article class="objectives goal-like" id="SprintModel-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc" id="SprintModel-2-1">
+<li id="SprintModel-2-1-1"><div class="para" id="SprintModel-2-1-1-1">Create a one-parameter ODE model of the velocity and position of a sprinter.</div></li>
+<li id="SprintModel-2-1-2"><div class="para" id="SprintModel-2-1-2-1">Compare the results of our model to real-world data from the 2008 Olympic 100m dash.</div></li>
+<li id="SprintModel-2-1-3"><div class="para" id="SprintModel-2-1-3-1">Estimate the value of the parameter in our ODE model that yields the best fit to the data using the built-in optimization abilities of Insightmaker.</div></li>
+</ul></article><section class="introduction" id="SprintModel-3"><div class="para" id="SprintModel-3-1">In this section we will follow the example given in the first section <a href="references-backmatter.html#SIMIODE-text" class="xref" data-knowl="./knowl/xref/SIMIODE-text.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 3: Differential Equations: A Toolbox for Modeling the World">[3]</a> and <a href="references-backmatter.html#BoltSprint" class="xref" data-knowl="./knowl/xref/BoltSprint.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 2: 1-092-DashItAll-ModelingSenario">[2]</a> to show the full workflow of modeling a real-world scenario with Insightmaker. You are encouraged to build your own Insights as you work through this section. However, if you get stuck, links to three Insights are provided at the end of this section. Each one illustrates a different approach to parameter estimation.</div> <div class="para" id="SprintModel-3-2">We consider the problem of creating an ODE model for the velocity of a sprinter based on the following data from the 2008 Olympic 100m dash:</div> <figure class="table table-like" id="sprint_data"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.1<span class="period">.</span></span><span class="space"> </span>Usain Bolt’s Position Data from the 2008 Olympic 100m Dash</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b3 r0 l0 t0 lines">Time (s)</td>
+<td class="l m b3 r0 l0 t0 lines">0.165</td>
+<td class="l m b3 r0 l0 t0 lines">1.85</td>
+<td class="l m b3 r0 l0 t0 lines">2.87</td>
+<td class="l m b3 r0 l0 t0 lines">3.78</td>
+<td class="l m b3 r0 l0 t0 lines">4.65</td>
+<td class="l m b3 r0 l0 t0 lines">5.50</td>
+<td class="l m b3 r0 l0 t0 lines">6.32</td>
+<td class="l m b3 r0 l0 t0 lines">7.14</td>
+<td class="l m b3 r0 l0 t0 lines">7.96</td>
+<td class="l m b3 r0 l0 t0 lines">8.79</td>
+<td class="l m b3 r0 l0 t0 lines">9.69</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Position (m)</td>
+<td class="l m b0 r0 l0 t0 lines">0</td>
+<td class="l m b0 r0 l0 t0 lines">10</td>
+<td class="l m b0 r0 l0 t0 lines">20</td>
+<td class="l m b0 r0 l0 t0 lines">30</td>
+<td class="l m b0 r0 l0 t0 lines">40</td>
+<td class="l m b0 r0 l0 t0 lines">50</td>
+<td class="l m b0 r0 l0 t0 lines">60</td>
+<td class="l m b0 r0 l0 t0 lines">70</td>
+<td class="l m b0 r0 l0 t0 lines">80</td>
+<td class="l m b0 r0 l0 t0 lines">90</td>
+<td class="l m b0 r0 l0 t0 lines">100</td>
+</tr>
+</table></div></figure> <div class="para" id="SprintModel-3-4">Observe that the data we are presented with is position, while we are attemting to model velocity. This turns out to be a common situation as velocity is easier to model with a differential equation using Newton’s Second Law (<span class="process-math">\(F = ma\)</span> has the derivative of velocity on the right-hand side), whereas position is easier to measure for data collection. However, since we can numerically integrate using Insightmaker we just need to create a model for velocity, then make the velocity stock equal to the inflow rate of the position stock via a link. This idea is illustrated with the following basic diagram, which we may refer to as an <dfn class="terminology">idiom</dfn> since it describes a very common modeling situation (this is the velocity-to-position idiom).</div> <figure class="figure figure-like" id="velocity_to_position"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/velocity_to_position.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.2<span class="period">.</span></span><span class="space"> </span>The basic velocity to position diagram.</figcaption></figure> <div class="para" id="SprintModel-3-6">Creating this basic diagram for the modeling scenario, while it may seem intuitive, is the first step in the process of modeling using Insightmaker. We will now carry out the rest of the modeling process explicitly.</div></section><section class="subsection" id="SprintModel-4"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.1</span><span class="space"> </span><span class="title">Creating the Model Diagram</span>
+</h3>
+<article class="axiom theorem-like" id="modeling-step-one"><h4 class="heading">
+<span class="type">Modeling Step</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Step 1: Identify Stocks and Flow Relationships.</span>
+</h4>
+<div class="para" id="modeling-step-one-2-1">Identify all time-dependent variables (stocks) in the scenario and observe possible inflows, outflow, and flows between stocks. Decide if any stock influences the flow into or out of another and create links accordingly.</div></article><div class="para" id="SprintModel-4-3">It is also good practice to establish units on all the stocks and flows of the model at this stage. In this case we will establish meters as the units of position, m/s as the units of velocity (the stock and the flow into position) and m/s<span class="process-math">\(^2\)</span> as the units of both flows into velocity.</div></section><section class="subsection" id="SprintModel-5"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.2</span><span class="space"> </span><span class="title">Establish Settings and Create Formulas</span>
+</h3>
+<article class="axiom theorem-like" id="modeling-step-two"><h4 class="heading">
+<span class="type">Modeling Step</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Step 2: Establish Flow Formulas and Parameters.</span>
+</h4>
+<div class="para" id="modeling-step-two-2-1">Create formulas for the flow rates as well as any parameters (variables in Insightmaker) that the flow rates may depend on.</div></article><div class="para logical" id="SprintModel-5-3">
+<div class="para">For the model of a sprint we will follow the Hill-Keller model as in <a href="references-backmatter.html#BoltSprint" class="xref" data-knowl="./knowl/xref/BoltSprint.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 2: 1-092-DashItAll-ModelingSenario">[2]</a>. In this model we have one term for propulsive force, <span class="process-math">\(F_p\text{,}\)</span> which is assumed to be proportional to the mass of the sprinter. Thus,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/BoltSprint.html">
+\begin{equation*}
+F_p = mP.
+\end{equation*}
+</div>
+<div class="para">Here <span class="process-math">\(F\)</span> will be in units of  m/s<span class="process-math">\(^2\)</span> and <span class="process-math">\(m\)</span> will be in units of kilograms. We will see that only one of them (<span class="process-math">\(F\)</span>) must be added as a variable in the model.</div>
+</div>
+<details id="SprintModel-5-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.5</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="SprintModel-5-4-1-1">How realistic does it seem that the propulsive force generated by a sprinter is</div> <ol class="decimal" id="SprintModel-5-4-1-2">
+<li id="SprintModel-5-4-1-2-1"><div class="para" id="SprintModel-5-4-1-2-1-1">proportional to their mass and</div></li>
+<li id="SprintModel-5-4-1-2-2"><div class="para" id="SprintModel-5-4-1-2-2-1">constant with respect to time?</div></li>
+</ol></article></details><div class="para logical" id="SprintModel-5-5">
+<div class="para">There is also a resistive force, <span class="process-math">\(F_r\text{,}\)</span> that is assumed to be proportional to the velocity <em class="emphasis">and</em> the mass of the sprinter. This assumption is based on the idea that this resistive force accounts for air resistance and internal resistance of the runner’s body. Thus,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F_r = -kmv.
+\end{equation*}
+</div>
+<div class="para">Here <span class="process-math">\(k\)</span> has units of <span class="process-math">\(1/\)</span>s. We will add <span class="process-math">\(k\)</span> as a variable to our insight.</div>
+</div>
+<div class="para logical" id="SprintModel-5-6">
+<div class="para">Using Newton’s Second Law, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+mv' = mF-kmv.
+\end{equation*}
+</div>
+<div class="para">Dividing everything by <span class="process-math">\(m\text{,}\)</span> we now have formulas for our flows for the velocity position stocks: <figure class="table table-like" id="SprintModel-5-6-3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.1.6<span class="period">.</span></span><span class="space"> </span>Flow Formulas for Sprint Model</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r0 l0 t0 lines">Flow</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">Formula</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">into/out of what</th>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">acceleration terms</td>
+<td class="l m b0 r0 l0 t0 lines">P</td>
+<td class="l m b0 r0 l0 t0 lines">into velocity</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">deceleration terms</td>
+<td class="l m b0 r0 l0 t0 lines">kv</td>
+<td class="l m b0 r0 l0 t0 lines">out of velocity</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">velocity</td>
+<td class="l m b0 r0 l0 t0 lines">v</td>
+<td class="l m b0 r0 l0 t0 lines">into position</td>
+</tr>
+</table></div></figure>
+</div>
+</div>
+<div class="para" id="SprintModel-5-7">Our Insight so far should look like the figure below with the flows describe above.</div>
+<figure class="figure figure-like" id="sprint_model_1"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/images/HillKeller1.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.7<span class="period">.</span></span><span class="space"> </span>The basic Hill-Keller Insight.</figcaption></figure><div class="para logical" id="SprintModel-5-9">
+<div class="para">Simulation settings will be as follows:</div>
+<dl class="description-list">
+<dt id="SprintModel-5-9-1-1">Simulation Start:</dt>
+<dd><div class="para" id="SprintModel-5-9-1-1-2">
+<span class="process-math">\(0.0165\text{.}\)</span> This is the first time value in our data. It isn’t zero because reaction time was nonzero.</div></dd>
+<dt id="SprintModel-5-9-1-2">Simulation End:</dt>
+<dd><div class="para" id="SprintModel-5-9-1-2-2">
+<span class="process-math">\(9.6735\text{.}\)</span> This is the difference between <span class="process-math">\(9.69\)</span> and <span class="process-math">\(0.0165\)</span>
+</div></dd>
+<dt id="SprintModel-5-9-1-3">Time Units:</dt>
+<dd><div class="para" id="SprintModel-5-9-1-3-2">Seconds</div></dd>
+<dt id="SprintModel-5-9-1-4">Simulation Time Step:</dt>
+<dd><div class="para" id="SprintModel-5-9-1-4-2">
+<span class="process-math">\(0.0005\text{.}\)</span> This is a very small time step, but it is (sort of) necessary because of the initial point and wanting <span class="process-math">\(9.69\)</span> to be an exact time step. (We could use a larger time step by investigating factors of <span class="process-math">\(96735\text{.}\)</span>)</div></dd>
+<dt id="SprintModel-5-9-1-5">Simulation Algorithm:</dt>
+<dd><div class="para" id="SprintModel-5-9-1-5-2">Euler’s Method. Since the time step is very small, Euler’s Method will be accurate enough.</div></dd>
+</dl>
+</div>
+<div class="para" id="SprintModel-5-10">At this point we have the Insight. Following <a href="references-backmatter.html#SIMIODE-text" class="xref" data-knowl="./knowl/xref/SIMIODE-text.html" data-reveal-label="Reveal" data-close-label="Close" title="Bibliographic Entry 3: Differential Equations: A Toolbox for Modeling the World">[3]</a>, we will let <span class="process-math">\(P = 11\)</span> and make <span class="process-math">\(k\)</span> have a slider to adjust it in small steps (of size <span class="process-math">\(.001\)</span>) between <span class="process-math">\(0\)</span> and <span class="process-math">\(1\)</span> (arrived at by running the model to see what works).</div></section><section class="subsection" id="SprintModel-6"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.3</span><span class="space"> </span><span class="title">Using Data</span>
+</h3>
+<article class="axiom theorem-like" id="modeling-step-three"><h4 class="heading">
+<span class="type">Modeling Step</span><span class="space"> </span><span class="codenumber">2.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Step 3: Adjust Parameters to Match the Data.</span>
+</h4>
+<div class="para" id="modeling-step-three-2-1">After creating some quantifiable way of measuring how well the simulation matches the data, import the data as a converter and use an optimization procedure to make the simulation match the data as well as possible.</div></article><div class="para logical" id="SprintModel-6-3">
+<div class="para">In order of increasing complexity we can</div>
+<ol class="decimal" id="SprintModel-6-3-1">
+<li id="SprintModel-6-3-1-1"><div class="para" id="SprintModel-6-3-1-1-1">adjust sliders to make the data match at one or more points by inspection,</div></li>
+<li id="SprintModel-6-3-1-2"><div class="para" id="SprintModel-6-3-1-2-1">use the built-in optimization algorithm in Insightmaker to minimize the absolute value of the difference between one data point and the simulation, or</div></li>
+<li id="SprintModel-6-3-1-3"><div class="para" id="SprintModel-6-3-1-3-1">use the built-in optimization algorithm in Insightmaker to minimize the sum of squared errors between the collection of data points and the simulation.</div></li>
+</ol>
+</div>
+<div class="para" id="SprintModel-6-4">We will now demonstrate each of these for our sprint model and see how much variation we get in our value of <span class="process-math">\(k\)</span> depending on the method.</div>
+<ol class="decimal" id="SprintModel-6-5">
+<li id="SprintModel-6-5-1">
+<div class="para" id="SprintModel-6-5-1-1">
+<dfn class="terminology">Adjust Paramteters with Sliders:</dfn> This is the most intuitive method. In this case, Bolt ran <span class="process-math">\(100\)</span> meters in <span class="process-math">\(9.69\)</span> seconds. Thus, we can run the simulation set to display time and position in the table display. Then, with sliders linked, we can adjust <span class="process-math">\(k\)</span> to make the position as close as we can to <span class="process-math">\(100\)</span> as possible when <span class="process-math">\(t=9.69\text{.}\)</span> The result is shown below:</div>
+<figure class="figure figure-like" id="sprint_slider_pic"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/SprintSlider.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.9<span class="period">.</span></span><span class="space"> </span>The slider of <span class="process-math">\(0.948\)</span> for <span class="process-math">\(k\)</span> yields a position very close to <span class="process-math">\(100\)</span> meters.</figcaption></figure>
+</li>
+<li id="SprintModel-6-5-2">
+<div class="para logical" id="SprintModel-6-5-2-1">
+<div class="para">
+<dfn class="terminology">Use the Optimizer (Version 1):</dfn> As an alternative to using a slider, we can use the built in optimization algorithm to minimize <span class="process-math">\(|\text{position}-100|\)</span> when <span class="process-math">\(t=9.69\text{.}\)</span> First, we create a variable for <span class="process-math">\(|\text{position}-100|\)</span> (it will need a link from position). Then we proceed as follows:</div>
+<ul class="disc" id="SprintModel-6-5-2-1-5">
+<li id="SprintModel-6-5-2-1-5-1"><div class="para" id="SprintModel-6-5-2-1-5-1-1">Choose "Optimization and Goal Seeking" from the "Tools" (toolbox next to the "Simulate" button).</div></li>
+<li id="SprintModel-6-5-2-1-5-2"><div class="para" id="SprintModel-6-5-2-1-5-2-1">Choose <span class="process-math">\(k\)</span> as the "primitive to adjust".</div></li>
+<li id="SprintModel-6-5-2-1-5-3"><div class="para" id="SprintModel-6-5-2-1-5-3-1">Highlight "minimize" and "final value".</div></li>
+<li id="SprintModel-6-5-2-1-5-4"><div class="para" id="SprintModel-6-5-2-1-5-4-1">Choose <span class="process-math">\(|\text{position}-100|\)</span> as the primitive and accuracy of <span class="process-math">\(0.001\)</span> along with a guess range for <span class="process-math">\(k\text{.}\)</span>
+</div></li>
+</ul>
+<div class="para">Running the optimization, we find the <span class="process-math">\(k\)</span> is about what we found using the slider method. Notice we get a range of values and the value of the minimized variable. This is a numerical optimization algorithm, hence may not arrive at exact values even if you can find them by hand. The output is shown below.</div>
+</div>
+<figure class="figure figure-like" id="sprint_end_opt_pic"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/SprintEndValueOpt.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.10<span class="period">.</span></span><span class="space"> </span>The optimizer also finds <span class="process-math">\(k\approx 0.948\text{.}\)</span></figcaption></figure>
+</li>
+<li id="SprintModel-6-5-3">
+<div class="para" id="SprintModel-6-5-3-1">
+<dfn class="terminology">Use the Optimizer (Version 2):</dfn> Minimizing the difference between <span class="process-math">\(100\)</span> and the model’s predictied position at <span class="process-math">\(t=9.69\)</span> does not account for any other time-position pairs. To obtain a more global fit to the data, we will use a <em class="emphasis">converter</em> with the entire dataset. Then we will minimize the sum of squared errors from the data to the model outputs.</div>
+<div class="para" id="SprintModel-6-5-3-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:35%;"><div class="para" id="SprintModel-6-5-3-2-1-1">To proceed, click to add a primitive and choose "Add Converter". Call your converter "data".</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="SprintModel-6-5-3-2-1-2"></div></div>
+<div class="sbspanel top" style="width:60%;"><img src="external/images/add_converter.png" class="contained"></div>
+</div></div></div>
+<div class="para" id="SprintModel-6-5-3-3">From here, insert the time and position values from <a href="SprintModel.html#sprint_data" class="xref" data-knowl="./knowl/xref/sprint_data.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.1: Usain Bolt’s Position Data from the 2008 Olympic 100m Dash">Table 2.1.1</a> with time as input source, meters as units, and linear interpolation. (Linear interpolation builds additional data points for comparison to the simulation by drawing straight lines through the data points.)</div>
+<div class="para" id="SprintModel-6-5-3-4">Now create a new variable called <span class="process-math">\(SE\)</span> (for "squared error") that has <span class="process-math">\(\text({position}-\text{data})^2\)</span> as its formula and m<span class="process-math">\(^2\)</span> as units.</div>
+<div class="para" id="SprintModel-6-5-3-5">Now open the optimization menu and choose to adjust <span class="process-math">\(k\)</span> to minimize the integral of <span class="process-math">\(SE\text{.}\)</span> (The integral will be the sum of the squared errors.)</div>
+<div class="para" id="SprintModel-6-5-3-6">Running the optimization, we find that this method gives <span class="process-math">\(k\approx 0.956\text{.}\)</span>
+</div>
+<figure class="figure figure-like" id="sprint_sse_opt_pic"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/SprintSSEOpt.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.11<span class="period">.</span></span><span class="space"> </span>The optimizer now finds <span class="process-math">\(k\approx 0.956\)</span> with the sum (integral) of the squared errors equal to <span class="process-math">\(23202.05\text{.}\)</span></figcaption></figure>
+</li>
+</ol>
+<details id="SprintModel-6-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="SprintModel-6-6-1-1">Create a new stock whose flow rate is <span class="process-math">\(SE/\text{TimeStep()}\)</span> (dividing by <span class="process-math">\(\text{TimeStep()}\)</span> will make this into a <em class="emphasis">sum</em> rather than an integral, which is what the optimizer does, really). Use this to compare the <span class="process-math">\(SSE\)</span> for <span class="process-math">\(k=0.948\)</span> and <span class="process-math">\(k=0.956\)</span> to verify that the latter gives a better global fit to the data.</div></article></details></section><section class="subsection" id="sprint_insights"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="space"> </span><span class="title">Sprint Insights</span>
+</h3>
+<div class="para logical" id="sprint_insights-2">
+<div class="para">For comparison to your Insights, see below:</div>
+<ul class="disc" id="sprint_insights-2-1">
+<li id="sprint_insights-2-1-1"><div class="para" id="sprint_insights-2-1-1-1">
+<a class="external" href="https://insightmaker.com/insight/1xXXnmxofSpDcIMFZgByMg" target="_blank">Insight only adjusting slider to match data.</a><details class="ptx-footnote" aria-live="polite" id="sprint_insights-2-1-1-1-2"><summary class="ptx-footnote__number" title="Footnote 2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sprint_insights-2-1-1-1-2"><code class="code-inline tex2jax_ignore">insightmaker.com/insight/1xXXnmxofSpDcIMFZgByMg</code></div></details>
+</div></li>
+<li id="sprint_insights-2-1-2"><div class="para" id="sprint_insights-2-1-2-1">
+<a class="external" href="https://insightmaker.com/insight/58F5qZ0Fmgj8xhsumaE6WC" target="_blank">Insight using the optimizer to match position when <span class="process-math">\(t=9.69\text{.}\)</span></a><details class="ptx-footnote" aria-live="polite" id="sprint_insights-2-1-2-1-2"><summary class="ptx-footnote__number" title="Footnote 3"><sup> 3 </sup></summary><div class="ptx-footnote__contents" id="sprint_insights-2-1-2-1-2"><code class="code-inline tex2jax_ignore">insightmaker.com/insight/58F5qZ0Fmgj8xhsumaE6WC</code></div></details>
+</div></li>
+<li id="sprint_insights-2-1-3"><div class="para" id="sprint_insights-2-1-3-1">
+<a class="external" href="https://insightmaker.com/insight/sJBZBRU4byVeBcQIfublD" target="_blank">Insight using the optimizer to minimize the sum of the squared errors.</a><details class="ptx-footnote" aria-live="polite" id="sprint_insights-2-1-3-1-2"><summary class="ptx-footnote__number" title="Footnote 4"><sup> 4 </sup></summary><div class="ptx-footnote__contents" id="sprint_insights-2-1-3-1-2"><code class="code-inline tex2jax_ignore">insightmaker.com/insight/sJBZBRU4byVeBcQIfublD</code></div></details>
+</div></li>
+</ul>
+</div></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="First_Order_Scenarios.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="FastPitchWorksheet.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>

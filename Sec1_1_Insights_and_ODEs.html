@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insights and ODEs</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Applied Differential Equations with Insightmaker and Data">
+<meta property="book:author" content="Erich McAlister">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/colors_martiansands.css" rel="stylesheet" type="text/css">
+<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
+<style>
+#preface-1-3 { counter-set: preface-1-3 0; }
+#preface-1-3 > li::marker { content: ""counter(preface-1-3,decimal)"."; }
+#preface-1-3 > li { counter-increment: preface-1-3; }
+#preface-2-1 { counter-set: preface-2-1 0; }
+#preface-2-1 > li::marker { content: ""counter(preface-2-1,decimal)"."; }
+#preface-2-1 > li { counter-increment: preface-2-1; }
+#Insights_of_IVPs-4-1 { counter-set: Insights_of_IVPs-4-1 0; }
+#Insights_of_IVPs-4-1 > li::marker { content: ""counter(Insights_of_IVPs-4-1,decimal)"."; }
+#Insights_of_IVPs-4-1 > li { counter-increment: Insights_of_IVPs-4-1; }
+#Stocks-2 { counter-set: Stocks-2 0; }
+#Stocks-2 > li::marker { content: ""counter(Stocks-2,decimal)"."; }
+#Stocks-2 > li { counter-increment: Stocks-2; }
+#Variables-2 { counter-set: Variables-2 0; }
+#Variables-2 > li::marker { content: ""counter(Variables-2,decimal)"."; }
+#Variables-2 > li { counter-increment: Variables-2; }
+#Links-2 { counter-set: Links-2 0; }
+#Links-2 > li::marker { content: ""counter(Links-2,decimal)"."; }
+#Links-2 > li { counter-increment: Links-2; }
+#Flows-2 { counter-set: Flows-2 0; }
+#Flows-2 > li::marker { content: ""counter(Flows-2,decimal)"."; }
+#Flows-2 > li { counter-increment: Flows-2; }
+#Intro_dimensional_analysis-6-1 { counter-set: Intro_dimensional_analysis-6-1 0; }
+#Intro_dimensional_analysis-6-1 > li::marker { content: ""counter(Intro_dimensional_analysis-6-1,decimal)"."; }
+#Intro_dimensional_analysis-6-1 > li { counter-increment: Intro_dimensional_analysis-6-1; }
+#First_Order_Scenarios-2-2 { counter-set: First_Order_Scenarios-2-2 0; }
+#First_Order_Scenarios-2-2 > li::marker { content: ""counter(First_Order_Scenarios-2-2,decimal)"."; }
+#First_Order_Scenarios-2-2 > li { counter-increment: First_Order_Scenarios-2-2; }
+#SprintModel-5-4-1-2 { counter-set: SprintModel-5-4-1-2 0; }
+#SprintModel-5-4-1-2 > li::marker { content: ""counter(SprintModel-5-4-1-2,decimal)"."; }
+#SprintModel-5-4-1-2 > li { counter-increment: SprintModel-5-4-1-2; }
+#SprintModel-6-3-1 { counter-set: SprintModel-6-3-1 0; }
+#SprintModel-6-3-1 > li::marker { content: ""counter(SprintModel-6-3-1,decimal)"."; }
+#SprintModel-6-3-1 > li { counter-increment: SprintModel-6-3-1; }
+#SprintModel-6-5 { counter-set: SprintModel-6-5 0; }
+#SprintModel-6-5 > li::marker { content: ""counter(SprintModel-6-5,decimal)"."; }
+#SprintModel-6-5 > li { counter-increment: SprintModel-6-5; }
+#baseball_dimensional_model-1-1-3 { counter-set: baseball_dimensional_model-1-1-3 0; }
+#baseball_dimensional_model-1-1-3 > li::marker { content: "("counter(baseball_dimensional_model-1-1-3,lower-alpha)")"; }
+#baseball_dimensional_model-1-1-3 > li { counter-increment: baseball_dimensional_model-1-1-3; }
+#FastPitchWorksheet-8-1-2 { counter-set: FastPitchWorksheet-8-1-2 0; }
+#FastPitchWorksheet-8-1-2 > li::marker { content: "("counter(FastPitchWorksheet-8-1-2,lower-alpha)")"; }
+#FastPitchWorksheet-8-1-2 > li { counter-increment: FastPitchWorksheet-8-1-2; }
+#DrugDosageWorksheet-7 { counter-set: DrugDosageWorksheet-7 0; }
+#DrugDosageWorksheet-7 > li::marker { content: "("counter(DrugDosageWorksheet-7,lower-alpha)")"; }
+#DrugDosageWorksheet-7 > li { counter-increment: DrugDosageWorksheet-7; }
+#basic_mixing-6-1 { counter-set: basic_mixing-6-1 0; }
+#basic_mixing-6-1 > li::marker { content: ""counter(basic_mixing-6-1,decimal)"."; }
+#basic_mixing-6-1 > li { counter-increment: basic_mixing-6-1; }
+#two-tank-conserved-volume-3-1 { counter-set: two-tank-conserved-volume-3-1 0; }
+#two-tank-conserved-volume-3-1 > li::marker { content: ""counter(two-tank-conserved-volume-3-1,decimal)"."; }
+#two-tank-conserved-volume-3-1 > li { counter-increment: two-tank-conserved-volume-3-1; }
+#basic_SIR-3-1 { counter-set: basic_SIR-3-1 0; }
+#basic_SIR-3-1 > li::marker { content: ""counter(basic_SIR-3-1,decimal)"."; }
+#basic_SIR-3-1 > li { counter-increment: basic_SIR-3-1; }
+#Variations_on_SIR-3-3 { counter-set: Variations_on_SIR-3-3 0; }
+#Variations_on_SIR-3-3 > li::marker { content: ""counter(Variations_on_SIR-3-3,decimal)"."; }
+#Variations_on_SIR-3-3 > li { counter-increment: Variations_on_SIR-3-3; }
+#harmonic_oscillators-5-2-3 { counter-set: harmonic_oscillators-5-2-3 0; }
+#harmonic_oscillators-5-2-3 > li::marker { content: ""counter(harmonic_oscillators-5-2-3,decimal)"."; }
+#harmonic_oscillators-5-2-3 > li { counter-increment: harmonic_oscillators-5-2-3; }
+#harmonic_oscillators-6-3 { counter-set: harmonic_oscillators-6-3 0; }
+#harmonic_oscillators-6-3 > li::marker { content: ""counter(harmonic_oscillators-6-3,decimal)"."; }
+#harmonic_oscillators-6-3 > li { counter-increment: harmonic_oscillators-6-3; }
+#RipcordCarsWorksheet-3-5-1-3-1-1 { counter-set: RipcordCarsWorksheet-3-5-1-3-1-1 0; }
+#RipcordCarsWorksheet-3-5-1-3-1-1 > li::marker { content: "("counter(RipcordCarsWorksheet-3-5-1-3-1-1,lower-alpha)")"; }
+#RipcordCarsWorksheet-3-5-1-3-1-1 > li { counter-increment: RipcordCarsWorksheet-3-5-1-3-1-1; }
+</style>
+</head>
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
+<h1 class="heading"><a href="applied-de-insightmaker.html"><span class="title">Applied Differential Equations with Insightmaker and Data</span></a></h1>
+<p class="byline">Erich McAlister</p>
+</div>
+</div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="calculator-toggle" class="calculator-toggle button" title="Show calculator" aria-expanded="false" aria-controls="calculator-container"><span class="icon material-symbols-outlined" aria-hidden="true">&#xea5f;</span><span class="name">Calc</span></button><div id="calculator-container" class="calculator-container" style="display: none; z-index:100;"><div id="geogebra-calculator"></div></div>
+<script>
+var ggbApp = new GGBApplet({"appName": "graphing",
+    "width": 330,
+    "height": 600,
+    "showToolBar": true,
+    "showAlgebraInput": true,
+    "perspective": "G/A",
+    "algebraInputPosition": "bottom",
+    "scaleContainerClass": "calculator-container",
+    "allowUpscale": true,
+    "autoHeight": true,
+    "disableAutoScale": false},
+true);
+</script></span><span class="treebuttons"><a class="previous-button button" href="Intro_to_Insightmaker.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="Intro_to_Insightmaker.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="Sec1_2_insightmaker_model_examples.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<li class="toc-item toc-frontmatter">
+<div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-3.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="Intro_to_Insightmaker.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction to Insightmaker for ODEs</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active">
+<div class="toc-title-box"><a href="Sec1_1_Insights_and_ODEs.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Insights and ODEs</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Sec1_1_Insights_and_ODEs.html#ODEs_and_IVPs" class="internal"><span class="codenumber">1.1.1</span> <span class="title">ODEs and IVPs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="Sec1_1_Insights_and_ODEs.html#Insights_of_IVPs" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Insights of IVPs</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Sec1_2_insightmaker_model_examples.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Some Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="Intro_dimensional_analysis.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Dimensional Analysis in ODEs and Insights</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="First_Order_Scenarios.html" class="internal"><span class="codenumber">2</span> <span class="title">First-Order Modeling Scenarios</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="SprintModel.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Modeling a Sprint with Insightmaker</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SprintModel.html#SprintModel-4" class="internal"><span class="codenumber">2.1.1</span> <span class="title">Creating the Model Diagram</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SprintModel.html#SprintModel-5" class="internal"><span class="codenumber">2.1.2</span> <span class="title">Establish Settings and Create Formulas</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SprintModel.html#SprintModel-6" class="internal"><span class="codenumber">2.1.3</span> <span class="title">Using Data</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="SprintModel.html#sprint_insights" class="internal"><span class="codenumber">2.1.4</span> <span class="title">Sprint Insights</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="FastPitchWorksheet.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Fastest Pitch?</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="CancerTreatmentWorksheet.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Modeling Cancer Treatment</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="DrugDosageWorksheet.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Multiple Drug Doses</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="higher_order_and_systems.html" class="internal"><span class="codenumber">3</span> <span class="title">Higher Order Equations and Systems</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems_salt_tanks.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Salt Tank Models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_salt_tanks.html#basic_mixing" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Basic Mixing Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_salt_tanks.html#two-tank-conserved-volume" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Two Tanks with Constant Fluid Volume</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_salt_tanks.html#two-tank-decreasing-volume" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Two Tanks without Constant Fluid Volume</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems_diseases.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Disease Models</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_diseases.html#basic_SIR" class="internal"><span class="codenumber">3.2.1</span> <span class="title">The Basic SIR Model</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_diseases.html#Variations_on_SIR" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Variations on the SIR Model</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="systems_oscillators.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Oscillators</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_oscillators.html#harmonic_oscillators" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Harmonic Oscillators</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="systems_ham_grad.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Conserved Quantities</span></a></div></li>
+<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="RipcordCarsWorksheet.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Ripcord Cars with Energy</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-index"><div class="toc-title-box"><a href="backmatter-2.html" class="internal"><span class="title">Index</span></a></div></li>
+<li class="toc-item toc-references"><div class="toc-title-box"><a href="references-backmatter.html" class="internal"><span class="title">References</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="Sec1_1_Insights_and_ODEs"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Insights and ODEs</span>
+</h2>
+<article class="objectives goal-like" id="Sec1_1_Insights_and_ODEs-2"><h3 class="heading"><span class="type">Objectives</span></h3>
+<ul class="disc" id="Sec1_1_Insights_and_ODEs-2-1">
+<li id="Sec1_1_Insights_and_ODEs-2-1-1"><div class="para" id="Sec1_1_Insights_and_ODEs-2-1-1-1">Understand the components of an Insight in the framework of introductory differential equations.</div></li>
+<li id="Sec1_1_Insights_and_ODEs-2-1-2"><div class="para" id="Sec1_1_Insights_and_ODEs-2-1-2-1">Work through some familiar examples from algebra and Calculus and as Insights and see how they relate to the different representations of solutions to ODEs in Insightmaker,</div></li>
+</ul></article><section class="subsection" id="ODEs_and_IVPs"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="space"> </span><span class="title">ODEs and IVPs</span>
+</h3>
+<div class="para" id="ODEs_and_IVPs-2">We begin by reminding ourselves what, in a purely mathematical sense, a differential equation is.</div>
+<article class="definition definition-like" id="def-DE"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">First-Order Ordinary Differential Equations.</span>
+</h4> <div class="para logical" id="def-DE-3-1">
+<div class="para">Let <span class="process-math">\(t\)</span> denote time, which we will take as our independent variable throughout this text. A <dfn class="terminology">first-order ordinary differential equation (ODE)</dfn> is an equation involving some unknown function of <span class="process-math">\(t\text{,}\)</span> <span class="process-math">\(y\)</span> (the dependent variable), its derivative <span class="process-math">\(y'\text{,}\)</span> and possibly <span class="process-math">\(t\text{.}\)</span> If possible, we often write our first-order differential equations in the standard form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y' = f(t,y),
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(f\)</span> is some function of <span class="process-math">\(y\)</span> and <span class="process-math">\(t\text{.}\)</span> A <dfn class="terminology">solution</dfn> to an ODE is some representation (not necessarily as a formula!) of a function that makes the equation true when substituted for <span class="process-math">\(y\text{.}\)</span>
+</div>
+</div> <div class="para" id="def-DE-3-2">An <dfn class="terminology">initial value problem (IVP)</dfn> is an ODE together with some specified output value at a specified input value, expressed as <span class="process-math">\(y(t_0) = y_0\text{,}\)</span> i.e. we are told that the graph of the unknown function <span class="process-math">\(y\)</span> passes through the point <span class="process-math">\((t_0,y_0)\text{.}\)</span> The equation <span class="process-math">\(y(t_0) = y_0\)</span> is called an <dfn class="terminology">initial condition</dfn> and the value <span class="process-math">\(y_0\)</span> is the <dfn class="terminology">initial value</dfn>.</div></article><div class="para" id="ODEs_and_IVPs-4">In more practical terms, a first-order ODE informs us of how this unknown function relates to its own derivative (rate of change) and time. The practical value of this idea is that we can often express or measure how a quantity changes more easily than find an expression for its value. Each ODE will have an entire parametrized family of functions as its set of solutions and the initial conditions indicate a data point in the <span class="process-math">\(ty\)</span>-plane that the graph must pass through. This picks out a particular solution. We will see later that we may have many data points and parameters in the ODE which we can (approximately) solve for using optimization.</div>
+<div class="para" id="ODEs_and_IVPs-5">Here are three examples that may help make the idea of ODEs and IVPs make sense. We will develop these as Insights before the end of the section.</div>
+<details id="Linear_as_IVP" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">Linear Functions.</span>
+</h4></summary><article class="example example-like knowl__content"> <div class="para logical" id="Linear_as_IVP-2">
+<div class="para">The first initial value problem you probably ever encountered was most likely stated in the following form: <em class="emphasis">find the equation of a line with slope <span class="process-math">\(m\)</span> passing through the point <span class="process-math">\((t_0,y_0)\)</span></em>. Stated in terms of differential equations, this instruction is simply to solve the IVP</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y' = m, y(t_0) = y_0.	
+\end{equation*}
+</div>
+<div class="para">The solution (check it), in slope-intercept form, is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y = mt + (y_0 - mt_0).
+\end{equation*}
+</div>
+</div> <div class="para" id="Linear_as_IVP-3">Observe that in practical situations, <span class="process-math">\(y\)</span> and <span class="process-math">\(t\)</span> typically have some sort of units. The units of <span class="process-math">\(y'\text{,}\)</span> and thus <span class="process-math">\(m\text{,}\)</span> are <span class="process-math">\(\frac{y\text{ units}}{t\text{ units}}\text{.}\)</span>
+</div></article></details><details id="Exp_as_IVP" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Exponential (Malthusian) Growth.</span>
+</h4></summary><article class="example example-like knowl__content"> <div class="para" id="Exp_as_IVP-2">The second common family of functions that naturally arises as the set of solutions to a family of differential equations are exponential functions. Here we will let our dependent variable be <span class="process-math">\(P\)</span> (for population, measured in individuals) and out independent variable be time, <span class="process-math">\(t\text{,}\)</span> in whatever units make sense for the problem.</div> <div class="para logical" id="Exp_as_IVP-3">
+<div class="para">The defining feature of a population that is growing exponentially is the following: <em class="emphasis">the instantaneous growth rate in <span class="process-math">\(P\)</span> is proportional to <span class="process-math">\(P\text{,}\)</span> with some constant of proportionality <span class="process-math">\(k\)</span></em>. Assuming <span class="process-math">\(P(t_0) = P_0\text{,}\)</span> finding the population as a function of time amounts to solving the IVP</div>
+<div class="displaymath process-math">
+\begin{equation*}
+P' = kP, P(t_0) = P_0.
+\end{equation*}
+</div>
+<div class="para">The solution to this IVP is given by <span class="process-math">\(P(t) = P_0e^{kt}\)</span>
+</div>
+</div> <div class="para" id="Exp_as_IVP-4">Observe that the units of <span class="process-math">\(P'\)</span> are <span class="process-math">\(\frac{\text{individuals}}{\text{time}}\text{.}\)</span> Since <span class="process-math">\(P\)</span> has units of individuals, in order for the differential equation to be dimensinally consistent the units of <span class="process-math">\(k\)</span> must be <span class="process-math">\(\frac{1}{\text{time}}\text{.}\)</span> This is a commonly encountered unit for percent rates of change because percentages are by definition dimensionless.</div></article></details><details id="Circle_as_System" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">A System of IVPs.</span>
+</h4></summary><article class="example example-like knowl__content"> <div class="para" id="Circle_as_System-2">Now we will introduce the idea of a system of differential equations. A system of ODEs (hence IVPs) involves multiple dependent variables whose rate of change depend on one-another. Such situations arise all the time. For instance, the variables could be competing animal species, interacting sub-populations during an epidemic (those who are susceptible, infected, and recovered), or the position and velocity of a mass on a spring.</div> <div class="para logical" id="Circle_as_System-3">
+<div class="para">A particularly simple example is given by</div>
+<div class="displaymath process-math" id="Circle_as_System-3-1">
+\begin{align*}
+x' = -y,\amp\ \ x(0) = 1\\
+y' = x,\amp\ \ y(0) = 0.
+\end{align*}
+</div>
+</div> <div class="para logical" id="Circle_as_System-4">
+<div class="para">In this example we are using <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> as the dependent variables to describe the coordinates of a particle moving in the <span class="process-math">\(xy\)</span>-plane. The values of <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> describe the particle’s position, whereas the values of <span class="process-math">\(x'\)</span> and <span class="process-math">\(y'\)</span> decribe where it is moving (instantaneously). More specifically, let’s think about the motion of the particle decriped by the differential equations when it is in each of the four quadrants of the plane.</div>
+<ul class="disc" id="Circle_as_System-4-8">
+<li id="Circle_as_System-4-8-1"><div class="para" id="Circle_as_System-4-8-1-1">If <span class="process-math">\((x,y)\)</span> is in the first quadrant, <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are both positive. Looking at the equations, we see that this means <span class="process-math">\(x'\)</span> is negative and <span class="process-math">\(y'\)</span> is positive. Thus, the particle is moving up and to the left.</div></li>
+<li id="Circle_as_System-4-8-2"><div class="para" id="Circle_as_System-4-8-2-1">If <span class="process-math">\((x,y)\)</span> is in the second quadrant, <span class="process-math">\(x\)</span> is negative and <span class="process-math">\(y\)</span> is positive. Looking at the equations, we see that this means <span class="process-math">\(x'\)</span> is negative and <span class="process-math">\(y'\)</span> is also negative. Thus, the particle is moving down and to the left.</div></li>
+<li id="Circle_as_System-4-8-3"><div class="para" id="Circle_as_System-4-8-3-1">If <span class="process-math">\((x,y)\)</span> is in the third quadrant, <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> are both negative. Looking at the equations, we see that this means <span class="process-math">\(x'\)</span> is positive and <span class="process-math">\(y'\)</span> is negative. Thus, the particle is moving down and to the right.</div></li>
+<li id="Circle_as_System-4-8-4"><div class="para" id="Circle_as_System-4-8-4-1">Finally, if <span class="process-math">\((x,y)\)</span> is in the fourth quadrant, <span class="process-math">\(x\)</span> is positive and <span class="process-math">\(y\)</span> is negative. Looking at the equations, we see that this means <span class="process-math">\(x'\)</span> is positive and <span class="process-math">\(y'\)</span> positive. Thus, the particle is moving up and to the right.</div></li>
+</ul>
+</div> <div class="para" id="Circle_as_System-5">The motion described above sounds like it might be circular (or at least periodic). Indeed, the solution to the given system of IVPs is <span class="process-math">\(x(t) = \cos(t)\)</span> and <span class="process-math">\(y(t) = \sin(t)\text{.}\)</span> As <span class="process-math">\(t\)</span> changes, the particle traces out the unit circle. Varying the initial conditions will change the starting point, which will change the radius if the starting point is not one unit from the origin.</div></article></details></section><section class="subsection" id="Insights_of_IVPs"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="space"> </span><span class="title">Insights of IVPs</span>
+</h3>
+<div class="para" id="Insights_of_IVPs-2">Now let’s get to the heart of this text: Insightmaker and Insights. If you haven’t already, you’ll want to go to <a class="external" href="https://insightmaker.com/" target="_blank"><code class="code-inline tex2jax_ignore">Insightmaker.com</code></a> and create a free account. Also, if you were reading the three examples in the previous subsection and weren’t feeling extra enlightened, the goal of this section is to help us see what’s going on by visualizing ODEs in multiple ways.</div>
+<article class="definition definition-like" id="def-Insight"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Insight.</span>
+</h4> Insightmaker represents ODE (systems-dynamics) models (on pages called <dfn class="terminology">Insights</dfn>) using what are known as <dfn class="terminology">stock-flow models</dfn>. Here we list the basic components of a stock-flow model, called <dfn class="terminology">primitives</dfn>. Each component will be discussed in more depth separately. <ul class="disc" id="def-Insight-4-4">
+<li id="def-Insight-4-4-1"><div class="para" id="p-derived-def-Insight-4-4-1">
+<dfn class="terminology">Stocks:</dfn> Stocks are things that accumulate. In the context of modeling with ODEs, these are the dependent variables of the system.</div></li>
+<li id="def-Insight-4-4-2"><div class="para" id="p-derived-def-Insight-4-4-2">
+<dfn class="terminology">Flows:</dfn> Flows into a stock contribute positively to the time-derivative of the corresponding dependent variable. Likewise, outflows contribute negatively. Briefly, the key formula to manage a stock-flow model is the following:<div class="displaymath process-math">
+\begin{equation*}
+\mbox{Time Derivative of a Stock} = \sum\mbox{Inflows} - \sum\mbox{Outflows}
+\end{equation*}
+</div>
+</div></li>
+<li id="def-Insight-4-4-3"><div class="para" id="p-derived-def-Insight-4-4-3">
+<dfn class="terminology">Variables:</dfn> Variables are often used as parameters in the context of ODEs. These are numbers that we may modify to match our model to data, such as adjusting <span class="process-math">\(k\)</span> in <a href="Sec1_1_Insights_and_ODEs.html#Exp_as_IVP" class="xref" data-knowl="./knowl/xref/Exp_as_IVP.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.1.3: Exponential (Malthusian) Growth">Example 1.1.3</a> in order to match a value of the population at a later time.</div></li>
+<li id="def-Insight-4-4-4"><div class="para" id="p-derived-def-Insight-4-4-4">
+<dfn class="terminology">Links:</dfn> Links are arrows between stocks, flows, and variables that allow the linked objects to be used in the formulas for the object that the to which the link points. Yes, that’s a mouthful, but links are quite a useful organizational tool.</div></li>
+</ul></article><div class="para logical" id="Insights_of_IVPs-4">
+<div class="para">Now we can take each primitive individually and say</div>
+<ol class="decimal" id="Insights_of_IVPs-4-1">
+<li id="Insights_of_IVPs-4-1-1"><div class="para" id="Insights_of_IVPs-4-1-1-1">How it is created.</div></li>
+<li id="Insights_of_IVPs-4-1-2"><div class="para" id="Insights_of_IVPs-4-1-2-1">How it can be modified.</div></li>
+<li id="Insights_of_IVPs-4-1-3"><div class="para" id="Insights_of_IVPs-4-1-3-1">What its important settings are.</div></li>
+</ol>
+<div class="para">Following along through each primitive, you can create an Insight for <a href="Sec1_1_Insights_and_ODEs.html#Linear_as_IVP" class="xref" data-knowl="./knowl/xref/Linear_as_IVP.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 1.1.2: Linear Functions">Example 1.1.2</a>.</div>
+</div>
+<details id="Stocks" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Primitive Summary</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Stocks.</span>
+</h4></summary><article class="question example-like knowl__content"> <ol class="decimal" id="Stocks-2">
+<li id="Stocks-2-1"><div class="para" id="Stocks-2-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:60%;"><div class="para" id="Stocks-2-1-1-1-1">To create a stock, click on the "<span class="process-math">\(\oplus\)</span> PRIMITIVE" button and choose to add a stock as shown. This will create a blue rectangular box with the name of your stock, which you can edit on the right side of the Insightmaker screen. Call this one <span class="process-math">\(y\text{.}\)</span>
+</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Stocks-2-1-1-1-2"></div></div>
+<div class="sbspanel top" style="width:35%;"><img src="external/images/CreateStock.png" class="contained"></div>
+</div></div></div></li>
+<li id="Stocks-2-2"><div class="para" id="Stocks-2-2-1">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:35%;"><div class="para" id="Stocks-2-2-1-1-1">When the stock you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the initial value of the stock. This will be the value of the stock at the start of the simulation (the default start is at <span class="process-math">\(t = 0\)</span>). Here we have it set to the value <span class="process-math">\(12\text{.}\)</span> Perhaps the most important mathematical idea with stocks is the following: <em class="emphasis">The expression you enter for the initial value is a single number, not something that varies with time; the time evolution of a stock is determined by the flows, which can depend on time.</em>
+</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Stocks-2-2-1-1-2"></div></div>
+<div class="sbspanel top" style="width:60%;"><img src="external/images/StockSliderSettings.png" class="contained"></div>
+</div></div> When we discuss variables and links, we will let the initial value be a variable. Doing this makes sense in models where we think of the initial value as a parameter, such as <span class="process-math">\(b\)</span> in <span class="process-math">\(y = mx+b\text{.}\)</span>
+</div></li>
+<li id="Stocks-2-3">
+<div class="para" id="Stocks-2-3-1">Now we will discuss the only two settings we use for stocks in an introductory Differential Equations course.</div>
+<ul class="disc" id="Stocks-2-3-2">
+<li id="Stocks-2-3-2-1"><div class="para" id="Stocks-2-3-2-1-1">We will typically want "Allow negatives" to be on, i.e. the stock can take on negative values. Even in models where context might exclude negative values (such as when a stock is population), we would like to allow them anyway so that we can see something might be wrong with our model.</div></li>
+<li id="Stocks-2-3-2-2"><div class="para" id="Stocks-2-3-2-2-1">If you toggle on "Enable value slider", this will allow you to create a slider for the initial value of the stock. The ability to use sliders in simulations and see how the behavior of the model changes dynamically is one of the most useful features of Insightmaker. (In the Insight we’re building, we will disable the value slider for this stock and create a variable for <span class="process-math">\(b\)</span> with a slider enabled.)</div></li>
+</ul>
+</li>
+</ol></article></details><details id="Variables" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Primitive Summary</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span><span class="space"> </span><span class="title">Variables.</span>
+</h4></summary><article class="question example-like knowl__content"> <ol class="decimal" id="Variables-2">
+<li id="Variables-2-1"><div class="para" id="Variables-2-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:60%;"><div class="para" id="Variables-2-1-1-1-1">To create a variable, click on the "<span class="process-math">\(\oplus\)</span> PRIMITIVE" button and choose to add a variable as shown. This will create a peach-colored ellipse with the name of your variable, which you can edit on the right side of the Insightmaker screen. Create two variables called <span class="process-math">\(m\)</span> and <span class="process-math">\(b\)</span> (drag so they’re not on top of one another).</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Variables-2-1-1-1-2"></div></div>
+<div class="sbspanel top" style="width:35%;"><img src="external/images/CreateVariable.png" class="contained"></div>
+</div></div></div></li>
+<li id="Variables-2-2"><div class="para" id="Variables-2-2-1">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:35%;"><div class="para" id="Variables-2-2-1-1-1">Similar to stocks, when a variable you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the value of the variable. This will be the value of the variable through at the start of the simulation. Note that there is a lot of flexibility in what we may enter in the formula for a variable; it may be a function of time or depend on other variables. In the example we’re exploring our variables will be the slope and <span class="process-math">\(y\)</span>-intercept of a linear function, which will be numbers controlled by sliders.</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Variables-2-2-1-1-2"></div></div>
+<div class="sbspanel top" style="width:60%;"><img src="external/images/VariableSliderSettings.png" class="contained"></div>
+</div></div> Links (discussed below) will allow our new variables to be used in formulas for other primitives.</div></li>
+<li id="Variables-2-3">
+<div class="para" id="Variables-2-3-1">The main setting we use for variables allows them to be dynamic parameters in simulations.</div>
+<ul class="disc" id="Variables-2-3-2"><li id="Variables-2-3-2-1"><div class="para" id="Variables-2-3-2-1-1">If you toggle on "Enable value slider", this will allow you to create a slider for the numerical value for the variable. When the slider is enabled and a numerical value is chosen, that variable will be constant through the simulation. You can choose a range of values and a step size for the slider that you find useful. Here we chose a range of <span class="process-math">\(-20\leq b\leq 20\)</span> with a step size of <span class="process-math">\(0.01\)</span> and set the slider to <span class="process-math">\(12\text{.}\)</span>
+</div></li></ul>
+</li>
+</ol></article></details><details id="Links" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Primitive Summary</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span><span class="space"> </span><span class="title">Links.</span>
+</h4></summary><article class="question example-like knowl__content"> <ol class="decimal" id="Links-2">
+<li id="Links-2-1"><div class="para" id="Links-2-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:60%;"><div class="para" id="Links-2-1-1-1-1">To create a link, click on the "Links" button to highlight it. Now click on the stock or variable that you want to use in the formula for another primitive. Then you can drag the arrow to the primitive in question. In our example right now, we should link <span class="process-math">\(b\)</span> to the stock <span class="process-math">\(y\text{.}\)</span>
+</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Links-2-1-1-1-2"></div></div>
+<div class="sbspanel top" style="width:35%;"><img src="external/images/CreateLink.png" class="contained"></div>
+</div></div></div></li>
+<li id="Links-2-2"><div class="para" id="Links-2-2-1">
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:35%;"><div class="para" id="Links-2-2-1-1-1">When the primitive you have linked to is highlighted you can now use that variable in its formula. Here we have the stock <span class="process-math">\(y\)</span> highlighted. Clicking in the formula box for the initial value, we can now add <span class="process-math">\([b]\text{.}\)</span> Now the initial value is controlled by the variable <span class="process-math">\(b\text{.}\)</span>
+</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Links-2-2-1-1-2"></div></div>
+<div class="sbspanel top" style="width:60%;"><img src="external/images/UseLinkedVariable.png" class="contained"></div>
+</div></div>	.</div></li>
+</ol></article></details><details id="Flows" class="question example-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Primitive Summary</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Flows.</span>
+</h4></summary><article class="question example-like knowl__content"> <ol class="decimal" id="Flows-2">
+<li id="Flows-2-1"><div class="para" id="Flows-2-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:60%;"><div class="para" id="Flows-2-1-1-1-1">To create a flow, click on the "Flows/Transitions" button to highlight it. Now click on the stock which you want to be the source or target of your flow (if the flow really has no source, click on the target stock only). Then you can drag the arrow to the stock at the other end of the flow. If there is no stock at one end, you will have a cloud at one end of the flow. In our example we want a flow with a cloud as source and <span class="process-math">\(y\)</span> as its target.</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Flows-2-1-1-1-2"></div></div>
+<div class="sbspanel top" style="width:35%;"><img src="external/images/CreateFlow.png" class="contained"></div>
+</div></div></div></li>
+<li id="Flows-2-2"><div class="para" id="Flows-2-2-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:35%;"><div class="para" id="Flows-2-2-1-1-1">When the flow is highlighted you will see this box on the left side of your screen. You may modify the formula for the flow in the current window, or you can click the circled box to have a new formula editing window. The formula may involve time (entered as Seconds(), Minutes(), etc.), the upstream and/or downstream stocks, or any linked variables. In our example we should link <span class="process-math">\(m\)</span> to the flow into <span class="process-math">\(y\)</span> and make it the flow rate.</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Flows-2-2-1-1-2"></div></div>
+<div class="sbspanel top" style="width:60%;"><img src="external/images/FlowFormula.png" class="contained"></div>
+</div></div></div></li>
+<li id="Flows-2-3"><div class="para" id="p-derived-Flows-2-3"><ul class="disc" id="Flows-2-3-1">
+<li id="Flows-2-3-1-1"><div class="para" id="Flows-2-3-1-1-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:35%;"><div class="para" id="Flows-2-3-1-1-1-1-1">For flows we can choose to only allow positive flow rates by toggling "positive flow rates only" on. When this is on there will be no flow from the target to the source. This will make sense to do in some contexts but not others. In our running example, if we wish to allow for negative slopes, then we need to toggle this feature off.</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Flows-2-3-1-1-1-1-2"></div></div>
+<div class="sbspanel top" style="width:60%;"><img src="external/images/PosOnlyFlowSlider.png" class="contained"></div>
+</div></div></div></li>
+<li id="Flows-2-3-1-2">
+<div class="para" id="Flows-2-3-1-2-1"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:35%;"><div class="para" id="Flows-2-3-1-2-1-1-1">When negative flow rates are allowed, we need to know which direction of the flow arrow positive rates represent. This is observed by one end of the the bidirectional flow arrow being hollow. Positive flow rates go from the primitive at hollow arrowhead to the primitive at the filled arrowhead.</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Flows-2-3-1-2-1-1-2"></div></div>
+<div class="sbspanel top" style="width:60%;"><img src="external/images/Flow_arrow.png" class="contained"></div>
+</div></div></div>
+<div class="para" id="Flows-2-3-1-2-2"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:35%;"><div class="para" id="Flows-2-3-1-2-2-1-1">Additionally, you may assign a minus sign (<span class="process-math">\(-\)</span>) and a plus sign (<span class="process-math">\(+\)</span>) to the ends of the arrows indicating positive and negative flow directions as this is somewhat easier to see than the default arrowhead types. To do this, right click on the flow and scroll down to see the "line" options and choose a minus on the start arrow and plus on the end arrow, as shown. You may choose this as the default for your insight by choosing to set this as the flow theme in the same menu.</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Flows-2-3-1-2-2-1-2"></div></div>
+<div class="sbspanel top" style="width:60%;"><img src="external/images/plus_minus_flow.png" class="contained"></div>
+</div></div></div>
+</li>
+</ul></div></li>
+</ol></article></details><div class="para" id="Insights_of_IVPs-9">If you have followed along building a linear function Insight as you have been reading, you should have an Insight like the following:</div>
+<figure class="figure figure-like" id="linear-Insight"><iframe src="https://insightmaker.com/insight/5mgijPG176EqqZ5fIAj4ZO/embed?topBar=1;sideBar=1;zoom=1" id="interactive-linear-Insight" width="540" height="540"></iframe><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.10<span class="period">.</span></span><span class="space"> </span>An Insight for a linear function (click on "full screen Insight" to open in a new window).</figcaption></figure><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:60%;"><div class="para" id="Insights_of_IVPs-11-1">Now you can click "simulate" and we see the time evolution of <span class="process-math">\(y\)</span> with initial value <span class="process-math">\(b\)</span> and slope <span class="process-math">\(m\)</span> (you may need to use the configuration settings in the simulation window to only show <span class="process-math">\(y\)</span>). If "sliders linked" is highlighted in the simulation window, then you can dynamically change the parameter values and see the effect on the graph of <span class="process-math">\(y\text{.}\)</span>
+</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="Insights_of_IVPs-11-2"></div></div>
+<div class="sbspanel top" style="width:35%;">
+<img src="external/images/SlidersLinked.png" class="contained" alt="described in detail following the image" aria-describedby="Insights_of_IVPs-11-3-description"><details class="image-description" aria-live="polite"><summary title="details"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span></summary><div id="Insights_of_IVPs-11-3-description"><div class="para" id="Insights_of_IVPs-11-3-1-1">Linked sliders button in simulation window.</div></div></details>
+</div>
+</div></div>
+<article class="remark remark-like" id="Insights_of_IVPs-12"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.1.11</span><span class="period">.</span>
+</h4>
+<div class="para" id="Insights_of_IVPs-12-1">Note that when sliders are linked, you may want to configure your graphing window with a fixed minumum and maximum for the axes. Otherwise, the axes will change as the parameters are varied.</div></article></section><section class="conclusion" id="Sec1_1_Insights_and_ODEs-5">In the next section we will explore some more examples, including the remaining examples of ODEs in this section. As we do these we will explore some more of the available displays and settings in Insightmaker.</section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="Intro_to_Insightmaker.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="Sec1_2_insightmaker_model_examples.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+</div>
+</body>
+</html>
