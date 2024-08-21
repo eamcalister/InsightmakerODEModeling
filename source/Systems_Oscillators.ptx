@@ -130,21 +130,59 @@
 
 	<exploration><title>Periodic Forcing without Damping</title>
 	<p>
-		Now we explore the effect of a periodic force of the form <m>F(t) = \cos(\omega t) </m> to an undamped (<m>\gamma = 0</m>) oscillator. Because an external force will put the mass into motion, we can let <m>x(0)=0</m> and <m>v(0) = 0</m>.
+		Now we explore the effect of a periodic force of the form <m>F(t) = \sin(\omega t) </m> to an undamped (<m>\gamma = 0</m>) oscillator with <m>k=1</m> and <m>m=1</m> (the more general case is treated in any standard differential equations text), i.e.
+		<me>
+			x'' + x = F(t).
+		</me>
+		When <m>F(t) = 0</m> (<m>\omega = 0</m>) the oscillator oscillates sinusoidally with period <m>2\pi</m>. 
+		Because an external force will put the mass into motion, we can let <m>x(0)=0</m> and <m>v(0) = 0</m>. 
 	</p>
 	<ol>
 		<li>
 			<p>
-				<em>Non-resonant Forcing:</em>
+				<em>Non-resonant Forcing:</em> This is when the period of the unforced oscillation is not equal to the period of the forcing function.
 			</p>
 		</li>
 		<li>
 			<p>
-				<em>Resonant Forcing:</em>
+				<em>Resonant Forcing:</em> This is when the period of the forcing function and the unforced oscillation are equal, i.e. <m>\omega = 2\pi</m>.
 			</p>
 		</li>
 	</ol>
-		
+	<p>
+		We will explore the resonant case with Insightmaker. While this is treated analytically in standard texts, we can gain more intuition via simulation. The Insight we will use is at <url href="https://insightmaker.com/insight/2MstzIO2XDDXLC6ULQt373" visual = "Resonance Insight" />.
+	</p>
+	<p>
+		We first will simulate with a forcing function (as an Insightmaker variable) called <m>One\ Period\ Force</m>, which is given by the algebraic formula
+		<me>
+			F(t)  =\begin{cases} \sin(t),\ \amp 2\pi(n-1) \lt t \lt 2\pi n\\ 0,\ \amp \text{otherwise}\end{cases}.
+		</me>
+		<em>See Insight for conditional flow function.</em>
+	</p>
+	<sidebyside widths="50% 5% 45%" margins="auto" valign="top">
+		<p>
+			Running this simulation and increasing <m>n</m> by one repeatedly, we obtain the following sequence of time series graphs. Notice that the oscillator remains motionless until the force is "turned on" and then oscillates freely after the force is "turned off". Because the second-order ODE we are working with is linear, the response to the sum of forces is equal to the sum of the forced responses (be sure that line makes sense). Because the force over multiple periods is the sum of these shifts of single period forces, we simply sum the graphs to the right (ad-infinitum) to obtain the response to a full sinusoid.  
+		</p><p></p>
+		<p>	
+			<image source="images/ResonanceGraphsSeparated.png">
+				<shortdescription>A sequence of responses to a one period sinusoidal force.</shortdescription>
+			</image>		
+		</p>
+	</sidebyside>
+	<p>
+		Replacing the single period forcing function with 
+		<me>
+			F(t)  =\begin{cases} \sin(t),\ \amp 0 \lt t \lt 2\pi n\\ 0,\ \amp \text{otherwise}\end{cases},
+		</me> 
+		we see the linear growth in amplitude. To see this best, we use the Compare Results function under the Tools menu in Insightmaker. Comparing graphs for <m>n = 1,\ldots, 8</m>, we obtain the following:
+		<figure xml:id="ResonanceGraphFinal">
+			<caption>Linear growth in amplitude illustated as we apply the periodic force over more periods.</caption>
+			<image source="images/ResonanceGraphFinal.png">
+			</image>
+		</figure>
+		The perfect alignment between forcing function and response is key to growth in amplitude. This way the shifted responses (shifted by the period of the forcing function) line up perfectly so that they are vertical stretches of one another. You are encouraged to experiment with the non-resonant case and see how that works out. 
+	</p>
+	
 	</exploration>
 	
 	<exercise>
