@@ -18,8 +18,69 @@
 	  	</ul>
   </objectives>
 
+  <definition xml:id="ConservedQuantity"><title>Consevred Quanity (two-dimentional)</title>
+	<statement>
+		<p>
+			Let <m>x_1,\ldots,x_n</m> be the dependent variables of a system of <m>n</m> differential equations. A <term>conserved quantity</term> for this system is a scalar-valued function <m>C(x_1,\ldots,x_n)</m> such that <m>C(x_1(t),\ldots,x_n(t))</m> is a constant function of <m>t</m>.
+		</p>
+	</statement>
+  </definition>
 
+  <example>
+	<statement>
+	We have encountered one conserved quantity in <xref ref="basic_SIR"/>. In that model, the quantity <m>S(t) + I(t) + R(t)</m> remained constant. This was illustrated using the areas graph in the simulation.
+	</statement> 
+  </example>
 
+  <p>
+	Conserved quatities often occur as sums of stocks. The conservation law takes graphical form in the following diagram:
+	<figure xml:id="conserved_idiom">
+		<caption>The basic structure for the quantity <m>x_1+x_2+\cdots +x_n</m> to be conserved.</caption>
+		<image source="images/conserved_quantity_diagram.png">
+		</image>
+	</figure>
+  </p>
 
+  <p>
+	The most important conserved quantity in many physical situations is <em>energy</em>. We explore the case of the undamped and unforced harmonic oscillator below.
+  </p>
+
+  <example><title>The Undamped and Unforced Harmonic Oscillator is Conservative</title>
+
+	The undamped and unforced harmonic oscillator
+	<me>mx''  + kx =0</me> 
+	takes form as a system (letting <m>x' = v</m>)
+	<md>
+		<mrow>x' =\amp\ v </mrow>
+		<mrow>v' =\amp\ -\frac{k}{m}x </mrow>.
+	</md>
+	The total energy function is given by
+	<me>
+		E(x,v) = \frac{k}{2}x^2 + \frac{m}{2}v^2.
+	</me>
+	The first term is the total work done in extending the spring to a position <m>x</m> from equilibrium and the second is the work done in accelerating the mass to velocity <m>v</m>. We can check that total energy is conserved by differntiating with respect to <m>t</m> and using the system of differential equations:
+	<me>
+		\frac{d}{dt}(E(x(t),v(t))) = k x x' + m v v' = kxv  - kxv = 0.
+	</me>
+	In the Insight below, we construct potential and kinetic energy as variables using the above formulas, but also as stocks. The flow rate between the stocks is given by the time derivative of the kinetic energy term, <m>KE' = mvv'</m>. We then compare the flow calculated energies to the formula computed ones.
+
+	<figure xml:id="harmonic_energy">
+		<caption>A harmonic oscillator with computed energies.</caption>
+		<interactive xml:id="harmonic-energy-Insight" iframe="https://insightmaker.com/insight/2pYgDCimC3u7hhbLSeQbAH/embed?topBar=1;sideBar=1;zoom=1" width = "90%"/>
+	</figure>
+
+  </example>
+ <p>
+	A generalization of the above for a second order system occurs when the system has the form 
+	<me>
+		\vec{X}'' = -\nabla U(\vec{X}).
+	</me>
+	In this case, <m>U</m> is called the <term>potnetial function</term>. The total energy is then given by
+	<me>E(\vec{X}) = \frac{1}{2}m\|\vec{X'}\|^2 + u(\vec{X}).</me>
+	The reader is encouraged to try modeling the motion of a particle in the plane under the influence of various potential functions. It's quite interesting to see what you get!
+ </p>
+ <p>
+	Energy arguments are unbiquitous in physics. In the next section, we present a scenario in which energy transfer can be used to decide when a toy car with a skidding wheel stops accelerating.
+ </p>
 
 </section>
