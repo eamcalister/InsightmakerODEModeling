@@ -301,7 +301,7 @@ In order of increasing complexity we can
 <exercise>
 	<statement>
 		<p>
-			Create a new stock whose flow rate is <m>SE/\text{TimeStep()}</m> (dividing by <m>\text{TimeStep()}</m> will make this into a <em>sum</em> rather than an integral, which is what the optimizer does, really). Use this to compare the <m>SSE</m> for <m>k=0.948</m> and <m>k=0.956</m> to verify that the latter gives a better global fit to the data.
+			Create a new stock whose flow rate is <m>SE/\text{TimeStep()}</m> (dividing by <m>\text{TimeStep()}</m> will make this into a <em>sum</em> rather than an integral, which is what the optimizer does, really). Use this to compare the <m>SSE</m> (sum of squared errors) for <m>k=0.948</m> and <m>k=0.956</m> to verify that the latter gives a better global fit to the data.
 		</p>
 	</statement>
 </exercise>
