@@ -155,12 +155,12 @@ Here <m>F</m> will be in units of  m/s<m>^2</m> and <m>m</m> will be in units of
 	<dl>
 		<li><title>Simulation Start:</title>
 			<p>
-				<m>0.0165</m>. This is the first time value in our data. It isn't zero because reaction time was nonzero.
+				<m>0.165</m>. This is the first time value in our data. It isn't zero because reaction time was nonzero.
 			</p>
 		</li>
 		<li><title>Simulation End:</title>
 			<p>
-				<m>9.6735</m>. This is the difference between <m>9.69</m> and <m>0.0165</m>	
+				<m>9.525</m>. This is the difference between <m>9.69</m> and <m>0.165</m>	
 			</p>
 		</li>
 		<li><title>Time Units:</title>
@@ -170,7 +170,7 @@ Here <m>F</m> will be in units of  m/s<m>^2</m> and <m>m</m> will be in units of
 		</li>
 		<li><title>Simulation Time Step:</title>
 			<p>
-			<m>0.0005</m>. This is a very small time step, but it is (sort of) necessary because of the initial point and wanting <m>9.69</m> to be an exact time step. (We could use a larger time step by investigating factors of <m>96735</m>.)	
+			<m>0.005</m>. This is a very small time step, but it is (sort of) necessary because of the initial point and wanting <m>9.69</m> to be an exact time step. (We could use a larger time step by investigating factors of <m>9525</m>.)	
 			</p>
 		</li>
 		<li><title>Simulation Algorithm:</title>
@@ -230,7 +230,7 @@ In order of increasing complexity we can
 		<figure xml:id="sprint_slider_pic">
 			<image source="images/SprintSlider.png">
 			</image>
-			<caption>The slider of <m>0.948</m> for <m>k</m> yields a position very close to <m>100</m> meters.</caption>
+			<caption>The slider of <m>0.929</m> for <m>k</m> yields a position very close to <m>100</m> meters.</caption>
 		</figure>
 	</li>
 	<li>
@@ -263,7 +263,7 @@ In order of increasing complexity we can
 		<figure xml:id="sprint_end_opt_pic">
 			<image source="images/SprintEndValueOpt.png">
 			</image>
-			<caption>The optimizer also finds <m>k\approx 0.948</m>.</caption>
+			<caption>The optimizer finds <m>k\approx 0.9296875</m>.</caption>
 		</figure>
 	</li>
 	<li>
@@ -293,7 +293,7 @@ In order of increasing complexity we can
 		<figure xml:id="sprint_sse_opt_pic">
 			<image source="images/SprintSSEOpt.png">
 			</image>
-			<caption>The optimizer now finds <m>k\approx 0.956</m> with the sum (integral) of the squared errors equal to <m>23202.05</m>.</caption>
+			<caption>The optimizer now finds <m>k\approx 0.9277</m> with the sum (integral) of the squared errors equal to <m>1382.47.05</m>.</caption>
 		</figure>
 	</li>
 </ol>
@@ -301,7 +301,7 @@ In order of increasing complexity we can
 <exercise>
 	<statement>
 		<p>
-			Create a new stock whose flow rate is <m>SE/\text{TimeStep()}</m> (dividing by <m>\text{TimeStep()}</m> will make this into a <em>sum</em> rather than an integral, which is what the optimizer does, really). Use this to compare the <m>SSE</m> (sum of squared errors) for <m>k=0.948</m> and <m>k=0.956</m> to verify that the latter gives a better global fit to the data.
+			Create a new stock whose flow rate is <m>SE/\text{TimeStep()}</m> (dividing by <m>\text{TimeStep()}</m> will make this into a <em>sum</em> rather than an integral, which is what the optimizer does, really). Use this to compare the <m>SSE</m> (sum of squared errors) for <m>k=0.929</m> and <m>k=0.9277</m> to verify that the latter gives a better global fit to the data.
 		</p>
 	</statement>
 </exercise>
