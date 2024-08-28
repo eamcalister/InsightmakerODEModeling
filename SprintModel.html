@@ -384,16 +384,16 @@ mv' = mF-kmv.
 <dl class="description-list">
 <dt id="SprintModel-5-9-1-1">Simulation Start:</dt>
 <dd><div class="para" id="SprintModel-5-9-1-1-2">
-<span class="process-math">\(0.0165\text{.}\)</span> This is the first time value in our data. It isn’t zero because reaction time was nonzero.</div></dd>
+<span class="process-math">\(0.165\text{.}\)</span> This is the first time value in our data. It isn’t zero because reaction time was nonzero.</div></dd>
 <dt id="SprintModel-5-9-1-2">Simulation End:</dt>
 <dd><div class="para" id="SprintModel-5-9-1-2-2">
-<span class="process-math">\(9.6735\text{.}\)</span> This is the difference between <span class="process-math">\(9.69\)</span> and <span class="process-math">\(0.0165\)</span>
+<span class="process-math">\(9.525\text{.}\)</span> This is the difference between <span class="process-math">\(9.69\)</span> and <span class="process-math">\(0.165\)</span>
 </div></dd>
 <dt id="SprintModel-5-9-1-3">Time Units:</dt>
 <dd><div class="para" id="SprintModel-5-9-1-3-2">Seconds</div></dd>
 <dt id="SprintModel-5-9-1-4">Simulation Time Step:</dt>
 <dd><div class="para" id="SprintModel-5-9-1-4-2">
-<span class="process-math">\(0.0005\text{.}\)</span> This is a very small time step, but it is (sort of) necessary because of the initial point and wanting <span class="process-math">\(9.69\)</span> to be an exact time step. (We could use a larger time step by investigating factors of <span class="process-math">\(96735\text{.}\)</span>)</div></dd>
+<span class="process-math">\(0.005\text{.}\)</span> This is a very small time step, but it is (sort of) necessary because of the initial point and wanting <span class="process-math">\(9.69\)</span> to be an exact time step. (We could use a larger time step by investigating factors of <span class="process-math">\(9525\text{.}\)</span>)</div></dd>
 <dt id="SprintModel-5-9-1-5">Simulation Algorithm:</dt>
 <dd><div class="para" id="SprintModel-5-9-1-5-2">Euler’s Method. Since the time step is very small, Euler’s Method will be accurate enough.</div></dd>
 </dl>
@@ -418,7 +418,7 @@ mv' = mF-kmv.
 <div class="para" id="SprintModel-6-5-1-1">
 <dfn class="terminology">Adjust Paramteters with Sliders:</dfn> This is the most intuitive method. In this case, Bolt ran <span class="process-math">\(100\)</span> meters in <span class="process-math">\(9.69\)</span> seconds. Thus, we can run the simulation set to display time and position in the table display. Then, with sliders linked, we can adjust <span class="process-math">\(k\)</span> to make the position as close as we can to <span class="process-math">\(100\)</span> as possible when <span class="process-math">\(t=9.69\text{.}\)</span> The result is shown below:</div>
 <figure class="figure figure-like" id="sprint_slider_pic"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/SprintSlider.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.9<span class="period">.</span></span><span class="space"> </span>The slider of <span class="process-math">\(0.948\)</span> for <span class="process-math">\(k\)</span> yields a position very close to <span class="process-math">\(100\)</span> meters.</figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.9<span class="period">.</span></span><span class="space"> </span>The slider of <span class="process-math">\(0.929\)</span> for <span class="process-math">\(k\)</span> yields a position very close to <span class="process-math">\(100\)</span> meters.</figcaption></figure>
 </li>
 <li id="SprintModel-6-5-2">
 <div class="para logical" id="SprintModel-6-5-2-1">
@@ -434,7 +434,7 @@ mv' = mF-kmv.
 <div class="para">Running the optimization, we find the <span class="process-math">\(k\)</span> is about what we found using the slider method. Notice we get a range of values and the value of the minimized variable. This is a numerical optimization algorithm, hence may not arrive at exact values even if you can find them by hand. The output is shown below.</div>
 </div>
 <figure class="figure figure-like" id="sprint_end_opt_pic"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/SprintEndValueOpt.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.10<span class="period">.</span></span><span class="space"> </span>The optimizer also finds <span class="process-math">\(k\approx 0.948\text{.}\)</span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.10<span class="period">.</span></span><span class="space"> </span>The optimizer finds <span class="process-math">\(k\approx 0.9296875\text{.}\)</span></figcaption></figure>
 </li>
 <li id="SprintModel-6-5-3">
 <div class="para" id="SprintModel-6-5-3-1">
@@ -450,12 +450,12 @@ mv' = mF-kmv.
 <div class="para" id="SprintModel-6-5-3-6">Running the optimization, we find that this method gives <span class="process-math">\(k\approx 0.956\text{.}\)</span>
 </div>
 <figure class="figure figure-like" id="sprint_sse_opt_pic"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/SprintSSEOpt.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.11<span class="period">.</span></span><span class="space"> </span>The optimizer now finds <span class="process-math">\(k\approx 0.956\)</span> with the sum (integral) of the squared errors equal to <span class="process-math">\(23202.05\text{.}\)</span></figcaption></figure>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.11<span class="period">.</span></span><span class="space"> </span>The optimizer now finds <span class="process-math">\(k\approx 0.9277\)</span> with the sum (integral) of the squared errors equal to <span class="process-math">\(1382.47.05\text{.}\)</span></figcaption></figure>
 </li>
 </ol>
 <details id="SprintModel-6-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.1.12</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="SprintModel-6-6-1-1">Create a new stock whose flow rate is <span class="process-math">\(SE/\text{TimeStep()}\)</span> (dividing by <span class="process-math">\(\text{TimeStep()}\)</span> will make this into a <em class="emphasis">sum</em> rather than an integral, which is what the optimizer does, really). Use this to compare the <span class="process-math">\(SSE\)</span> (sum of squared errors) for <span class="process-math">\(k=0.948\)</span> and <span class="process-math">\(k=0.956\)</span> to verify that the latter gives a better global fit to the data.</div></article></details></section><section class="subsection" id="sprint_insights"><h3 class="heading hide-type">
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="SprintModel-6-6-1-1">Create a new stock whose flow rate is <span class="process-math">\(SE/\text{TimeStep()}\)</span> (dividing by <span class="process-math">\(\text{TimeStep()}\)</span> will make this into a <em class="emphasis">sum</em> rather than an integral, which is what the optimizer does, really). Use this to compare the <span class="process-math">\(SSE\)</span> (sum of squared errors) for <span class="process-math">\(k=0.929\)</span> and <span class="process-math">\(k=0.9277\)</span> to verify that the latter gives a better global fit to the data.</div></article></details></section><section class="subsection" id="sprint_insights"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.1.4</span><span class="space"> </span><span class="title">Sprint Insights</span>
 </h3>
 <div class="para logical" id="sprint_insights-2">
