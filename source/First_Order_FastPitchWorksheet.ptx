@@ -35,7 +35,7 @@
 		<ol>
 			<li>
 				<p>
-					Use dimensional analysis to explain why the exponent <m>c</m> must equal <m>2</m>.
+					Use dimensional analysis to explain why the exponent <m>d</m> must equal <m>2</m>.
 				</p>
 			</li>
 			<li>
@@ -64,7 +64,7 @@
   </p>
 
   <p>
-	The data set we will use to estimate <m>k</m> is given in the table below, sourced from the makers of a Bluetooth enabled pitch training ball (reference). The terminology used in the given table is defined as follows:
+	The data set we will use to estimate <m>k</m> is given in the table below, sourced from the makers of a Bluetooth enabled pitch training ball (<url href="https://docs.google.com/spreadsheets/d/1csJmCHzopbc_EWa1idFGMoDUBorkBRIbZvatA2nk11U/edit?gid=2134910657#gid=2134910657" visual = "Pitch Data"/>). The terminology used in the given table is defined as follows:
 	<ul>
 		<li>
 			<p>
@@ -170,7 +170,7 @@
 <exercise>
 	<statement>
 	<p>
-		Now (2024 as of writing) MLB publishes drag coefficients (values of <m>K</m> in <xref ref="baseball_dimensional_model"/>). Do a little research to compare values you would compute from your estimates of <m>k</m>. How far off are we and what might be the cause of the error?
+		Now (2024 as of writing) MLB publishes drag coefficients (values of <m>2K</m> in <xref ref="baseball_dimensional_model"/>). Do a little research to compare values you would compute from your estimates of <m>k</m>. How far off are we and what might be the cause of the error? (See <url href="https://baseballsavant.mlb.com/drag-dashboard?_gl=1*pslree*_gcl_au*NjM1MTU4NzguMTcyNjUwOTcwNw..*_ga*MTI1MzYyMzQxMi4xNzI2NTA5NzA3*_ga_N8YFCZLYSZ*MTcyNjUwOTcwNC4xLjAuMTcyNjUwOTcwNC42MC4wLjY1MTAxMjI0Mw" visual = "MLB Drag Dashboard" />)
 	</p>
 	</statement>
 </exercise>
