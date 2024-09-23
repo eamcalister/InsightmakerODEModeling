@@ -38,7 +38,7 @@ where <m>\alpha\geq </m> is a parameter called the <term>intrinsic growth rate</
   <exercise>
 	<statement>
 		<p>
-			Explain why the expressions <m>\alpha\dfrac{(1-r)r}{1+r}</m> and <m>kr</m> are both always positive. Develop and Insight with one inflow, one outflow, and two variables (with sliders). (<em>For students turning this in, you will need to submit your Insightmaker files.</em>)
+			Explain why the expressions <m>\alpha\dfrac{(1-r)r}{1+r}</m> and <m>kr</m> are both always positive. Develop an Insight with one inflow, one outflow, and two variables (with sliders). (<em>For students turning this in, you will need to submit your Insightmaker files.</em>)
 		</p>
 	</statement>
   </exercise>
