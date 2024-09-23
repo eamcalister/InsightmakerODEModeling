@@ -28,7 +28,7 @@
   </p>
 
   <p>
-	Suppose you work for a drug company that has recently discovered a new cancer drug. It has been tried out on a small number of patients and now you need to study the results further before proceeding to widespread clinical trials. The model describing the relative (dimensionless) radius <m>r</m> of a tumor for a dosage of relative size <m>k\geq 0</m> is given by the differential equation
+	Suppose you work for a drug company that has recently discovered a new cancer drug. It has been tried out on a small number of patients and now you need to study the results further before proceeding to widespread clinical trials. The model describing the relative (as a percentage of maximal possible tumor size, thus dimensionless) radius <m>r</m> of a tumor for a dosage of relative size <m>k\geq 0</m> is given by the differential equation
 <me>
 r' = \alpha\frac{(1-r)r}{1+r} - kr,
 </me>
