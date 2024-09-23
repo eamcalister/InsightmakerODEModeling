@@ -32,7 +32,7 @@
 <me>
 r' = \alpha\frac{(1-r)r}{1+r} - kr,
 </me>
-where <m>\alpha\geq </m> is a parameter called the <term>intrinsic growth rate</term>. The time units are months. Suppose, throughout this worksheet, that at time of detection <m>r=.05</m>.
+where <m>\alpha\geq 0 </m> is a parameter called the <term>intrinsic growth rate</term>. The time units are months. Suppose, throughout this worksheet, that at time of detection <m>r=.05</m>.
   </p>
 
   <exercise>
