@@ -721,11 +721,65 @@ var ptx_lunr_docs = [
   "body": " What does the graph of the flow function really look like in an idealized (instantaneous injection) bolus injection model?  "
 },
 {
+  "id": "HalfWheelingWorksheet",
+  "level": "1",
+  "url": "HalfWheelingWorksheet.html",
+  "type": "Worksheet",
+  "number": "3.1",
+  "title": "Half Wheel Hell",
+  "body": " Half Wheel Hell     Introduce a linear system of differential equations and explore possible behaviors of the long run solutions.     \"Half wheeling\" occurs when two cyclists ride side-by-side and one of them insists on always keeping their front wheel one wheel radius ahead of the other rider's wheel (the title of this worksheet is from ). When the rider who is half a wheel behind tries to match the velocity of the rider who is half a wheel in front, the front rider accelerates to maintain the half wheel gap. We wish to model this scenario with a system of differential equations and decide the answer to the following questions:   Is it always the case that riding with a half wheeler will result in unbounded velocities or can an equilibrium be achieved?    Are there some scenarios in which velocities oscillate and some where they don't?     How many stocks should we have present in this model and what are they? Create names for them.   Suppose we have two riders: Rider 1 (Speed-match Freddy, who is noce and sociable) and Rider 2 (Half-wheel Eddy, who is kind of a jerk). They each change their velocities according to the other rider as follows:   Freddy changes his velocity at a rate proportional to the difference in the two rider's velocities with constant of proportionality . If Eddy is faster, Freddy speeds up. If Eddy is slower, Freddy slows down.    Eddy changes his velocity at a rate proportional to the difference between his position and Freddy's and meters with constant of proportionality . If Eddy is more than meters ahead of Freddy, he slows down. If Eddy is less than meters ahead of Freddy, he speeds up.   Develop a system of four differential equations to model this scenario and turn them into an Insight with variables and .    Assume and . If the riders start perfectly side-by-side at a velocity of m\/s, what will their long run velocities be? Will they be separated by meters? Show visuals with both the time series plot and the scatter plot with \"show lines\" on and \"show points\" off.    Suppose Freddy gets fed up with Eddy and quits being nice. He decides to start half-wheeling as well. Modify the system of differential equations and see what happens. Is the new behavior of the velicities what you expect? Does one rider stay consistently in fron of the other?   "
+},
+{
+  "id": "HalfWheelingWorksheet-2",
+  "level": "2",
+  "url": "HalfWheelingWorksheet.html#HalfWheelingWorksheet-2",
+  "type": "Objectives",
+  "number": "3.1",
+  "title": "",
+  "body": "   Introduce a linear system of differential equations and explore possible behaviors of the long run solutions.    "
+},
+{
+  "id": "half-wheel-stocks",
+  "level": "2",
+  "url": "HalfWheelingWorksheet.html#half-wheel-stocks",
+  "type": "Worksheet Exercise",
+  "number": "3.1.1",
+  "title": "",
+  "body": "How many stocks should we have present in this model and what are they? Create names for them. "
+},
+{
+  "id": "HalfWheelingWorksheet-5",
+  "level": "2",
+  "url": "HalfWheelingWorksheet.html#HalfWheelingWorksheet-5",
+  "type": "Worksheet Exercise",
+  "number": "3.1.2",
+  "title": "",
+  "body": " Suppose we have two riders: Rider 1 (Speed-match Freddy, who is noce and sociable) and Rider 2 (Half-wheel Eddy, who is kind of a jerk). They each change their velocities according to the other rider as follows:   Freddy changes his velocity at a rate proportional to the difference in the two rider's velocities with constant of proportionality . If Eddy is faster, Freddy speeds up. If Eddy is slower, Freddy slows down.    Eddy changes his velocity at a rate proportional to the difference between his position and Freddy's and meters with constant of proportionality . If Eddy is more than meters ahead of Freddy, he slows down. If Eddy is less than meters ahead of Freddy, he speeds up.   Develop a system of four differential equations to model this scenario and turn them into an Insight with variables and .  "
+},
+{
+  "id": "HalfWheelingWorksheet-6",
+  "level": "2",
+  "url": "HalfWheelingWorksheet.html#HalfWheelingWorksheet-6",
+  "type": "Worksheet Exercise",
+  "number": "3.1.3",
+  "title": "",
+  "body": " Assume and . If the riders start perfectly side-by-side at a velocity of m\/s, what will their long run velocities be? Will they be separated by meters? Show visuals with both the time series plot and the scatter plot with \"show lines\" on and \"show points\" off.  "
+},
+{
+  "id": "HalfWheelingWorksheet-7",
+  "level": "2",
+  "url": "HalfWheelingWorksheet.html#HalfWheelingWorksheet-7",
+  "type": "Worksheet Exercise",
+  "number": "3.1.4",
+  "title": "",
+  "body": " Suppose Freddy gets fed up with Eddy and quits being nice. He decides to start half-wheeling as well. Modify the system of differential equations and see what happens. Is the new behavior of the velicities what you expect? Does one rider stay consistently in fron of the other?  "
+},
+{
   "id": "systems_salt_tanks",
   "level": "1",
   "url": "systems_salt_tanks.html",
   "type": "Section",
-  "number": "3.1",
+  "number": "3.2",
   "title": "Salt Tank Models",
   "body": " Salt Tank Models     Introduce mixing in and single tank as a first order differential equation.    Create and analyze systems of interconnected tanks as linear systems of ODEs.    Use a conditional in formulas for flow rates.      A standard first-order ODE is associated to the following problem type: The Basic Salt Tank Problem  A brine (salt water) solution of conentration kg\/L at a rate of L\/min flows into a tank of volume of initially pure water. A well-mixed solution drains out the bottom of the tank at L\/min. How much salt is in the tank as a function of time?  We call these problems \"salt tank problems\".  In this section we explore this type of problem in general with multiple tanks and perhaps without conserved volumes. The worksheet in the next section presents the modeling scenario in and section 6.5.1 of     Basic Mixing Problems  To present the problem in in ODE form, letting denote the amount of salt in the tank at a time of minutes, we have We can arrive at essentially through unit analysis. Since the amount of salt in a tank sounds exactly like a stock, we can represent it as the following Insight:    The basic one-tank mixing Insight.     We may determine the solution of this IVP analytically to be Running the given Insight with , , and (all with associated units) yields the corresponding graph  The graph of a solution to the basic salt tank problem.    The long run equilibrium amount of salt in the tank is kg. This makes sense as it yields a concentration of kg\/L. In the log run all the mixture in the tank is inflow mixture.   In your own copy of , create a variable that is equal to . For a given , , and , use the optimization algorithm to find the equilibrium value of by imnimizing the integral of this new variable.   Now we will consider the following questions:   What if there are several interconnected tanks?    What if the inflow and outflow rates are not the same?       Two Tanks with Constant Fluid Volume  Consider the first problem:  The Two Tank Mixing Problem  Consider two interconnected tanks initially containing fresh water, call them Tank 1 and Tank 2, of volumes L and L, respectively. A brine solution of concentration kg\/L flows into Tank 1 from an external source at a rate of L\/min. A well-mixed solution froms from Tank 1 to Tank 2 at a rate of L\/min and from Tank 2 to Tank 1 at a rate of L\/min. Finally, a well-mixed solution exits Tank 2 at a rate of L\/min.    This is a scenario where building the Insight is perhaps easier than building the differential equations first. We do so as follows:   Create stocks and for the amount of salt, in kg, in Tank 1 and Tank 2, respectively. Both should have initial values of zero.    Create flows into Tank 1 from the outside and from Tank 2. Likewise, create flows out of Tank 2 to the outside and to Tank 1.    Create variables for , , , , , , and .     Now we need to create links based on what the various salt rates depend on. The best strategy for this is to take each tank and apply the idiom diagram shown below, which corresponds to the ODE   The one tank mixing idiom.    Splitting the inflows and outflows as necessary for each tank we may obtain the following table of linkages:   Variable Links in a Two Tank Mixing Problem    Link Source Target    1 External Flow into Tank 1    2 External Flow into Tank 1    3 Tank 1 to Tank 2    4 Tank 1 to Tank 2    5 Tank 2 to Tank 1    6 Tank 2 to Tank 1    7 External Flow out of Tank 2    8 External Flow out of Tank 2    At this point we have the full diagram:  The full two-tank diagram.     While this diagram may seem complicated, we now see that each ODE in our system will have three terms, what their signs are, and on what variables they depend. We have   Using these to build our flow rates in the diagram. Using parameter values indicated in the table nad running for minutes, we obtain the following ( ):                               Two tank time series graphs.       In each of these graphs we see the long run behavior yields a concentration of about kg\/L, as expected. We can also see the equilibrium solutions approached in the following scatter plot:  Scatter plot for the two tank problem. Dot at the equilibrium and arrow added.        Two Tanks without Constant Fluid Volume  Notice that in the previous section we carefully chose our flow rates into and out of each tank so that the net inflow was zero. That is, If this is not the case, then we will need to modify our model slightly and be careful of division by zero.  In order to allow for the volume in each tank to be variable, we create links to the volume variables, and , from the appropriate rate variables. Now, after removing the sliders for and , we may enter in the formulas for and , respectively (with initial volumes as in the previous section). Note that care with units must be taken when entering these formulas; the first would be entered as {3 Liters}+([r_in]-[r_1_2]+[r_2_1])*{Minutes() Minutes} .  Now if we run the simulation with , we obtain the time series graphs  Variable volume salt tank amounts without worrying about zero or negative volumes.    We have a problem because the volume of liquid in Tank 2 approaces zero in minutes. This is when we can use one of the most powerful features of Insightmaker.   Conditional Flow Rates  Using the If Then Else function in the General Functions Menu, we can add conditions to our flow rates. The syntax is given by IfThenElse(Test Condition, Value if True, Value if False) .   In our case we must link and to all flows and apply the condition that both volumes are positive to all the flow rates. For instance, the Outflow flow rate will be given by IfThenElse([V1]>{0 Liters} and [V2]>{0 Liters},[r_out]*[A2]\/[V2],0) . Applying this we obtain the following time series:  Variable volume salt tank amounts using a conditional to deal with zero or negative volumes.    Now we see the flows all turn off at seconds.  The Insight for this scenario may be found at . One could argue the number of links starts to make the Insight inelegant. At this stage it might be useful to experiment with ghosting primitives (see ). A slightly more visually pleasing Insight is available at .  Try to re-create the results of the variable volume tanks using stocks for each volume. This will avoid putting explicit formulas for the volumes as functions of time.   "
 },
@@ -734,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#systems_salt_tanks-2",
   "type": "Objectives",
-  "number": "3.1",
+  "number": "3.2",
   "title": "",
   "body": "   Introduce mixing in and single tank as a first order differential equation.    Create and analyze systems of interconnected tanks as linear systems of ODEs.    Use a conditional in formulas for flow rates.    "
 },
@@ -743,7 +797,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#salt-tank-statement",
   "type": "Problem",
-  "number": "3.1.1",
+  "number": "3.2.1",
   "title": "The Basic Salt Tank Problem.",
   "body": "The Basic Salt Tank Problem  A brine (salt water) solution of conentration kg\/L at a rate of L\/min flows into a tank of volume of initially pure water. A well-mixed solution drains out the bottom of the tank at L\/min. How much salt is in the tank as a function of time?  "
 },
@@ -752,7 +806,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#Basic-Mixing-Insight",
   "type": "Figure",
-  "number": "3.1.2",
+  "number": "3.2.2",
   "title": "",
   "body": " The basic one-tank mixing Insight.   "
 },
@@ -761,7 +815,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#BasicMixingGraph",
   "type": "Figure",
-  "number": "3.1.3",
+  "number": "3.2.3",
   "title": "",
   "body": " The graph of a solution to the basic salt tank problem.    "
 },
@@ -770,7 +824,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#basic_mixing-5",
   "type": "Checkpoint",
-  "number": "3.1.4",
+  "number": "3.2.4",
   "title": "",
   "body": " In your own copy of , create a variable that is equal to . For a given , , and , use the optimization algorithm to find the equilibrium value of by imnimizing the integral of this new variable.  "
 },
@@ -779,7 +833,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#tank_idiom",
   "type": "Figure",
-  "number": "3.1.5",
+  "number": "3.2.5",
   "title": "",
   "body": " The one tank mixing idiom.    "
 },
@@ -788,7 +842,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#two-tank-conserved-volume-5",
   "type": "Table",
-  "number": "3.1.6",
+  "number": "3.2.6",
   "title": "Variable Links in a Two Tank Mixing Problem",
   "body": " Variable Links in a Two Tank Mixing Problem    Link Source Target    1 External Flow into Tank 1    2 External Flow into Tank 1    3 Tank 1 to Tank 2    4 Tank 1 to Tank 2    5 Tank 2 to Tank 1    6 Tank 2 to Tank 1    7 External Flow out of Tank 2    8 External Flow out of Tank 2    "
 },
@@ -797,7 +851,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#two-tank-full",
   "type": "Figure",
-  "number": "3.1.7",
+  "number": "3.2.7",
   "title": "",
   "body": " The full two-tank diagram.    "
 },
@@ -806,7 +860,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#two-tank-time-series",
   "type": "Figure",
-  "number": "3.1.8",
+  "number": "3.2.8",
   "title": "",
   "body": " Two tank time series graphs.    "
 },
@@ -815,7 +869,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#two-tank-phase",
   "type": "Figure",
-  "number": "3.1.9",
+  "number": "3.2.9",
   "title": "",
   "body": " Scatter plot for the two tank problem. Dot at the equilibrium and arrow added.    "
 },
@@ -824,7 +878,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#bad_volumes",
   "type": "Figure",
-  "number": "3.1.10",
+  "number": "3.2.10",
   "title": "",
   "body": " Variable volume salt tank amounts without worrying about zero or negative volumes.    "
 },
@@ -842,7 +896,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_salt_tanks.html#two-tank-decreasing-volume-8",
   "type": "Checkpoint",
-  "number": "3.1.12",
+  "number": "3.2.12",
   "title": "",
   "body": "Try to re-create the results of the variable volume tanks using stocks for each volume. This will avoid putting explicit formulas for the volumes as functions of time. "
 },
@@ -851,7 +905,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "systems_diseases.html",
   "type": "Section",
-  "number": "3.2",
+  "number": "3.3",
   "title": "Disease Models",
   "body": " Disease Models     Develop the basic SIR model for the spread of an infectious disease.    Estimate parameters in the SIR model using data.    Consider other versions and uses of the SIR model.      The Basic SIR Model  The basic model for the spread of an infectious disease involves three sub-populations of a larger one.   The sub-population of individuals who are susceptible to infection. The number of individuals in this population is denoted by .    The sub-population of individuals who are infected. The number of individuals in this population is denoted by .    The sub-population of individuals who are recovered from the disease. The number of individuals in this population is denoted by .     In order to simplify the model, we assume that   The total population remains constant, i.e. nobody enters or leaves the local population in which we are modeling spread of the disease.    Once recovered, individuals gain immunity from re-infection. This is often true for common diseases, at least on the time scale in which we might model.   A good test-study for this situation is the case presented in and develobed as a SIMIODE modeling scenario in . In this scenario we have a British boarding school where an influenza outbreak occured. The number of infected students each day of the outbreak is given by the table:  Influenza Outbreak Model    Day 0 1 2 3 4 5 6 7 8 9 10 11 12 13    infected 1 3 25 72 222 282 265 233 189 123 70 25 11 4    The total number of boys at the school was 763.  To build the model, we start with the rumor spread model , thinking of the infection as a rumor. Thus, we have two stocks and , with a flow from to given by the formula , where and are in units of individuals and is in units of . We assume that a consant percentage of the infected individuals recover on a daily basis. Hence the flow rate from to is given by , where has units of . This yields the Insight , with main diagram  The SIR model diagram.    and system of differential equations given by Initial values are given by , , and .  To estimate and , we use the data given in as a converter and use the optimization algorithm to minimize the sum of squared errors as in to obtain and . This yields the time series graphs (with the data shown)  SIR from boarding school matched to data.    To show the total population being conserved, we can apply the \"use areas\" in the graph to obtain the following:  Using area graphs to show the conserved population in the basic SIR model.    This graphical representation is particularly nice when a sum of quantities is conserved through time. This could be total population or total energy (potential plus kinetic) in a mechanical system.    Variations on the SIR Model  There are many variations on the SIR model. These variations could be mathematical or contextual in nature. A nice survey is available at . A fun (or horrifying variation) is to make the infected populations zombies, as in . The following exercise explores one possible variation given in Part II of .  Consider the scenario where instead of \"recovered\", we call the stock described by \"removed\" in the sense that they are removed from the and populations. Suppose that we have a population of individuals, , , and . Let and . Now, assume further that individuals in the removed population can convince individuals in the susceptible population to practice better hygiene to avoid infection. Essentially, susceptible individuals can be \"infected\" with better health practices. Create a new model with a new variable that describes this interaction in a way similar to the - interaction.   How large does need to be to ensure the infected population never goes above of the population?    What are real-world things that would impact the size of ?     "
 },
@@ -860,7 +914,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_diseases.html#systems_diseases-2",
   "type": "Objectives",
-  "number": "3.2",
+  "number": "3.3",
   "title": "",
   "body": "   Develop the basic SIR model for the spread of an infectious disease.    Estimate parameters in the SIR model using data.    Consider other versions and uses of the SIR model.    "
 },
@@ -869,7 +923,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_diseases.html#SIR_data",
   "type": "Table",
-  "number": "3.2.1",
+  "number": "3.3.1",
   "title": "Influenza Outbreak Model",
   "body": " Influenza Outbreak Model    Day 0 1 2 3 4 5 6 7 8 9 10 11 12 13    infected 1 3 25 72 222 282 265 233 189 123 70 25 11 4    "
 },
@@ -878,7 +932,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_diseases.html#SIR_diagram",
   "type": "Figure",
-  "number": "3.2.2",
+  "number": "3.3.2",
   "title": "",
   "body": " The SIR model diagram.    "
 },
@@ -887,7 +941,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_diseases.html#SIR_boarding_school_graph",
   "type": "Figure",
-  "number": "3.2.3",
+  "number": "3.3.3",
   "title": "",
   "body": " SIR from boarding school matched to data.    "
 },
@@ -896,7 +950,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_diseases.html#SIR_areas",
   "type": "Figure",
-  "number": "3.2.4",
+  "number": "3.3.4",
   "title": "",
   "body": " Using area graphs to show the conserved population in the basic SIR model.    "
 },
@@ -905,7 +959,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_diseases.html#Variations_on_SIR-3",
   "type": "Checkpoint",
-  "number": "3.2.5",
+  "number": "3.3.5",
   "title": "",
   "body": "Consider the scenario where instead of \"recovered\", we call the stock described by \"removed\" in the sense that they are removed from the and populations. Suppose that we have a population of individuals, , , and . Let and . Now, assume further that individuals in the removed population can convince individuals in the susceptible population to practice better hygiene to avoid infection. Essentially, susceptible individuals can be \"infected\" with better health practices. Create a new model with a new variable that describes this interaction in a way similar to the - interaction.   How large does need to be to ensure the infected population never goes above of the population?    What are real-world things that would impact the size of ?   "
 },
@@ -914,7 +968,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "systems_oscillators.html",
   "type": "Section",
-  "number": "3.3",
+  "number": "3.4",
   "title": "Oscillators",
   "body": " Oscillators     Introduce the basic diagram for second order differential equations.    Explore the basic harmonic oscillator (damped or not, forced or not).    Consider a driven nonlinear pendulum as an example that is not solvable by analytic methods.      Second-order ODEs are ones of the form To handle these equations numerically, we must convert such ODEs to a system of first-order ODEs. We do this by introducting the variable . We use the letter because we are now thinking of as a position and as a velocity. This yields the system of first order ODEs The basic Insightmaker diagram for a second order equation becomes the following:  The general second order equation diagram.    This construction can be generalized to any higher-order equation by introducing more intermediate stocks for the derivatives.  We will now explore an important class of examples inwhich it makes sense to break the single flow into into multiple branches.    Harmonic Oscillators  harmonic oscillator   A simple harmonic oscillator is a spring-mass system in which the magnitude of the restoring force of the spring is proportional to the dispalcement of the mass. Given the mass and spring constant , the position of the mass satisfies the second-order ODE or equivalently A damped harmonic oscillator has an additional damping term, where the damping is assumed to be proportional to the velocity. Using as the damping coefficient, we have A forced harmonic oscillator introduces an external force function and we have  Note that in spring-mass systems we have , , and positive.   We now explore the behavior of oscillators in various cases with Insightmaker. The Insight used for these is available at . The diagram is given by   The damped and forced oscillator.     No External Force  Analytic methods can be used to show the three possible cases. In each case we show the result with and .    Overdamped: This occurs when . In this case we see and decay to zero rapidly. Using , , and , we obtain the following:  position and velocity graphs for an overdamped oscillator       Underdamped: This occurs when . In this case we see and oscillate with amplitude decaying to zero. Using , , and , we obtain the following:  position and velocity graphs for an underdamped oscillator  In the scatterplot with and on the horizontal and vertical axes, respectively, we see a spiral:  position and velocity graphs for an overdamped oscillator       Underdamped: This occurs when . In this case we see and decaying to zero with an \"almost\" oscillation at the start. Using , , and , we obtain the following:  position and velocity graphs for a critically damped oscillator  In the scatterplot with and on the horizontal and vertical axes, respectively, we see an \"almost\" spiral:  position and velocity graphs for a critically damped oscillator       Notice that all solution other than when will approach zero in the long run. This should make sense as positive damping should slow our mass down.   Periodic Forcing without Damping  Now we explore the effect of a periodic force of the form to an undamped ( ) oscillator with and (the more general case is treated in any standard differential equations text), i.e. When ( ) the oscillator oscillates sinusoidally with period . Because an external force will put the mass into motion, we can let and .     Non-resonant Forcing: This is when the period of the unforced oscillation is not equal to the period of the forcing function.     Resonant Forcing: This is when the period of the forcing function and the unforced oscillation are equal, i.e. .    We will explore the resonant case with Insightmaker. While this is treated analytically in standard texts, we can gain more intuition via simulation. The Insight we will use is at .  We first will simulate with a forcing function (as an Insightmaker variable) called , which is given by the algebraic formula  See Insight for conditional flow function.    Running this simulation and increasing by one repeatedly, we obtain the following sequence of time series graphs. Notice that the oscillator remains motionless until the force is \"turned on\" and then oscillates freely after the force is \"turned off\". Because the second-order ODE we are working with is linear, the response to the sum of forces is equal to the sum of the forced responses (be sure that line makes sense). Because the force over multiple periods is the sum of these shifts of single period forces, we simply sum the graphs to the right (ad-infinitum) to obtain the response to a full sinusoid.    A sequence of responses to a one period sinusoidal force.     Replacing the single period forcing function with we see the linear growth in amplitude. To see this best, we use the Compare Results function under the Tools menu in Insightmaker. Comparing graphs for , we obtain the following:  Linear growth in amplitude illustated as we apply the periodic force over more periods.    The perfect alignment between forcing function and response is key to growth in amplitude. This way the shifted responses (shifted by the period of the forcing function) line up perfectly so that they are vertical stretches of one another. You are encouraged to experiment with the non-resonant case and see how that works out.   What are the possible outcomes of applying a periodic force to a damped oscillator? Consider all possible cases of damping and think about how the results make physical sense.    The oscillator problems presented in this section are rather standard in a first course in differential equations. They are amenable to analytic methods. However, we should keep in mind that Insightmaker doesn't care if an ODE is linear or not. For instance, one may explore the behavior of a non-linear air spring using Insightmaker using essentially the same diagram we used above but with different flow formulas. Using the programming functions in the flow formulas, one may use different damping coefficients depending position and\/or on the sign of the velocity. Linear constant coefficient oscillators are just the beginning.   "
 },
@@ -923,7 +977,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_oscillators.html#systems_oscillators-2",
   "type": "Objectives",
-  "number": "3.3",
+  "number": "3.4",
   "title": "",
   "body": "   Introduce the basic diagram for second order differential equations.    Explore the basic harmonic oscillator (damped or not, forced or not).    Consider a driven nonlinear pendulum as an example that is not solvable by analytic methods.    "
 },
@@ -932,7 +986,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_oscillators.html#second_order_idiom",
   "type": "Figure",
-  "number": "3.3.1",
+  "number": "3.4.1",
   "title": "",
   "body": " The general second order equation diagram.    "
 },
@@ -941,7 +995,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_oscillators.html#harmonic_oscillator",
   "type": "Definition",
-  "number": "3.3.2",
+  "number": "3.4.2",
   "title": "",
   "body": "harmonic oscillator   A simple harmonic oscillator is a spring-mass system in which the magnitude of the restoring force of the spring is proportional to the dispalcement of the mass. Given the mass and spring constant , the position of the mass satisfies the second-order ODE or equivalently A damped harmonic oscillator has an additional damping term, where the damping is assumed to be proportional to the velocity. Using as the damping coefficient, we have A forced harmonic oscillator introduces an external force function and we have  Note that in spring-mass systems we have , , and positive.  "
 },
@@ -950,7 +1004,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_oscillators.html#damped_forced_oscillator",
   "type": "Figure",
-  "number": "3.3.3",
+  "number": "3.4.3",
   "title": "",
   "body": " The damped and forced oscillator.    "
 },
@@ -977,7 +1031,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_oscillators.html#harmonic_oscillators-7",
   "type": "Checkpoint",
-  "number": "3.3.5",
+  "number": "3.4.5",
   "title": "",
   "body": "What are the possible outcomes of applying a periodic force to a damped oscillator? Consider all possible cases of damping and think about how the results make physical sense. "
 },
@@ -986,7 +1040,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "systems_ham_grad.html",
   "type": "Section",
-  "number": "3.4",
+  "number": "3.5",
   "title": "Conserved Quantities",
   "body": " Conserved Quantities     Define what a conserved quantity is for a dynamical system.    Show with Insightmaker that in an undamped and unforced oscillator total energy is conserved.     Consevred Quanity (two-dimentional)   Let be the dependent variables of a system of differential equations. A conserved quantity for this system is a scalar-valued function such that is a constant function of .     We have encountered one conserved quantity in . In that model, the quantity remained constant. This was illustrated using the areas graph in the simulation.   Conserved quatities often occur as sums of stocks. The conservation law takes graphical form in the following diagram:  The basic structure for the quantity to be conserved.      The most important conserved quantity in many physical situations is energy . We explore the case of the undamped and unforced harmonic oscillator below.  The Undamped and Unforced Harmonic Oscillator is Conservative The undamped and unforced harmonic oscillator takes form as a system (letting ) The total energy function is given by The first term is the total work done in extending the spring to a position from equilibrium and the second is the work done in accelerating the mass to velocity . We can check that total energy is conserved by differntiating with respect to and using the system of differential equations: In the Insight below, we construct potential and kinetic energy as variables using the above formulas, but also as stocks. The flow rate between the stocks is given by the time derivative of the kinetic energy term, . We then compare the flow calculated energies to the formula computed ones.  A harmonic oscillator with computed energies.     A generalization of the above for a second order system occurs when the system has the form In this case, is called the potnetial function . The total energy is then given by The reader is encouraged to try modeling the motion of a particle in the plane under the influence of various potential functions. It's quite interesting to see what you get!  Energy arguments are unbiquitous in physics. In the next section, we present a scenario in which energy transfer can be used to decide when a toy car with a skidding wheel stops accelerating.  "
 },
@@ -995,7 +1049,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_ham_grad.html#systems_ham_grad-2",
   "type": "Objectives",
-  "number": "3.4",
+  "number": "3.5",
   "title": "",
   "body": "   Define what a conserved quantity is for a dynamical system.    Show with Insightmaker that in an undamped and unforced oscillator total energy is conserved.    "
 },
@@ -1004,7 +1058,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_ham_grad.html#ConservedQuantity",
   "type": "Definition",
-  "number": "3.4.1",
+  "number": "3.5.1",
   "title": "Consevred Quanity (two-dimentional).",
   "body": "Consevred Quanity (two-dimentional)   Let be the dependent variables of a system of differential equations. A conserved quantity for this system is a scalar-valued function such that is a constant function of .   "
 },
@@ -1013,7 +1067,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_ham_grad.html#systems_ham_grad-4",
   "type": "Example",
-  "number": "3.4.2",
+  "number": "3.5.2",
   "title": "",
   "body": " We have encountered one conserved quantity in . In that model, the quantity remained constant. This was illustrated using the areas graph in the simulation.  "
 },
@@ -1022,7 +1076,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_ham_grad.html#conserved_idiom",
   "type": "Figure",
-  "number": "3.4.3",
+  "number": "3.5.3",
   "title": "",
   "body": " The basic structure for the quantity to be conserved.    "
 },
@@ -1031,7 +1085,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "systems_ham_grad.html#systems_ham_grad-7",
   "type": "Example",
-  "number": "3.4.4",
+  "number": "3.5.4",
   "title": "The Undamped and Unforced Harmonic Oscillator is Conservative.",
   "body": "The Undamped and Unforced Harmonic Oscillator is Conservative The undamped and unforced harmonic oscillator takes form as a system (letting ) The total energy function is given by The first term is the total work done in extending the spring to a position from equilibrium and the second is the work done in accelerating the mass to velocity . We can check that total energy is conserved by differntiating with respect to and using the system of differential equations: In the Insight below, we construct potential and kinetic energy as variables using the above formulas, but also as stocks. The flow rate between the stocks is given by the time derivative of the kinetic energy term, . We then compare the flow calculated energies to the formula computed ones.  A harmonic oscillator with computed energies.    "
 },
@@ -1049,7 +1103,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "RipcordCarsWorksheet.html",
   "type": "Worksheet",
-  "number": "3.5",
+  "number": "3.6",
   "title": "Ripcord Cars with Energy",
   "body": " Ripcord Cars with Energy     Create a model for the motion of a ripcord car based on energy transfer from a spinning wheel to a moving car.    Estimate parameters in the model to match real-world observations.      In this worksheet you will model the motion of a ripcord car. If you don't know what a ripcord car is, this video should help.   What is a ripcord car? The coolest toy ever!    This worksheet is based on the SIMIODE modeling scenario , but modified to use energy transfer as a modeling concept.  A ripcord toy (call it a \"car\") uses a handle with a toothed extension cord (the \"t-stick\") to spin a wheel. When placed on the ground the wheel initially spins exerting a force that accelerates the car. During the spinning on the ground the speed of the wheel decreases, which causes a loss of rotational kinetic energy in the wheel. Assuming energy is conserved (little energy is dissipated as heat or lost to air resistance), the rotational energy lost by the wheel is converted to translational kinetic energy of the car. This transfer of energy continues until pure rolling is achieved. That is, letting be the velocity of the car, be the radius of the wheel, and by the angular velocity of the wheel, the energy transfer from the rotation of the wheel to the translation of the car stops when   Throughout the remaining problems we will assume the following:   The total mass of the car (including the driving wheel) is kg and the mass of the spinning wheel is kg.    When we pull the ripcord, we impart a total energy of J as rotational kinetic energy for the driving wheel of the car.    There are two forces exerted on the car prior to the moment when pure rolling is achieved.   A constant propulsive force exerted by the spinning wheel.    A resistive force proportional to the translational velocity of the car.   After pure rolling is achieved only the resistive force is present.     The data that has been collected (from a film at 30 frames per second) on our car is the following:  Distance Traveled by Ripcord Toy    Frame (at 30 fps) Distance (in cm)    0 0    4 3    8 10    12 21    16 34    20 50    24 68    28 85    32 103    36 120    40 136    44 153    48 168    52 184    56 199    60 214    64 228    68 243    72 257    For reference, the formula for translational kinetic energy is and the formula for rotational kinetic energy is .   Derive an equation involving masses and energy of the wheel and car that holds when pure rolling occurs, i.e. when . (This will be useful when developing the formula for a flow rate.)  Show that the derivative (with respect to time) of is where is the mass of the car, is the sum of all forces on the car, and is the velocity of the car.  Create and Insight to model the motion of the car. Here are some hints:   Use velocity, position, kinetic energy of the wheel, and kinetic energy of the car as stocks.    Since energy is conserved, inflow to the kinetic energy of the car equals the outflow from the kinetic energy of the wheel.    Energy transfer occurs until the equation from holds. After this time, you can ignore the energy stocks.    There should be two flows for the velocity stock.     Estimate , , and to match the data in . Observe that the data has input of frames rather than time. You will need to account for that.  As an alternative approach, without using energy, estimate the time when velocity stops increasing from . Use this as a parameter so that only two variables need to be estimated. Which method yields a smaller SSE from the data?  "
 },
@@ -1058,7 +1112,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "RipcordCarsWorksheet.html#RipcordCarsWorksheet-2",
   "type": "Objectives",
-  "number": "3.5",
+  "number": "3.6",
   "title": "",
   "body": "   Create a model for the motion of a ripcord car based on energy transfer from a spinning wheel to a moving car.    Estimate parameters in the model to match real-world observations.    "
 },
@@ -1067,7 +1121,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "RipcordCarsWorksheet.html#ripcord-car-fig",
   "type": "Figure",
-  "number": "3.5.1",
+  "number": "3.6.1",
   "title": "",
   "body": " What is a ripcord car? The coolest toy ever!   "
 },
@@ -1076,7 +1130,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "RipcordCarsWorksheet.html#toy_data",
   "type": "Table",
-  "number": "3.5.2",
+  "number": "3.6.2",
   "title": "Distance Traveled by Ripcord Toy",
   "body": " Distance Traveled by Ripcord Toy    Frame (at 30 fps) Distance (in cm)    0 0    4 3    8 10    12 21    16 34    20 50    24 68    28 85    32 103    36 120    40 136    44 153    48 168    52 184    56 199    60 214    64 228    68 243    72 257    "
 },
@@ -1085,7 +1139,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "RipcordCarsWorksheet.html#energy_eq",
   "type": "Worksheet Exercise",
-  "number": "3.5.1",
+  "number": "3.6.1",
   "title": "",
   "body": "Derive an equation involving masses and energy of the wheel and car that holds when pure rolling occurs, i.e. when . (This will be useful when developing the formula for a flow rate.) "
 },
@@ -1094,7 +1148,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "RipcordCarsWorksheet.html#RipcordCarsWorksheet-5",
   "type": "Worksheet Exercise",
-  "number": "3.5.2",
+  "number": "3.6.2",
   "title": "",
   "body": "Show that the derivative (with respect to time) of is where is the mass of the car, is the sum of all forces on the car, and is the velocity of the car. "
 },
@@ -1103,7 +1157,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "RipcordCarsWorksheet.html#RipcordCarsWorksheet-6",
   "type": "Worksheet Exercise",
-  "number": "3.5.3",
+  "number": "3.6.3",
   "title": "",
   "body": "Create and Insight to model the motion of the car. Here are some hints:   Use velocity, position, kinetic energy of the wheel, and kinetic energy of the car as stocks.    Since energy is conserved, inflow to the kinetic energy of the car equals the outflow from the kinetic energy of the wheel.    Energy transfer occurs until the equation from holds. After this time, you can ignore the energy stocks.    There should be two flows for the velocity stock.    "
 },
@@ -1112,7 +1166,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "RipcordCarsWorksheet.html#RipcordCarsWorksheet-7",
   "type": "Worksheet Exercise",
-  "number": "3.5.4",
+  "number": "3.6.4",
   "title": "",
   "body": "Estimate , , and to match the data in . Observe that the data has input of frames rather than time. You will need to account for that. "
 },
@@ -1121,7 +1175,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "RipcordCarsWorksheet.html#RipcordCarsWorksheet-8",
   "type": "Worksheet Exercise",
-  "number": "3.5.5",
+  "number": "3.6.5",
   "title": "",
   "body": "As an alternative approach, without using energy, estimate the time when velocity stops increasing from . Use this as a parameter so that only two variables need to be estimated. Which method yields a smaller SSE from the data? "
 },
@@ -1141,7 +1195,7 @@ var ptx_lunr_docs = [
   "type": "References",
   "number": "",
   "title": "References",
-  "body": " References  Julie C. Beier, Jana L. Gevertz and Keith E. Howard, Building Context with Tumor Growth Modeling Projects in Differential Equations , PRIMUS , 25 , 4 , pp 297-395 , Taylor and Francis , , doi:10.1080\/10511970.2014.975881, 2015.  Kurt Bryan, 1-092-DashItAll-ModelingSenario  , doi:\/10.25334\/M2CS-ZA79, 2022.  Kurt Bryan, Differential Equations: A Toolbox for Modeling the World SIMIODE.org, 2021.  Robert Devaney, Morris Hirsh, Stephen Smale, Differential Equations, Dynamical Systems, and an Introduction to Chaos, Third Edition  251-252 Academic Press, 2013.  Stanley Florkowski and Ryan Miller, 6-018-ExploringSIRModel-ModelingScenario  , doi:\/10.25334\/BM76-2667, 2022.  Scott Fortmann-Roe, Insight Maker: A general-purpose tool for web-based modeling simulation , Simulation Modelling Practice and Theory , 47 , 28-45 , 2014, .  Brody Dylan Johnson, 3-100-Ripcord-Toys-ModelingScenario  , doi:\/10.25334\/8CZ1-Y987, 2023.  Lorelei Koss, SIR Models: Differential Equations that Support the Common Good , CODEE Journal , 12 ,article 6, 2019, .  Erich McAlister, 1-145-FastPitch-ModelingScenario  , doi:\/10.25334\/TV3N-R432, 2022.  Sheila Miller, 6-001-Epidemic-ModelingScenario  , doi:\/10.25334\/N6DF-2J82, 2022.  Bryan Winkel, 1-007-AntTunnelBuilding-ModelingScenario  , doi:\/10.25334\/DQRP-G032, 2022.  Bryan Winkel, 5-001-LSD-ModelingScenario.  , doi:\/10.25334\/CNEE-7J76, 2022.  Bryan Winkel, 7-010-MultipleDoses-ModelingScenario  , doi:\/10.25334\/CCW1-E736, 2022.   Communicable Disease Surveillance Center. 1978. News and Notes: Influenza in a Boarding School.  British Medical Journal 1 6112 586-590    "
+  "body": " References  Julie C. Beier, Jana L. Gevertz and Keith E. Howard, Building Context with Tumor Growth Modeling Projects in Differential Equations , PRIMUS , 25 , 4 , pp 297-395 , Taylor and Francis , , doi:10.1080\/10511970.2014.975881, 2015.  Kurt Bryan, 1-092-DashItAll-ModelingSenario  , doi:\/10.25334\/M2CS-ZA79, 2022.  Kurt Bryan, Differential Equations: A Toolbox for Modeling the World SIMIODE.org, 2021.  Robert Devaney, Morris Hirsh, Stephen Smale, Differential Equations, Dynamical Systems, and an Introduction to Chaos, Third Edition  251-252 Academic Press, 2013.  Stanley Florkowski and Ryan Miller, 6-018-ExploringSIRModel-ModelingScenario  , doi:\/10.25334\/BM76-2667, 2022.  Scott Fortmann-Roe, Insight Maker: A general-purpose tool for web-based modeling simulation , Simulation Modelling Practice and Theory , 47 , 28-45 , 2014, .  Brody Dylan Johnson, 3-100-Ripcord-Toys-ModelingScenario  , doi:\/10.25334\/8CZ1-Y987, 2023.  Maynard Hershon, Half-Wheel Hell and Other Cycling Stories Velo Press, 1994.  Lorelei Koss, SIR Models: Differential Equations that Support the Common Good , CODEE Journal , 12 ,article 6, 2019, .  Erich McAlister, 1-145-FastPitch-ModelingScenario  , doi:\/10.25334\/TV3N-R432, 2022.  Sheila Miller, 6-001-Epidemic-ModelingScenario  , doi:\/10.25334\/N6DF-2J82, 2022.  Bryan Winkel, 1-007-AntTunnelBuilding-ModelingScenario  , doi:\/10.25334\/DQRP-G032, 2022.  Bryan Winkel, 5-001-LSD-ModelingScenario.  , doi:\/10.25334\/CNEE-7J76, 2022.  Bryan Winkel, 7-010-MultipleDoses-ModelingScenario  , doi:\/10.25334\/CCW1-E736, 2022.   Communicable Disease Surveillance Center. 1978. News and Notes: Influenza in a Boarding School.  British Medical Journal 1 6112 586-590    "
 }
 ]
 
