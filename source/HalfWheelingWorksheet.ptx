@@ -67,6 +67,14 @@
   <exercise>
     <statement>
         <p>
+            Leaving <m>k_1=1</m>, is there a value of <m>k_2</m> where velocities approach equilibrium rapidly without oscillation? Can you find it?
+        </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+        <p>
             Suppose Freddy gets fed up with Eddy and quits being nice. He decides to start half-wheeling as well. Modify the system of differential equations and see what happens. Is the new behavior of the velicities what you expect? Does one rider stay consistently in fron of the other?
         </p>
     </statement>
