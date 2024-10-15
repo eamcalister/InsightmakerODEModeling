@@ -2,7 +2,7 @@
     "xml.fileAssociations": [
         {
             "pattern": "**/source/**.ptx",
-            "systemId": "C:\\Users\\mcalister_e\\.ptx\\version unknown\\core\\schema\\pretext.rng"
+            "systemId": "C:\\Users\\Erich\\.ptx\\version unknown\\core\\schema\\pretext.rng"
         }
     ],
     "pretext-tools.installPretext": false

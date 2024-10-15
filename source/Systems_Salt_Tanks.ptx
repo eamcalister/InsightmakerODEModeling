@@ -176,8 +176,8 @@
 	<p>
 		While this diagram may seem complicated, we now see that each ODE in our system will have three terms, what their signs are, and on what variables they depend. We have
 		<md>
-			<mrow>V_1' =  \amp r_{in}C - r_{12}\frac{A_1}{V_1} + r_{21}\frac{A_2}{V_2} </mrow>
-			<mrow>V_2' =  \amp r_{12}\frac{A_1}{V_1} - r_{21}\frac{A_2}{V_2} - r_{out}\frac{A_2}{V_2} </mrow>
+			<mrow>A_1' =  \amp r_{in}C - r_{12}\frac{A_1}{V_1} + r_{21}\frac{A_2}{V_2} </mrow>
+			<mrow>A_2' =  \amp r_{12}\frac{A_1}{V_1} - r_{21}\frac{A_2}{V_2} - r_{out}\frac{A_2}{V_2} </mrow>
 		</md>
 	</p>
 	<p>

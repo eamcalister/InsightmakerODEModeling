@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<worksheet xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="HalfWheelingWorksheet">
+	<title>Half Wheel Hell</title>
+
+	<objectives>
+		<ul>
+	  		<li>
+	  			<p>
+				Introduce a linear system of differential equations and explore possible behaviors of the long run solutions.
+	  			</p>
+	  		</li>
+	  	</ul>
+  </objectives>
+
+  <p>
+	"Half wheeling" occurs when two cyclists ride side-by-side and one of them insists on always keeping their front wheel one wheel radius ahead of the other rider's wheel (the title of this worksheet is from <xref ref="HalfWheel"/>). When the rider who is half a wheel behind tries to match the velocity of the rider who is half a wheel in front, the front rider accelerates to maintain the half wheel gap. We wish to model this scenario with a system of differential equations and decide the answer to the following questions:
+    <ul>
+        <li>
+            <p>
+                Is it always the case that riding with a half wheeler will result in unbounded velocities or can an equilibrium be achieved? 
+            </p>
+        </li>
+        <li>
+            <p>
+                Are there some scenarios in which velocities oscillate and some where they don't?
+            </p>
+        </li>
+    </ul>
+  </p>
+
+  <exercise xml:id="half-wheel-stocks" workspace="2in">
+	<statement>
+        How many stocks should we have present in this model and what are they? Create names for them. 
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+        <p>
+            Suppose we have two riders: Rider 1 (Speed-match Freddy, who is noce and sociable) and Rider 2 (Half-wheel Eddy, who is kind of a jerk). They each change their velocities according to the other rider as follows:
+            <ul>
+                <li>
+                    <p>
+                        Freddy changes his velocity at a rate proportional to the difference in the two rider's velocities with constant of proportionality <m>k_1</m>. If Eddy is faster, Freddy speeds up. If Eddy is slower, Freddy slows down.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Eddy changes his velocity at a rate proportional to the difference between his position and Freddy's and <m>0.5</m> meters with constant of proportionality <m>k_2</m>. If Eddy is more than <m>0.5</m> meters ahead of Freddy, he slows down. If Eddy is less than <m>0.5</m> meters ahead of Freddy, he speeds up. 
+                    </p>
+                </li>
+            </ul> 
+            Develop a system of four differential equations to model this scenario and turn them into an Insight with variables <m>k_1</m> and <m>k_2</m>.
+        </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+        <p>
+            Assume <m>k_1 = 1</m> and <m>k_2 = 3</m>. If the riders start perfectly side-by-side at a velocity of <m>8.5</m> m/s, what will their long run velocities be? Will they be separated by <m>0.5</m> meters? Show visuals with both the time series plot and the scatter plot with "show lines" on and "show points" off.
+        </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+        <p>
+            Suppose Freddy gets fed up with Eddy and quits being nice. He decides to start half-wheeling as well. Modify the system of differential equations and see what happens. Is the new behavior of the velicities what you expect? Does one rider stay consistently in fron of the other?
+        </p>
+    </statement>
+  </exercise>
+
+
+
+</worksheet>

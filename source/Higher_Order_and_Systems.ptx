@@ -12,7 +12,7 @@
   In this chapter we will explore several important types of systems and higher-order equations with Insightmaker, making use of its capabilities when analytic methods fail or make things difficult (such as when the flow rates should depend on a condition being met).
 
 </introduction>
-
+<xi:include href="HalfWheelingWorksheet.ptx" />
 <xi:include  href="./Systems_Salt_Tanks.ptx" />
 <xi:include  href="./Systems_Disease_Models.ptx" />
 <xi:include  href="./Systems_Oscillators.ptx" />
