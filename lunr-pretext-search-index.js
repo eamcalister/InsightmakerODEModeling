@@ -1,18 +1,18 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "frontmatter-2",
+  "id": "front-colophon",
   "level": "1",
-  "url": "frontmatter-2.html",
+  "url": "front-colophon.html",
   "type": "Colophon",
   "number": "",
   "title": "Colophon",
-  "body": "  copyright  "
+  "body": ""
 },
 {
-  "id": "frontmatter-3",
+  "id": "frontmatter-4",
   "level": "1",
-  "url": "frontmatter-3.html",
+  "url": "frontmatter-4.html",
   "type": "Acknowledgements",
   "number": "",
   "title": "Acknowledgements",
@@ -628,7 +628,7 @@ var ptx_lunr_docs = [
   "type": "Worksheet",
   "number": "2.4",
   "title": "Multiple Drug Doses",
-  "body": " Multiple Drug Doses     Drug dosage,      This worksheet is based on    In this worksheet we consider the problem of administering a drug under the following conditions:    The minimum amount of drug in the bloodstream to be effective is mg. On the other hand, the maximum amount to avoid adverse effects is mg. Thus, over the 24 hour dosing period, the amount in the blood must remain between mg and mg.    The drug is removed from the bloodstream and moved into other tissues (where it is effective) at a rate proportional to the amount present in the bloodstream per hour. The half-life of the drug in the body is hours.    Due to staffing patterns, a nurse will only administer an injection or change an IV bag at intervals that are an integer number of hours, e.g. every hour on the hour.    We wish to model and compare the following two dosing protocols:     Continuous Drip: Under this protocol the drug is administered several times in amounts of mg at a constant rate over some fixed time period. For instance, every two hours the nurse might attach a new IV bag that continuously administers mg over the course of minutes.     Bolus Injections: The drug may be administered as a bolus . That is, a certain amount of drug is injected all at once (essentially instantaneously). For instance, the nurse may inject mg exactly every two hours.    In order to model these protocols, you will find the Insightmaker Pulse function useful. The pulse function works as follows:  Pulse(Time, Height, Width, Repeat)  will create a \"pulse train\" starting at time , of height , with each bump of width , repeating every time units. For instance, the graph of is shown below.   A pulse train starting at , of height , width , repeating every time units.     The pulse function should be used to \"turn on\" and \"turn off\" the drug flow.  Continuous Drip Exercises   Exercises 1-3 are about protocol (a) above.    Build an Insightmaker model to model the continuous drip dosing method assuming the patient initially has no drug in their bloodstream. The model should have sliders for the duration of the drip, the amount in each IV bag, and the frequency with which the IV bag is changed.    Use your Insight to give several combinations of drip duration, IV bag dose quantity, and IV bag change frequency that gives acceptable results. Include graphs for each combination and use them to explain the general effect of varying each of the parameters.    Among the several possible combinations you gave above, what are some of the considerations you might use to choose the \"best\" of them. Use some mathematics to decide which of your combinations is best for each of your considerations.    Bolus Exercises   Exercises 4-6 are about protocol (b) above.    Modify your model (by taking a limit, approximately) to model the situation of bolus injections and give several combinations of dose size and frequency that are acceptable. Explain things thoroughly.    Re-answer what the \"best\" combination of dose size and frequency is among your combinations for bolus injections. Why might you choose bolus injections vs. continuous drips?    What does the graph of the flow function really look like in an idealized (instantaneous injection) bolus injection model?    "
+  "body": " Multiple Drug Doses     We will model dosing of a drug under multiple dosing protocols.    We will use the pulse function to turn on and off flows at regular time intervals.      This worksheet is based on    In this worksheet we consider the problem of administering a drug under the following conditions:    The minimum amount of drug in the bloodstream to be effective is mg. On the other hand, the maximum amount to avoid adverse effects is mg. Thus, over the 24 hour dosing period, the amount in the blood must remain between mg and mg.    The drug is removed from the bloodstream and moved into other tissues (where it is effective) at a rate proportional to the amount present in the bloodstream per hour. The half-life of the drug in the body is hours.    Due to staffing patterns, a nurse will only administer an injection or change an IV bag at intervals that are an integer number of hours, e.g. every hour on the hour.    We wish to model and compare the following two dosing protocols:     Continuous Drip: Under this protocol the drug is administered several times in amounts of mg at a constant rate over some fixed time period. For instance, every two hours the nurse might attach a new IV bag that continuously administers mg over the course of minutes.     Bolus Injections: The drug may be administered as a bolus . That is, a certain amount of drug is injected all at once (essentially instantaneously). For instance, the nurse may inject mg exactly every two hours.    In order to model these protocols, you will find the Insightmaker Pulse function useful. The pulse function works as follows:  Pulse(Time, Height, Width, Repeat)  will create a \"pulse train\" starting at time , of height , with each bump of width , repeating every time units. For instance, the graph of is shown below.   A pulse train starting at , of height , width , repeating every time units.     The pulse function should be used to \"turn on\" and \"turn off\" the drug flow.  Continuous Drip Exercises   Exercises 1-3 are about protocol (a) above.    Build an Insightmaker model to model the continuous drip dosing method assuming the patient initially has no drug in their bloodstream. The model should have sliders for the duration of the drip, the amount in each IV bag, and the frequency with which the IV bag is changed.    Use your Insight to give several combinations of drip duration, IV bag dose quantity, and IV bag change frequency that gives acceptable results. Include graphs for each combination and use them to explain the general effect of varying each of the parameters.    Among the several possible combinations you gave above, what are some of the considerations you might use to choose the \"best\" of them. Use some mathematics to decide which of your combinations is best for each of your considerations.    Bolus Exercises   Exercises 4-6 are about protocol (b) above.    Modify your model (by taking a limit, approximately) to model the situation of bolus injections and give several combinations of dose size and frequency that are acceptable. Explain things thoroughly.    Re-answer what the \"best\" combination of dose size and frequency is among your combinations for bolus injections. Why might you choose bolus injections vs. continuous drips?    What does the graph of the flow function really look like in an idealized (instantaneous injection) bolus injection model?    "
 },
 {
   "id": "DrugDosageWorksheet-2",
@@ -637,7 +637,7 @@ var ptx_lunr_docs = [
   "type": "Objectives",
   "number": "2.4",
   "title": "",
-  "body": "   Drug dosage,    "
+  "body": "   We will model dosing of a drug under multiple dosing protocols.    We will use the pulse function to turn on and off flows at regular time intervals.    "
 },
 {
   "id": "DrugDosageWorksheet-7-1-1",
