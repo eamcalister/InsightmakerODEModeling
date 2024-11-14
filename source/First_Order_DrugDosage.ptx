@@ -7,9 +7,14 @@
 		<ul>
 	  		<li>
 	  			<p>
-					Drug dosage,
+					We will model dosing of a drug under multiple dosing protocols.
 	  			</p>
 	  		</li>
+			<li>
+				<p>
+					We will use the pulse function to turn on and off flows at regular time intervals.
+				</p>
+			</li>
 	  	</ul>
   </objectives>
 
