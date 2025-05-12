@@ -13,7 +13,7 @@
 
   <book xml:id="applied-de-insightmaker">
     <!-- The book needs a title and can have a subtitle  -->
-    <title>Applied Differential Equations with Insightmaker and Data (Fall 2024 Ed.)</title>
+    <title>Applied Differential Equations with Insightmaker and Data (Fall 2025 Ed.)</title>
 
 
 
@@ -21,7 +21,6 @@
     <xi:include href="./Intro_to_Insightmaker.ptx" />
     <xi:include href="./First_Order_Scenarios.ptx" />
     <xi:include href="./Higher_Order_and_Systems.ptx" />
-    <!--xi:include href="./Chapter4.ptx" /-->
     <xi:include href="./backmatter.ptx" />
 
 

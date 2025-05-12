@@ -48,6 +48,7 @@ where <m>\alpha\geq 0 </m> is a parameter called the <term>intrinsic growth rate
 		<p>
 			Use the model you have developed above to describe the long-run behavior of the tumor under each of the following scenarios:
 		</p>
+		<p>
 		<ul>
 			<li>
 				<p>
@@ -60,7 +61,10 @@ where <m>\alpha\geq 0 </m> is a parameter called the <term>intrinsic growth rate
 				</p>
 			</li>
 		</ul>
+		</p>
+		<p>
 		Explain why each of these results makes practical sense.
+		</p>
 	</statement>
 
 	</exercise>
@@ -104,7 +108,9 @@ where <m>\alpha\geq 0 </m> is a parameter called the <term>intrinsic growth rate
 				</row>
 			</tabular>
 		</table>
+	<p>	
 	Use a converter for this data and the method of least-squares (recall how this was done in <xref ref="SprintModel"/>) to determine the intrinsic growth rate for this tumor.
+	</p>
 	</statement>
   </exercise>
 

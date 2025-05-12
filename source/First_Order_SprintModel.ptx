@@ -125,6 +125,7 @@ Here <m>F</m> will be in units of  m/s<m>^2</m> and <m>m</m> will be in units of
 		mv' = mF-kmv.
 	</me>
 	Dividing everything by <m>m</m>, we now have formulas for our flows for the velocity position stocks:
+</p>
 	<table>
 		<title>Flow Formulas for Sprint Model</title>
 		<tabular>
@@ -142,7 +143,7 @@ Here <m>F</m> will be in units of  m/s<m>^2</m> and <m>m</m> will be in units of
 			</row>
 		</tabular>
 	</table>
-</p>
+
 <p>
 	Our Insight so far should look like the figure below with the flows describe above.
 </p>	
@@ -222,15 +223,16 @@ In order of increasing complexity we can
 	We will now demonstrate each of these for our sprint model and see how much variation we get in our value of <m>k</m> depending on the method.
 </p>
 
+<p>
 <ol>
 	<li>
 		<p>
 			<term>Adjust Paramteters with Sliders:</term> This is the most intuitive method. In this case, Bolt ran <m>100</m> meters in <m>9.69</m> seconds. Thus, we can run the simulation set to display time and position in the table display. Then, with sliders linked, we can adjust <m>k</m> to make the position as close as we can to <m>100</m> as possible when <m>t=9.69</m>. The result is shown below:
 		</p>
 		<figure xml:id="sprint_slider_pic">
+			<caption>The slider of <m>0.929</m> for <m>k</m> yields a position very close to <m>100</m> meters.</caption>
 			<image source="images/SprintSlider.png">
 			</image>
-			<caption>The slider of <m>0.929</m> for <m>k</m> yields a position very close to <m>100</m> meters.</caption>
 		</figure>
 	</li>
 	<li>
@@ -261,23 +263,23 @@ In order of increasing complexity we can
 			Running the optimization, we find the <m>k</m> is about what we found using the slider method. Notice we get a range of values and the value of the minimized variable. This is a numerical optimization algorithm, hence may not arrive at exact values even if you can find them by hand. The output is shown below.
 		</p>
 		<figure xml:id="sprint_end_opt_pic">
+		<caption>The optimizer finds <m>k\approx 0.9296875</m>.</caption>
 			<image source="images/SprintEndValueOpt.png">
 			</image>
-			<caption>The optimizer finds <m>k\approx 0.9296875</m>.</caption>
 		</figure>
 	</li>
 	<li>
 		<p>
 			<term>Use the Optimizer (Version 2):</term> Minimizing the difference between <m>100</m> and the model's predictied position at <m>t=9.69</m> does not account for any other time-position pairs. To obtain a more global fit to the data, we will use a <em>converter</em> with the entire dataset. Then we will minimize the sum of squared errors from the data to the model outputs.
 		</p>
-		<p>
+		
 			<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 				<p>	
 				To proceed, click to add a primitive and choose "Add Converter". Call your converter "data".
 				</p><p></p>
 				<image source="images/add_converter.png" width="60%"></image>
-				</sidebyside>
-		</p>
+			</sidebyside>
+		
 		<p>
 			From here, insert the time and position values from <xref ref="sprint_data"/> with time as input source, meters as units, and linear interpolation. (Linear interpolation builds additional data points for comparison to the simulation by drawing straight lines through the data points.) 
 		</p>
@@ -291,12 +293,13 @@ In order of increasing complexity we can
 			Running the optimization, we find that this method gives <m>k\approx 0.956</m>.
 		</p>
 		<figure xml:id="sprint_sse_opt_pic">
+			<caption>The optimizer now finds <m>k\approx 0.9277</m> with the sum (integral) of the squared errors equal to <m>1382.47.05</m>.</caption>
 			<image source="images/SprintSSEOpt.png">
 			</image>
-			<caption>The optimizer now finds <m>k\approx 0.9277</m> with the sum (integral) of the squared errors equal to <m>1382.47.05</m>.</caption>
 		</figure>
 	</li>
 </ol>
+</p>
 
 <exercise>
 	<statement>

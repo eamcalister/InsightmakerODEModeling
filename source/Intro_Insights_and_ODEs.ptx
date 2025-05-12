@@ -4,7 +4,9 @@
 	<title>Insights and ODEs</title>
 
   <objectives>
+
 	In this section we will
+		
 		<ul>
 	  		<li>
 				<p>
@@ -131,7 +133,10 @@ Now let's get to the heart of this text: Insightmaker and Insights. If you haven
 
 <definition xml:id="def-Insight"><title>Insight</title><idx><h>Insight</h></idx><idx><h>Primitive</h></idx>
 <statement>	
+<p>	
 Insightmaker represents ODE (systems-dynamics) models (on pages called <term>Insights</term>) using what are known as <term>stock-flow models</term>. Here we list the basic components of a stock-flow model, called <term>primitives</term>. Each component will be discussed in more depth separately. 
+</p>
+<p>
   <ul>
 	<li><term>Stocks:</term> Stocks are things that accumulate. In the context of modeling with ODEs, these are the dependent variables of the system.</li>
 
@@ -141,7 +146,8 @@ Insightmaker represents ODE (systems-dynamics) models (on pages called <term>Ins
 
 	<li><term>Variables:</term> Variables are often used as parameters in the context of ODEs. These are numbers that we may modify to match our model to data, such as adjusting <m>k</m> in <xref ref="Exp_as_IVP"/> in order to match a value of the population at a later time.</li>
 	<li><term>Links:</term> Links are arrows between stocks, flows, and variables that allow the linked objects to be used in the formulas for the object that the to which the link points. Yes, that's a mouthful, but links are quite a useful organizational tool. </li>
-  </ul> 
+  </ul>
+</p>
 </statement>
 </definition>
 
@@ -169,23 +175,24 @@ Following along through each primitive, you can create an Insight for <xref ref=
 
 <question xml:id="Stocks"><title>Stocks</title>
 	<ol>
-	<li><p>
+	<li>
 		<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 			<p>
 				To create a stock, click on the "<m>\oplus</m> PRIMITIVE" button and choose to add a stock as shown. This will create a blue rectangular box with the name of your stock, which you can edit on the right side of the Insightmaker screen. Call this one <m>y</m>.
 			</p><p></p>
 			<image source="images/CreateStock.png" width="60%"></image>
 		</sidebyside>
-	</p>	
+	
 	</li>
 	<li>
-		<p>
+		
 			<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 				<p>
 				When the stock you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the initial value of the stock. This will be the value of the stock at the start of the simulation (the default start is at <m>t = 0</m>). Here we have it set to the value <m>12</m>. Perhaps the most important mathematical idea with stocks is the following: <em> The expression you enter for the initial value is a single number, not something that varies with time; the time evolution of a stock is determined by the flows, which can depend on time.</em> 
 				</p><p></p>
 				<image source="images/StockSliderSettings.png" width="60%"></image>
 			</sidebyside>	
+		<p>	
 			When we discuss variables and links, we will let the initial value be a variable. Doing this makes sense in models where we think of the initial value as a parameter, such as <m>b</m> in <m> y = mx+b</m>.
 		</p>
 	</li>
@@ -211,23 +218,23 @@ Following along through each primitive, you can create an Insight for <xref ref=
 
 <question xml:id="Variables"><title>Variables</title>
 	<ol>
-	<li><p>
+	<li>
 		<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 			<p>
 				To create a variable, click on the "<m>\oplus</m> PRIMITIVE" button and choose to add a variable as shown. This will create a peach-colored ellipse with the name of your variable, which you can edit on the right side of the Insightmaker screen. Create two variables called <m>m</m> and <m>b</m> (drag so they're not on top of one another).
 			</p><p></p>
 			<image source="images/CreateVariable.png" width="60%"></image>
-		</sidebyside>
-	</p>	
+		</sidebyside>	
 	</li>
 	<li>
-		<p>
+		
 			<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 				<p>
 					Similar to stocks, when a variable you have created is highlighted, you will see this box on the left side of the Insightmaker screen. This is where you can set the value of the variable. This will be the value of the variable through at the start of the simulation. Note that there is a lot of flexibility in what we may enter in the formula for a variable; it may be a function of time or depend on other variables. In the example we're exploring our variables will be the slope and <m>y</m>-intercept of a linear function, which will be numbers controlled by sliders.
 				</p><p></p>
 				<image source="images/VariableSliderSettings.png" width="60%"></image>
-			</sidebyside>	
+			</sidebyside>
+		<p>	
 			Links (discussed below) will allow our new variables to be used in formulas for other primitives.
 		</p>
 	</li>
@@ -248,24 +255,22 @@ Following along through each primitive, you can create an Insight for <xref ref=
 
 <question xml:id="Links"><title>Links</title>
 	<ol>
-	<li><p>
+	<li>
 		<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 			<p>
 				To create a link, click on the "Links" button to highlight it. Now click on the stock or variable that you want to use in the formula for another primitive. Then you can drag the arrow to the primitive in question. In our example right now, we should link <m>b</m> to the stock <m>y</m>.
 			</p><p></p>
 			<image source="images/CreateLink.png" width="60%"></image>
-		</sidebyside>
-	</p>	
+		</sidebyside>	
 	</li>
 	<li>
-		<p>
+
 			<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 				<p>
 				When the primitive you have linked to is highlighted you can now use that variable in its formula. Here we have the stock <m>y</m> highlighted. Clicking in the formula box for the initial value, we can now add <m>[b]</m>. Now the initial value is controlled by the variable <m>b</m>. 
 				</p><p></p>
 				<image source="images/UseLinkedVariable.png" width="60%"></image>
 			</sidebyside>	.
-		</p>
 	</li>
 	</ol>
 </question>
@@ -273,48 +278,48 @@ Following along through each primitive, you can create an Insight for <xref ref=
 
 <question xml:id="Flows"><title>Flows</title>
 	<ol>
-	<li><p>
+	<li>
 		<sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 			<p>
 				To create a flow, click on the "Flows/Transitions" button to highlight it. Now click on the stock which you want to be the source or target of your flow (if the flow really has no source, click on the target stock only). Then you can drag the arrow to the stock at the other end of the flow. If there is no stock at one end, you will have a cloud at one end of the flow. In our example we want a flow with a cloud as source and <m>y</m> as its target.
 			</p><p></p>
 			<image source="images/CreateFlow.png" width="60%"></image>
 		</sidebyside>
-	</p>	
+	
 	</li>
 	<li>
-		<p>
+		
 			<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 				<p>
 				When the flow is highlighted you will see this box on the left side of your screen. You may modify the formula for the flow in the current window, or you can click the circled box to have a new formula editing window. The formula may involve time (entered as Seconds(), Minutes(), etc.), the upstream and/or downstream stocks, or any linked variables. In our example we should link <m>m</m> to the flow into <m>y</m> and make it the flow rate.
 				</p><p></p>
 				<image source="images/FlowFormula.png" width="60%"></image>
 			</sidebyside>	
-		</p>
+		
 	</li>
 	<li>
 
 		<ul>
 			<li>
-				<p>
+				
 				<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 					<p>
 					For flows we can choose to only allow positive flow rates by toggling "positive flow rates only" on. When this is on there will be no flow from the target to the source. This will make sense to do in some contexts but not others. In our running example, if we wish to allow for negative slopes, then we need to toggle this feature off.
 					</p><p></p>
 					<image source="images/PosOnlyFlowSlider.png" width="60%"></image>
 				</sidebyside>	
-				</p>
+				
 			</li>
 			<li>
-				<p>
+			
 				<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 						<p>
 						When negative flow rates are allowed, we need to know which direction of the flow arrow positive rates represent. This is observed by one end of the the bidirectional flow arrow being hollow. Positive flow rates go from the primitive at hollow arrowhead to the primitive at the filled arrowhead.  
 						</p><p></p>
 						<image source="images/Flow_arrow.png" width="60%"></image>
 				</sidebyside>	
-				</p>
-				<p>
+			
+			
 					<sidebyside widths="35% 5% 60%" margins="auto" valign="top">
 					<p>	
 					Additionally, you may assign a minus sign (<m>-</m>) and a plus sign (<m>+</m>) to the ends of the arrows indicating positive and negative flow directions as this is somewhat easier to see than the default arrowhead types. To do this, right click on the flow and scroll down to see the "line" options and choose a minus on the start arrow and plus on the end arrow, as shown. You may choose this as the default for your insight by choosing to set this as the flow theme in the same menu. 
@@ -322,7 +327,7 @@ Following along through each primitive, you can create an Insight for <xref ref=
 					<image source="images/plus_minus_flow.png" width="60%"></image>
 					<!--image source="images/flow_theme.png" width="60%"></image-->
 					</sidebyside>
-				</p>
+				
 			</li>
 		</ul>
 	</li>
@@ -335,18 +340,16 @@ If you have followed along building a linear function Insight as you have been r
 
 <figure xml:id="linear-Insight">
 	<caption>An Insight for a linear function (click on "full screen Insight" to open in a new window).</caption>
-	<interactive xml:id="interactive-linear-Insight" iframe="https://insightmaker.com/insight/5mgijPG176EqqZ5fIAj4ZO/embed?topBar=1;sideBar=1;zoom=1" width = "90%"/>
+	<interactive xml:id="interactive-linear-Insight" iframe="https://insightmaker.com/insight/5mgijPG176EqqZ5fIAj4ZO/embed?topBar=1;sideBar=1;zoom=1" width = "125%"/>
 </figure>
+
+
 
 <sidebyside widths="60% 5% 35%" margins="auto" valign="top">
 <p>
 	Now you can click "simulate" and we see the time evolution of <m>y</m> with initial value <m>b</m> and slope <m>m</m> (you may need to use the configuration settings in the simulation window to only show <m>y</m>). If "sliders linked" is highlighted in the simulation window, then you can dynamically change the parameter values and see the effect on the graph of <m>y</m>. 
 </p><p></p>
-<image source="images/SlidersLinked.png" width="40%"><description>
-	<p>
-	Linked sliders button in simulation window.
-	</p>
-</description></image>
+<image source="images/SlidersLinked.png" width="40%"></image>
 
 
 </sidebyside>
@@ -368,7 +371,9 @@ If you have followed along building a linear function Insight as you have been r
 </subsection>
 
 <conclusion>
+<p>
 In the next section we will explore some more examples, including the remaining examples of ODEs in this section. As we do these we will explore some more of the available displays and settings in Insightmaker.
+</p>
 </conclusion>
 
 </section>

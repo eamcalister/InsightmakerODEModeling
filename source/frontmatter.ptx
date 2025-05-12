@@ -5,25 +5,37 @@
 
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
   <titlepage>
+    <titlepage-items></titlepage-items>
+    <!--author>
+      <personname>Erich McAlister</personname>
+      <department>Mathematics</department>
+      <institution>Fort Lewis College</institution>
+    </author-->
+    <!--date><today/></date-->
+  </titlepage>
+  <colophon>
+    <colophon-items></colophon-items>
+  </colophon>
+  
+
+
+  <bibinfo>
+    <!--website>
+      <name><c>my-website.org</c></name>
+      <address>http://my.website.org</address>
+    </website-->
     <author>
       <personname>Erich McAlister</personname>
       <department>Mathematics</department>
       <institution>Fort Lewis College</institution>
     </author>
     <date><today/></date>
-  </titlepage>
-
-  <colophon>
-    <!--website>
-      <name><c>my-website.org</c></name>
-      <address>http://my.website.org</address>
-    </website-->
 
     <copyright>
       <!-- In addition to specifying the copyright holder, you should  -->
       <!-- include a license, such as the cc-by-sa license shown below -->
       <!-- so people reading your book know how they can use it.       -->
-      <year>2024</year>
+      <year>2025</year>
       <holder>Erich McAlister</holder>
       <!-- <minilicense><image source="../images/by-sa.png" /></minilicense> -->
       <shortlicense>
@@ -33,7 +45,7 @@
 
     </copyright>
 
-  </colophon>
+  </bibinfo>
 
   <!--dedication>
     <p>
