@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="li"><h4 class="heading">
+<span class="type">Item</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span>
+</h4>
+<div class="para">
+<dfn class="terminology">Use the Optimizer (Version 2):</dfn> Minimizing the difference between <span class="process-math">\(100\)</span> and the model’s predictied position at <span class="process-math">\(t=9.69\)</span> does not account for any other time-position pairs. To obtain a more global fit to the data, we will use a <em class="emphasis">converter</em> with the entire dataset. Then we will minimize the sum of squared errors from the data to the model outputs.<div class="autopermalink" data-description="Paragraph"><a href="#converter_optimizer-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:35%;"><div class="para">To proceed, click to add a primitive and choose "Add Converter". Call your converter "data".<div class="autopermalink" data-description="Paragraph"><a href="#converter_optimizer-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para"><div class="autopermalink" data-description="Paragraph"><a href="#converter_optimizer-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
+<div class="sbspanel top" style="width:60%;"><img src="external/images/add_converter.png" class="contained"></div>
+</div></div>
+<div class="para">From here, insert the time and position values from <a href="SprintModel.html#sprint_data" class="xref" data-knowl="./knowl/xref/sprint_data.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 2.1.1: Usain Bolt’s Position Data from the 2008 Olympic 100m Dash">Table 2.1.1</a> with time as input source, meters as units, and linear interpolation. (Linear interpolation builds additional data points for comparison to the simulation by drawing straight lines through the data points.)<div class="autopermalink" data-description="Paragraph"><a href="#converter_optimizer-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Now create a new variable called <span class="process-math">\(SE\)</span> (for "squared error") that has <span class="process-math">\(\text({position}-\text{data})^2\)</span> as its formula and m<span class="process-math">\(^2\)</span> as units.<div class="autopermalink" data-description="Paragraph"><a href="#converter_optimizer-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Now open the optimization menu and choose to adjust <span class="process-math">\(k\)</span> to minimize the integral of <span class="process-math">\(SE\text{.}\)</span> (The integral will be the sum of the squared errors.)<div class="autopermalink" data-description="Paragraph"><a href="#converter_optimizer-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Running the optimization, we find that this method gives <span class="process-math">\(k\approx 0.956\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#converter_optimizer-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/SprintSSEOpt.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.11<span class="period">.</span></span><span class="space"> </span>The optimizer now finds <span class="process-math">\(k\approx 0.9277\)</span> with the sum (integral) of the squared errors equal to <span class="process-math">\(1382.47.05\text{.}\)</span><div class="autopermalink" data-description="Figure 2.1.11"><a href="#sprint_sse_opt_pic" title="Copy heading and permalink for Figure 2.1.11" aria-label="Copy heading and permalink for Figure 2.1.11">🔗</a></div></figcaption></figure></article><span class="incontext"><a class="internal" href="SprintModel.html#converter_optimizer">in-context</a></span>
+</body>
+</html>
