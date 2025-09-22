@@ -6,14 +6,19 @@
 <!--*                                          *-->
 <!--********************************************-->
 <html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: salem                          *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Oscillators</title>
-<meta name="Keywords" content="Authored in PreTeXt">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta xmlns:pf="https://prefigure.org" property="og:type" content="book">
-<meta xmlns:pf="https://prefigure.org" property="book:title" content="Applied Differential Equations with Insightmaker and Data (Fall 2024 Ed.)">
-<meta xmlns:pf="https://prefigure.org" property="book:author" content="Erich McAlister">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
@@ -69,101 +74,51 @@ window.MathJax = {
     )}
   }
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><link href="_static/pretext/css/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.googleapis.com">
-<link xmlns:pf="https://prefigure.org" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
-<link xmlns:pf="https://prefigure.org" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-<script src="https://cdn.geogebra.org/apps/deployggb.js"></script><link href="_static/pretext/css/pretext.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/shell_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/banner_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/navbar_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/toc_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/style_default.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/colors_martiansands.css" rel="stylesheet" type="text/css">
-<link href="_static/pretext/css/setcolors.css" rel="stylesheet" type="text/css">
-<style>
-#preface-1-3 { counter-set: preface-1-3 0; }
-#preface-1-3 > li::marker { content: ""counter(preface-1-3,decimal)"."; }
-#preface-1-3 > li { counter-increment: preface-1-3; }
-#preface-2-1 { counter-set: preface-2-1 0; }
-#preface-2-1 > li::marker { content: ""counter(preface-2-1,decimal)"."; }
-#preface-2-1 > li { counter-increment: preface-2-1; }
-#Insights_of_IVPs-4-1 { counter-set: Insights_of_IVPs-4-1 0; }
-#Insights_of_IVPs-4-1 > li::marker { content: ""counter(Insights_of_IVPs-4-1,decimal)"."; }
-#Insights_of_IVPs-4-1 > li { counter-increment: Insights_of_IVPs-4-1; }
-#Stocks-2 { counter-set: Stocks-2 0; }
-#Stocks-2 > li::marker { content: ""counter(Stocks-2,decimal)"."; }
-#Stocks-2 > li { counter-increment: Stocks-2; }
-#Variables-2 { counter-set: Variables-2 0; }
-#Variables-2 > li::marker { content: ""counter(Variables-2,decimal)"."; }
-#Variables-2 > li { counter-increment: Variables-2; }
-#Links-2 { counter-set: Links-2 0; }
-#Links-2 > li::marker { content: ""counter(Links-2,decimal)"."; }
-#Links-2 > li { counter-increment: Links-2; }
-#Flows-2 { counter-set: Flows-2 0; }
-#Flows-2 > li::marker { content: ""counter(Flows-2,decimal)"."; }
-#Flows-2 > li { counter-increment: Flows-2; }
-#Intro_dimensional_analysis-6-1 { counter-set: Intro_dimensional_analysis-6-1 0; }
-#Intro_dimensional_analysis-6-1 > li::marker { content: ""counter(Intro_dimensional_analysis-6-1,decimal)"."; }
-#Intro_dimensional_analysis-6-1 > li { counter-increment: Intro_dimensional_analysis-6-1; }
-#First_Order_Scenarios-2-2 { counter-set: First_Order_Scenarios-2-2 0; }
-#First_Order_Scenarios-2-2 > li::marker { content: ""counter(First_Order_Scenarios-2-2,decimal)"."; }
-#First_Order_Scenarios-2-2 > li { counter-increment: First_Order_Scenarios-2-2; }
-#SprintModel-5-4-1-2 { counter-set: SprintModel-5-4-1-2 0; }
-#SprintModel-5-4-1-2 > li::marker { content: ""counter(SprintModel-5-4-1-2,decimal)"."; }
-#SprintModel-5-4-1-2 > li { counter-increment: SprintModel-5-4-1-2; }
-#SprintModel-6-3-1 { counter-set: SprintModel-6-3-1 0; }
-#SprintModel-6-3-1 > li::marker { content: ""counter(SprintModel-6-3-1,decimal)"."; }
-#SprintModel-6-3-1 > li { counter-increment: SprintModel-6-3-1; }
-#SprintModel-6-5 { counter-set: SprintModel-6-5 0; }
-#SprintModel-6-5 > li::marker { content: ""counter(SprintModel-6-5,decimal)"."; }
-#SprintModel-6-5 > li { counter-increment: SprintModel-6-5; }
-#baseball_dimensional_model-1-1-3 { counter-set: baseball_dimensional_model-1-1-3 0; }
-#baseball_dimensional_model-1-1-3 > li::marker { content: "("counter(baseball_dimensional_model-1-1-3,lower-alpha)")"; }
-#baseball_dimensional_model-1-1-3 > li { counter-increment: baseball_dimensional_model-1-1-3; }
-#FastPitchWorksheet-8-1-2 { counter-set: FastPitchWorksheet-8-1-2 0; }
-#FastPitchWorksheet-8-1-2 > li::marker { content: "("counter(FastPitchWorksheet-8-1-2,lower-alpha)")"; }
-#FastPitchWorksheet-8-1-2 > li { counter-increment: FastPitchWorksheet-8-1-2; }
-#DrugDosageWorksheet-7 { counter-set: DrugDosageWorksheet-7 0; }
-#DrugDosageWorksheet-7 > li::marker { content: "("counter(DrugDosageWorksheet-7,lower-alpha)")"; }
-#DrugDosageWorksheet-7 > li { counter-increment: DrugDosageWorksheet-7; }
-#basic_mixing-6-1 { counter-set: basic_mixing-6-1 0; }
-#basic_mixing-6-1 > li::marker { content: ""counter(basic_mixing-6-1,decimal)"."; }
-#basic_mixing-6-1 > li { counter-increment: basic_mixing-6-1; }
-#two-tank-conserved-volume-3-1 { counter-set: two-tank-conserved-volume-3-1 0; }
-#two-tank-conserved-volume-3-1 > li::marker { content: ""counter(two-tank-conserved-volume-3-1,decimal)"."; }
-#two-tank-conserved-volume-3-1 > li { counter-increment: two-tank-conserved-volume-3-1; }
-#basic_SIR-3-1 { counter-set: basic_SIR-3-1 0; }
-#basic_SIR-3-1 > li::marker { content: ""counter(basic_SIR-3-1,decimal)"."; }
-#basic_SIR-3-1 > li { counter-increment: basic_SIR-3-1; }
-#Variations_on_SIR-3-3 { counter-set: Variations_on_SIR-3-3 0; }
-#Variations_on_SIR-3-3 > li::marker { content: ""counter(Variations_on_SIR-3-3,decimal)"."; }
-#Variations_on_SIR-3-3 > li { counter-increment: Variations_on_SIR-3-3; }
-#harmonic_oscillators-5-2-3 { counter-set: harmonic_oscillators-5-2-3 0; }
-#harmonic_oscillators-5-2-3 > li::marker { content: ""counter(harmonic_oscillators-5-2-3,decimal)"."; }
-#harmonic_oscillators-5-2-3 > li { counter-increment: harmonic_oscillators-5-2-3; }
-#harmonic_oscillators-6-3 { counter-set: harmonic_oscillators-6-3 0; }
-#harmonic_oscillators-6-3 > li::marker { content: ""counter(harmonic_oscillators-6-3,decimal)"."; }
-#harmonic_oscillators-6-3 > li { counter-increment: harmonic_oscillators-6-3; }
-#RipcordCarsWorksheet-3-5-1-3-1-1 { counter-set: RipcordCarsWorksheet-3-5-1-3-1-1 0; }
-#RipcordCarsWorksheet-3-5-1-3-1-1 > li::marker { content: "("counter(RipcordCarsWorksheet-3-5-1-3-1-1,lower-alpha)")"; }
-#RipcordCarsWorksheet-3-5-1-3-1-1 > li { counter-increment: RipcordCarsWorksheet-3-5-1-3-1-1; }
-</style>
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Applied Differential Equations with Insightmaker and Data (Fall 2025 Ed.)">
+<meta property="book:author" content="Erich McAlister">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.9.10';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
 </head>
 <body class="pretext book ignore-math">
-<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
-<a xmlns:pf="https://prefigure.org" id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="applied-de-insightmaker.html"><span class="title">Applied Differential Equations with Insightmaker and Data (Fall 2024 Ed.)</span></a></h1>
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="applied-de-insightmaker.html"><span class="title">Applied Differential Equations with Insightmaker and Data (Fall 2025 Ed.)</span></a></h1>
 <p class="byline">Erich McAlister</p>
-</div>
-</div></header><nav xmlns:pf="https://prefigure.org" id="ptx-navbar" class="ptx-navbar navbar"><button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><a class="index-button button" href="backmatter-2.html" title="Index"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe88e;</span><span class="name">Index</span></a><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
 <div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
 <div class="search-results-controls">
@@ -188,7 +143,14 @@ var ggbApp = new GGBApplet({"appName": "graphing",
     "autoHeight": true,
     "disableAutoScale": false},
 true);
-</script></span><span class="treebuttons"><a class="previous-button button" href="systems_diseases.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="higher_order_and_systems.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="systems_ham_grad.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span></nav><div xmlns:pf="https://prefigure.org" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+</script><button id="embed-button" class="embed-button button" title="Embed this page"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe86f;</span><span class="name">Embed</span></button><div class="embed-popup hidden" id="embed-popup">
+<p>Copy the code below to embed this page in your own website or LMS page.</p>
+<div class="embed-code-container">
+<textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
+</div>
+</div>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="systems_diseases.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="higher_order_and_systems.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="systems_ham_grad.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
@@ -199,11 +161,11 @@ true);
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
 <div class="ptx-page">
-<div xmlns:pf="https://prefigure.org" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2"><ul class="structural contains-active toc-item-list">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="2" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter">
 <div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="front-colophon.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="frontmatter-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
 <li class="toc-item toc-acknowledgement"><div class="toc-title-box"><a href="frontmatter-4.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
 <li class="toc-item toc-preface"><div class="toc-title-box"><a href="preface.html" class="internal"><span class="title">Preface</span></a></div></li>
 </ul>
@@ -258,9 +220,9 @@ true);
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_diseases.html#Variations_on_SIR" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Variations on the SIR Model</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-section active">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="systems_oscillators.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Oscillators</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_oscillators.html#harmonic_oscillators" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Harmonic Oscillators</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="systems_oscillators.html#harmonic_oscillators" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Harmonic Oscillators</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="systems_ham_grad.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Conserved Quantities</span></a></div></li>
 <li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="RipcordCarsWorksheet.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Ripcord Cars with Energy</span></a></div></li>
@@ -274,15 +236,28 @@ true);
 </ul>
 </li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:pf="https://prefigure.org" class="section" id="systems_oscillators"><h2 class="heading hide-type">
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="systems_oscillators"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space"> </span><span class="codenumber">3.4</span><span class="space"> </span><span class="title">Oscillators</span>
 </h2>
 <article class="objectives goal-like" id="systems_oscillators-2"><h3 class="heading"><span class="type">Objectives</span></h3>
 <ul class="disc" id="systems_oscillators-2-1">
-<li id="systems_oscillators-2-1-1"><div class="para" id="systems_oscillators-2-1-1-1">Introduce the basic diagram for second order differential equations.</div></li>
-<li id="systems_oscillators-2-1-2"><div class="para" id="systems_oscillators-2-1-2-1">Explore the basic harmonic oscillator (damped or not, forced or not).</div></li>
-<li id="systems_oscillators-2-1-3"><div class="para" id="systems_oscillators-2-1-3-1">Consider a driven nonlinear pendulum as an example that is not solvable by analytic methods.</div></li>
-</ul></article><section class="introduction" id="systems_oscillators-3"><div class="para logical" id="systems_oscillators-3-1">
+<li id="systems_oscillators-2-1-1">
+<div class="para" id="systems_oscillators-2-1-1-1">Introduce the basic diagram for second order differential equations.<div class="autopermalink" data-description="Paragraph"><a href="#systems_oscillators-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#systems_oscillators-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="systems_oscillators-2-1-2">
+<div class="para" id="systems_oscillators-2-1-2-1">Explore the basic harmonic oscillator (damped or not, forced or not).<div class="autopermalink" data-description="Paragraph"><a href="#systems_oscillators-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#systems_oscillators-2-1-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="systems_oscillators-2-1-3">
+<div class="para" id="systems_oscillators-2-1-3-1">Consider a driven nonlinear pendulum as an example that is not solvable by analytic methods.<div class="autopermalink" data-description="Paragraph"><a href="#systems_oscillators-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Objective"><a href="#systems_oscillators-2-1-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Objectives 3.4"><a href="#systems_oscillators-2" title="Copy heading and permalink for Objectives 3.4" aria-label="Copy heading and permalink for Objectives 3.4">🔗</a></div></article><section class="introduction" id="systems_oscillators-3"><div class="para logical" id="systems_oscillators-3-1">
 <div class="para">Second-order ODEs are ones of the form</div>
 <div class="displaymath process-math">
 \begin{equation*}
@@ -297,9 +272,11 @@ x' = \amp\ v
 \end{align*}
 </div>
 <div class="para">The basic Insightmaker diagram for a second order equation becomes the following: <figure class="figure figure-like" id="second_order_idiom"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="external/images/second_order_idiom.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.1<span class="period">.</span></span><span class="space"> </span>The general second order equation diagram.</figcaption></figure> This construction can be generalized to any higher-order equation by introducing more intermediate stocks for the derivatives.</div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.1<span class="period">.</span></span><span class="space"> </span>The general second order equation diagram.<div class="autopermalink" data-description="Figure 3.4.1"><a href="#second_order_idiom" title="Copy heading and permalink for Figure 3.4.1" aria-label="Copy heading and permalink for Figure 3.4.1">🔗</a></div></figcaption></figure> This construction can be generalized to any higher-order equation by introducing more intermediate stocks for the derivatives.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#systems_oscillators-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="systems_oscillators-3-2">We will now explore an important class of examples inwhich it makes sense to break the single flow into <span class="process-math">\(v\)</span> into multiple branches.</div></section><section class="subsection" id="harmonic_oscillators"><h3 class="heading hide-type">
+<div class="para" id="systems_oscillators-3-2">We will now explore an important class of examples inwhich it makes sense to break the single flow into <span class="process-math">\(v\)</span> into multiple branches.<div class="autopermalink" data-description="Paragraph"><a href="#systems_oscillators-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><section class="subsection" id="harmonic_oscillators"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.4.1</span><span class="space"> </span><span class="title">Harmonic Oscillators</span>
 </h3>
 <article class="definition definition-like" id="harmonic_oscillator"><h4 class="heading">
@@ -330,27 +307,44 @@ mx''+\gamma x' + kx = 0.
 mx'' + \gamma x' + kx = F(t).
 \end{equation*}
 </div>
-</div> Note that in spring-mass systems we have <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(k\text{,}\)</span> and <span class="process-math">\(\gamma\)</span> positive.</article><div class="para" id="harmonic_oscillators-3">We now explore the behavior of oscillators in various cases with Insightmaker. The Insight used for these is available at <a class="external" href="https://insightmaker.com/insight/34DZg8rPU4e0I7aVGR59dm" target="_blank"><code class="code-inline tex2jax_ignore">Harmonic Oscillator Insight</code></a>. The diagram is given by</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillator-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> Note that in spring-mass systems we have <span class="process-math">\(m\text{,}\)</span> <span class="process-math">\(k\text{,}\)</span> and <span class="process-math">\(\gamma\)</span> positive.<div class="autopermalink" data-description="Definition 3.4.2"><a href="#harmonic_oscillator" title="Copy heading and permalink for Definition 3.4.2" aria-label="Copy heading and permalink for Definition 3.4.2">🔗</a></div></article><div class="para" id="harmonic_oscillators-3">We now explore the behavior of oscillators in various cases with Insightmaker. The Insight used for these is available at <a class="external" href="https://insightmaker.com/insight/34DZg8rPU4e0I7aVGR59dm" target="_blank"><code class="code-inline tex2jax_ignore">Harmonic Oscillator Insight</code></a>. The diagram is given by<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <figure class="figure figure-like" id="damped_forced_oscillator"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/damped_oscillator.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.3<span class="period">.</span></span><span class="space"> </span>The damped and forced oscillator.</figcaption></figure><article class="exploration project-like" id="harmonic_oscillators-5"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.3<span class="period">.</span></span><span class="space"> </span>The damped and forced oscillator.<div class="autopermalink" data-description="Figure 3.4.3"><a href="#damped_forced_oscillator" title="Copy heading and permalink for Figure 3.4.3" aria-label="Copy heading and permalink for Figure 3.4.3">🔗</a></div></figcaption></figure><article class="exploration project-like" id="harmonic_oscillators-5"><h4 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">No External Force.</span>
 </h4>
 <div class="para logical" id="harmonic_oscillators-5-2">
 <div class="para">Analytic methods can be used to show the three possible cases. In each case we show the result with <span class="process-math">\(x(0) = 1\)</span> and <span class="process-math">\(v(0) = 0\text{.}\)</span>
 </div>
 <ol class="decimal" id="harmonic_oscillators-5-2-3">
-<li id="harmonic_oscillators-5-2-3-1"><div class="para" id="harmonic_oscillators-5-2-3-1-1">
+<li id="harmonic_oscillators-5-2-3-1">
+<div class="para" id="harmonic_oscillators-5-2-3-1-1">
 <em class="emphasis">Overdamped:</em> This occurs when <span class="process-math">\(\gamma^2 - 4mk &gt; 0\text{.}\)</span> In this case we see <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> decay to zero rapidly. Using <span class="process-math">\(\gamma = 3\text{,}\)</span> <span class="process-math">\(m = 1\text{,}\)</span> and <span class="process-math">\(k=1\text{,}\)</span> we obtain the following: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/overdamped.png" class="contained" alt="position and velocity graphs for an overdamped oscillator"></div>
-</div></li>
-<li id="harmonic_oscillators-5-2-3-2"><div class="para" id="harmonic_oscillators-5-2-3-2-1">
-<em class="emphasis">Underdamped:</em> This occurs when <span class="process-math">\(\gamma^2 - 4mk \lt 0\text{.}\)</span> In this case we see <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> oscillate with amplitude decaying to zero. Using <span class="process-math">\(\gamma = 1\text{,}\)</span> <span class="process-math">\(m = 1\text{,}\)</span> and <span class="process-math">\(k=3\text{,}\)</span> we obtain the following: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/underdamped_time_series.png" class="contained" alt="position and velocity graphs for an underdamped oscillator"></div> In the scatterplot with <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> on the horizontal and vertical axes, respectively, we see a spiral: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/underdamped_scatter.png" class="contained" alt="position and velocity graphs for an overdamped oscillator"></div>
-</div></li>
-<li id="harmonic_oscillators-5-2-3-3"><div class="para" id="harmonic_oscillators-5-2-3-3-1">
-<em class="emphasis">Underdamped:</em> This occurs when <span class="process-math">\(\gamma^2 - 4mk = 0\text{.}\)</span> In this case we see <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> decaying to zero with an "almost" oscillation at the start. Using <span class="process-math">\(\gamma = 2\text{,}\)</span> <span class="process-math">\(m = 1\text{,}\)</span> and <span class="process-math">\(k=1\text{,}\)</span> we obtain the following: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/crit_damped_time_series.png" class="contained" alt="position and velocity graphs for a critically damped oscillator"></div> In the scatterplot with <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> on the horizontal and vertical axes, respectively, we see an "almost" spiral: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/crit_damped_scatter.png" class="contained" alt="position and velocity graphs for a critically damped oscillator"></div>
-</div></li>
-</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-5-2-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="harmonic_oscillators-5-3">Notice that all solution other than when <span class="process-math">\(\gamma = 0\)</span> will approach zero in the long run. This should make sense as positive damping should slow our mass down.</div></article><article class="exploration project-like" id="harmonic_oscillators-6"><h4 class="heading">
+<div class="autopermalink" data-description="Item 1"><a href="#harmonic_oscillators-5-2-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="harmonic_oscillators-5-2-3-2">
+<div class="para" id="harmonic_oscillators-5-2-3-2-1">
+<em class="emphasis">Underdamped:</em> This occurs when <span class="process-math">\(\gamma^2 - 4mk \lt 0\text{.}\)</span> In this case we see <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> oscillate with amplitude decaying to zero. Using <span class="process-math">\(\gamma = 1\text{,}\)</span> <span class="process-math">\(m = 1\text{,}\)</span> and <span class="process-math">\(k=3\text{,}\)</span> we obtain the following: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/underdamped_time_series.png" class="contained" alt="position and velocity graphs for an underdamped oscillator"></div> In the scatterplot with <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> on the horizontal and vertical axes, respectively, we see a spiral: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/underdamped_scatter.png" class="contained" alt="position and velocity graphs for an overdamped oscillator"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-5-2-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#harmonic_oscillators-5-2-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="harmonic_oscillators-5-2-3-3">
+<div class="para" id="harmonic_oscillators-5-2-3-3-1">
+<em class="emphasis">Underdamped:</em> This occurs when <span class="process-math">\(\gamma^2 - 4mk = 0\text{.}\)</span> In this case we see <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> decaying to zero with an "almost" oscillation at the start. Using <span class="process-math">\(\gamma = 2\text{,}\)</span> <span class="process-math">\(m = 1\text{,}\)</span> and <span class="process-math">\(k=1\text{,}\)</span> we obtain the following: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/crit_damped_time_series.png" class="contained" alt="position and velocity graphs for a critically damped oscillator"></div> In the scatterplot with <span class="process-math">\(x\)</span> and <span class="process-math">\(v\)</span> on the horizontal and vertical axes, respectively, we see an "almost" spiral: <div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/crit_damped_scatter.png" class="contained" alt="position and velocity graphs for a critically damped oscillator"></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-5-2-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#harmonic_oscillators-5-2-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-5-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="harmonic_oscillators-5-3">Notice that all solution other than when <span class="process-math">\(\gamma = 0\)</span> will approach zero in the long run. This should make sense as positive damping should slow our mass down.<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-5-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exploration 1: No External Force"><a href="#harmonic_oscillators-5" title="Copy heading and permalink for Exploration 1: No External Force" aria-label="Copy heading and permalink for Exploration 1: No External Force">🔗</a></div></article><article class="exploration project-like" id="harmonic_oscillators-6"><h4 class="heading">
 <span class="type">Exploration</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span><span class="space"> </span><span class="title">Periodic Forcing without Damping.</span>
 </h4>
 <div class="para logical" id="harmonic_oscillators-6-2">
@@ -362,15 +356,24 @@ x'' + x = F(t).
 </div>
 <div class="para">When <span class="process-math">\(F(t) = 0\)</span> (<span class="process-math">\(\omega = 0\)</span>) the oscillator oscillates sinusoidally with period <span class="process-math">\(2\pi\text{.}\)</span> Because an external force will put the mass into motion, we can let <span class="process-math">\(x(0)=0\)</span> and <span class="process-math">\(v(0) = 0\text{.}\)</span>
 </div>
+<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <ol class="decimal" id="harmonic_oscillators-6-3">
-<li id="harmonic_oscillators-6-3-1"><div class="para" id="harmonic_oscillators-6-3-1-1">
-<em class="emphasis">Non-resonant Forcing:</em> This is when the period of the unforced oscillation is not equal to the period of the forcing function.</div></li>
-<li id="harmonic_oscillators-6-3-2"><div class="para" id="harmonic_oscillators-6-3-2-1">
-<em class="emphasis">Resonant Forcing:</em> This is when the period of the forcing function and the unforced oscillation are equal, i.e. <span class="process-math">\(\omega = 2\pi\text{.}\)</span>
-</div></li>
+<li id="harmonic_oscillators-6-3-1">
+<div class="para" id="harmonic_oscillators-6-3-1-1">
+<em class="emphasis">Non-resonant Forcing:</em> This is when the period of the unforced oscillation is not equal to the period of the forcing function.<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-6-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#harmonic_oscillators-6-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="harmonic_oscillators-6-3-2">
+<div class="para" id="harmonic_oscillators-6-3-2-1">
+<em class="emphasis">Resonant Forcing:</em> This is when the period of the forcing function and the unforced oscillation are equal, i.e. <span class="process-math">\(\omega = 2\pi\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-6-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#harmonic_oscillators-6-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
 </ol>
-<div class="para" id="harmonic_oscillators-6-4">We will explore the resonant case with Insightmaker. While this is treated analytically in standard texts, we can gain more intuition via simulation. The Insight we will use is at <a class="external" href="https://insightmaker.com/insight/2MstzIO2XDDXLC6ULQt373" target="_blank"><code class="code-inline tex2jax_ignore">Resonance Insight</code></a>.</div>
+<div class="para" id="harmonic_oscillators-6-4">We will explore the resonant case with Insightmaker. While this is treated analytically in standard texts, we can gain more intuition via simulation. The Insight we will use is at <a class="external" href="https://insightmaker.com/insight/2MstzIO2XDDXLC6ULQt373" target="_blank"><code class="code-inline tex2jax_ignore">Resonance Insight</code></a>.<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-6-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="para logical" id="harmonic_oscillators-6-5">
 <div class="para">We first will simulate with a forcing function (as an Insightmaker variable) called <span class="process-math">\(One\ Period\ Force\text{,}\)</span> which is given by the algebraic formula</div>
 <div class="displaymath process-math">
@@ -379,11 +382,15 @@ F(t)  =\begin{cases} \sin(t),\ \amp 2\pi(n-1) \lt t \lt 2\pi n\\ 0,\ \amp \text{
 \end{equation*}
 </div>
 <div class="para"><em class="emphasis">See Insight for conditional flow function.</em></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
-<div class="sbspanel top" style="width:50%;"><div class="para" id="harmonic_oscillators-6-6-1">Running this simulation and increasing <span class="process-math">\(n\)</span> by one repeatedly, we obtain the following sequence of time series graphs. Notice that the oscillator remains motionless until the force is "turned on" and then oscillates freely after the force is "turned off". Because the second-order ODE we are working with is linear, the response to the sum of forces is equal to the sum of the forced responses (be sure that line makes sense). Because the force over multiple periods is the sum of these shifts of single period forces, we simply sum the graphs to the right (ad-infinitum) to obtain the response to a full sinusoid.</div></div>
-<div class="sbspanel top" style="width:5%;"><div class="para" id="harmonic_oscillators-6-6-2"></div></div>
-<div class="sbspanel top" style="width:45%;"><div class="para" id="harmonic_oscillators-6-6-3"><img src="external/images/ResonanceGraphsSeparated.png" class="contained" alt="A sequence of responses to a one period sinusoidal force."></div></div>
+<div class="sbspanel top" style="width:50%;"><div class="para" id="harmonic_oscillators-6-6-1">Running this simulation and increasing <span class="process-math">\(n\)</span> by one repeatedly, we obtain the following sequence of time series graphs. Notice that the oscillator remains motionless until the force is "turned on" and then oscillates freely after the force is "turned off". Because the second-order ODE we are working with is linear, the response to the sum of forces is equal to the sum of the forced responses (be sure that line makes sense). Because the force over multiple periods is the sum of these shifts of single period forces, we simply sum the graphs to the right (ad-infinitum) to obtain the response to a full sinusoid.<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-6-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
+<div class="sbspanel top" style="width:5%;"><div class="para" id="harmonic_oscillators-6-6-2"><div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-6-6-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div></div>
+<div class="sbspanel top" style="width:45%;"><div class="para" id="harmonic_oscillators-6-6-3">
+<img src="external/images/ResonanceGraphsSeparated.png" class="contained" alt="A sequence of responses to a one period sinusoidal force."><div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-6-6-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></div>
 </div></div>
 <div class="para logical" id="harmonic_oscillators-6-7">
 <div class="para">Replacing the single period forcing function with</div>
@@ -393,16 +400,19 @@ F(t)  =\begin{cases} \sin(t),\ \amp 0 \lt t \lt 2\pi n\\ 0,\ \amp \text{otherwis
 \end{equation*}
 </div>
 <div class="para">we see the linear growth in amplitude. To see this best, we use the Compare Results function under the Tools menu in Insightmaker. Comparing graphs for <span class="process-math">\(n = 1,\ldots, 8\text{,}\)</span> we obtain the following: <figure class="figure figure-like" id="ResonanceGraphFinal"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/ResonanceGraphFinal.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.4<span class="period">.</span></span><span class="space"> </span>Linear growth in amplitude illustated as we apply the periodic force over more periods.</figcaption></figure> The perfect alignment between forcing function and response is key to growth in amplitude. This way the shifted responses (shifted by the period of the forcing function) line up perfectly so that they are vertical stretches of one another. You are encouraged to experiment with the non-resonant case and see how that works out.</div>
-</div></article><details id="harmonic_oscillators-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.4.4<span class="period">.</span></span><span class="space"> </span>Linear growth in amplitude illustated as we apply the periodic force over more periods.<div class="autopermalink" data-description="Figure 3.4.4"><a href="#ResonanceGraphFinal" title="Copy heading and permalink for Figure 3.4.4" aria-label="Copy heading and permalink for Figure 3.4.4">🔗</a></div></figcaption></figure> The perfect alignment between forcing function and response is key to growth in amplitude. This way the shifted responses (shifted by the period of the forcing function) line up perfectly so that they are vertical stretches of one another. You are encouraged to experiment with the non-resonant case and see how that works out.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#harmonic_oscillators-6-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Exploration 2: Periodic Forcing without Damping"><a href="#harmonic_oscillators-6" title="Copy heading and permalink for Exploration 2: Periodic Forcing without Damping" aria-label="Copy heading and permalink for Exploration 2: Periodic Forcing without Damping">🔗</a></div></article><details id="harmonic_oscillators-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.4.5</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content">What are the possible outcomes of applying a periodic force to a damped oscillator? Consider all possible cases of damping and think about how the results make physical sense.</article></details></section><section class="conclusion" id="systems_oscillators-5"><div class="para" id="systems_oscillators-5-1">The oscillator problems presented in this section are rather standard in a first course in differential equations. They are amenable to analytic methods. However, we should keep in mind that Insightmaker doesn’t care if an ODE is linear or not. For instance, one may explore the behavior of a non-linear air spring using Insightmaker using essentially the same diagram we used above but with different flow formulas. Using the programming functions in the flow formulas, one may use different damping coefficients depending position and/or on the sign of the velocity. Linear constant coefficient oscillators are just the beginning.</div></section></section></div>
-<div class="ptx-content-footer">
-<a class="previous-button button" href="systems_diseases.html" title="Previous"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="systems_ham_grad.html" title="Next"><span class="name">Next</span><span xmlns:pf="https://prefigure.org" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</h4></summary><article class="exercise exercise-like knowl__content">What are the possible outcomes of applying a periodic force to a damped oscillator? Consider all possible cases of damping and think about how the results make physical sense.<div class="autopermalink" data-description="Checkpoint 3.4.5"><a href="#harmonic_oscillators-7" title="Copy heading and permalink for Checkpoint 3.4.5" aria-label="Copy heading and permalink for Checkpoint 3.4.5">🔗</a></div></article></details><div class="autopermalink" data-description="Subsection 3.4.1: Harmonic Oscillators"><a href="#harmonic_oscillators" title="Copy heading and permalink for Subsection 3.4.1: Harmonic Oscillators" aria-label="Copy heading and permalink for Subsection 3.4.1: Harmonic Oscillators">🔗</a></div></section><section class="conclusion" id="systems_oscillators-5"><div class="para" id="systems_oscillators-5-1">The oscillator problems presented in this section are rather standard in a first course in differential equations. They are amenable to analytic methods. However, we should keep in mind that Insightmaker doesn’t care if an ODE is linear or not. For instance, one may explore the behavior of a non-linear air spring using Insightmaker using essentially the same diagram we used above but with different flow formulas. Using the programming functions in the flow formulas, one may use different damping coefficients depending position and/or on the sign of the velocity. Linear constant coefficient oscillators are just the beginning.<div class="autopermalink" data-description="Paragraph"><a href="#systems_oscillators-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div></section><div class="autopermalink" data-description="Section 3.4: Oscillators"><a href="#systems_oscillators" title="Copy heading and permalink for Section 3.4: Oscillators" aria-label="Copy heading and permalink for Section 3.4: Oscillators">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="systems_diseases.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="systems_ham_grad.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a xmlns:pf="https://prefigure.org" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:pf="https://prefigure.org" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png"></a><a xmlns:pf="https://prefigure.org" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png"></a>
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
 </body>
 </html>
