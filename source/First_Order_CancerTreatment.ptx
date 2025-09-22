@@ -109,7 +109,7 @@ where <m>\alpha\geq 0 </m> is a parameter called the <term>intrinsic growth rate
 			</tabular>
 		</table>
 	<p>	
-	Use a converter for this data and the method of least-squares (recall how this was done in <xref ref="SprintModel"/>) to determine the intrinsic growth rate for this tumor.
+	Use a converter for this data and the method of least-squares (recall how this was done in <xref ref="converter_optimizer"/> of the section on using data of the sprint model) to determine the intrinsic growth rate for this tumor.
 	</p>
 	</statement>
   </exercise>
