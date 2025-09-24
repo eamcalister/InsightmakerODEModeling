@@ -72,7 +72,7 @@ where <m>\alpha\geq 0 </m> is a parameter called the <term>intrinsic growth rate
   <exercise>
 	<statement>
 		<p>
-			Determine the equilibrium solutions of the given model algebraically (show your work) and determine their stability depending on the values of <m>\alpha</m> and <m>k</m>. What is the desirable (in terms of real-world cancer treatment) in terms of the equilibria and stability of them, and how must <m>\alpha</m> and <m>k</m> be related to achieve this outcome. Include graphs from Insightmaker simulations to illustrate each possible outcome with descriptions that are accessible to a non-mathematical audience.
+			Determine the equilibrium solutions of the given model algebraically (show your work) and determine their stability depending on the values of <m>\alpha</m> and <m>k</m> (show phase portraits in your write-up). What is the desirable (in terms of real-world cancer treatment) in terms of the equilibria and stability of them, and how must <m>\alpha</m> and <m>k</m> be related to achieve this outcome? Include graphs from Insightmaker simulations to illustrate each possible outcome with descriptions that are accessible to a non-mathematical audience.
 		</p>
 	</statement>
   </exercise>
