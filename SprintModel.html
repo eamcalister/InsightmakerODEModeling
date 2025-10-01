@@ -101,14 +101,14 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.9.10';
+eBookConfig.runestone_version = '7.9.11';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.fea5c754ab3e056b.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<script src="_static/prefix-runtime.59de9dca80a62a76.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.b37c97cbe7a5455b.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.8141ae22fd347e48.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdn.geogebra.org/apps/deployggb.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
@@ -450,7 +450,9 @@ mv' = mF-kmv.
 <dfn class="terminology">Adjust Paramteters with Sliders:</dfn> This is the most intuitive method. In this case, Bolt ran <span class="process-math">\(100\)</span> meters in <span class="process-math">\(9.69\)</span> seconds. Thus, we can run the simulation set to display time and position in the table display. Then, with sliders linked, we can adjust <span class="process-math">\(k\)</span> to make the position as close as we can to <span class="process-math">\(100\)</span> as possible when <span class="process-math">\(t=9.69\text{.}\)</span> The result is shown below:<div class="autopermalink" data-description="Paragraph"><a href="#SprintModel-6-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="sprint_slider_pic"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/SprintSlider.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.9<span class="period">.</span></span><span class="space"> </span>The slider of <span class="process-math">\(0.929\)</span> for <span class="process-math">\(k\)</span> yields a position very close to <span class="process-math">\(100\)</span> meters.<div class="autopermalink" data-description="Figure 2.1.9"><a href="#sprint_slider_pic" title="Copy heading and permalink for Figure 2.1.9" aria-label="Copy heading and permalink for Figure 2.1.9">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item 1"><a href="#SprintModel-6-5-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.9<span class="period">.</span></span><span class="space"> </span>The slider of <span class="process-math">\(0.929\)</span> for <span class="process-math">\(k\)</span> yields a position very close to <span class="process-math">\(100\)</span> meters.<div class="autopermalink" data-description="Figure 2.1.9"><a href="#sprint_slider_pic" title="Copy heading and permalink for Figure 2.1.9" aria-label="Copy heading and permalink for Figure 2.1.9">🔗</a></div></figcaption></figure><div class="para" id="SprintModel-6-5-1-1-3">Using the slider capability will allow you to get a good initial guess range for your parameter, which you can use in the optimizer (see below).<div class="autopermalink" data-description="Paragraph"><a href="#SprintModel-6-5-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#SprintModel-6-5-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
 <li id="SprintModel-6-5-1-2">
 <div class="para logical" id="SprintModel-6-5-1-2-1">
@@ -473,7 +475,7 @@ mv' = mF-kmv.
 <div class="autopermalink" data-description="Item"><a href="#SprintModel-6-5-1-2-1-5-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
 <li id="SprintModel-6-5-1-2-1-5-4">
-<div class="para" id="SprintModel-6-5-1-2-1-5-4-1">Choose <span class="process-math">\(|\text{position}-100|\)</span> as the primitive and accuracy of <span class="process-math">\(0.001\)</span> along with a guess range for <span class="process-math">\(k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#SprintModel-6-5-1-2-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="SprintModel-6-5-1-2-1-5-4-1">Choose <span class="process-math">\(|\text{position}-100|\)</span> as the primitive and accuracy of <span class="process-math">\(0.001\)</span> along with a guess range for <span class="process-math">\(k\)</span> (determined by using sliders an visual inspection).<div class="autopermalink" data-description="Paragraph"><a href="#SprintModel-6-5-1-2-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Item"><a href="#SprintModel-6-5-1-2-1-5-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
 </li>
@@ -500,10 +502,10 @@ mv' = mF-kmv.
 </div>
 <div class="para" id="converter_optimizer-5">Now open the optimization menu and choose to adjust <span class="process-math">\(k\)</span> to minimize the integral of <span class="process-math">\(SE\text{.}\)</span> (The integral will be the sum of the squared errors.)<div class="autopermalink" data-description="Paragraph"><a href="#converter_optimizer-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="converter_optimizer-6">Running the optimization, we find that this method gives <span class="process-math">\(k\approx 0.956\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#converter_optimizer-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="converter_optimizer-6">Running the optimization (with an initial guess range from <span class="process-math">\(0\)</span> to <span class="process-math">\(1\)</span>), we find that this method gives <span class="process-math">\(k\approx 0.9277\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#converter_optimizer-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <figure class="figure figure-like" id="sprint_sse_opt_pic"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/images/SprintSSEOpt.png" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.11<span class="period">.</span></span><span class="space"> </span>The optimizer now finds <span class="process-math">\(k\approx 0.9277\)</span> with the sum (integral) of the squared errors equal to <span class="process-math">\(1382.47.05\text{.}\)</span><div class="autopermalink" data-description="Figure 2.1.11"><a href="#sprint_sse_opt_pic" title="Copy heading and permalink for Figure 2.1.11" aria-label="Copy heading and permalink for Figure 2.1.11">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item 3"><a href="#converter_optimizer" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.1.11<span class="period">.</span></span><span class="space"> </span>The optimizer now finds <span class="process-math">\(k\approx 0.9277\)</span> with the sum (integral) of the squared errors equal to <span class="process-math">\(\approx 1382.4734\text{.}\)</span><div class="autopermalink" data-description="Figure 2.1.11"><a href="#sprint_sse_opt_pic" title="Copy heading and permalink for Figure 2.1.11" aria-label="Copy heading and permalink for Figure 2.1.11">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item 3"><a href="#converter_optimizer" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#SprintModel-6-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
