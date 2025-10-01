@@ -234,6 +234,9 @@ In order of increasing complexity we can
 			<image source="images/SprintSlider.png">
 			</image>
 		</figure>
+		<p>
+			Using the slider capability will allow you to get a good initial guess range for your parameter, which you can use in the optimizer (see below).
+		</p>
 	</li>
 	<li>
 		<p>
@@ -256,7 +259,7 @@ In order of increasing complexity we can
 				</li>
 				<li>
 					<p>
-						Choose <m>|\text{position}-100|</m> as the primitive and accuracy of <m>0.001</m> along with a guess range for <m>k</m>. 
+						Choose <m>|\text{position}-100|</m> as the primitive and accuracy of <m>0.001</m> along with a guess range for <m>k</m> (determined by using sliders an visual inspection). 
 					</p>
 				</li>
 			</ul>
@@ -290,10 +293,10 @@ In order of increasing complexity we can
 			Now open the optimization menu and choose to adjust <m>k</m> to minimize the integral of <m>SE</m>. (The integral will be the sum of the squared errors.)
 		</p>
 		<p>
-			Running the optimization, we find that this method gives <m>k\approx 0.956</m>.
+			Running the optimization (with an initial guess range from <m>0</m> to <m>1</m>), we find that this method gives <m>k\approx 0.9277</m>.
 		</p>
 		<figure xml:id="sprint_sse_opt_pic">
-			<caption>The optimizer now finds <m>k\approx 0.9277</m> with the sum (integral) of the squared errors equal to <m>1382.47.05</m>.</caption>
+			<caption>The optimizer now finds <m>k\approx 0.9277</m> with the sum (integral) of the squared errors equal to <m>\approx 1382.4734</m>.</caption>
 			<image source="images/SprintSSEOpt.png">
 			</image>
 		</figure>
